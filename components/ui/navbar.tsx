@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 const Navbar = React.forwardRef<HTMLElement, React.HTMLAttributes<HTMLElement>>(
   ({ className, ...props }, ref) => (
     <nav
-      className={cn("flex items-center justify-between py-4", className)}
+      className={cn("flex items-center justify-between", className)}
       {...props}
       ref={ref}
     />

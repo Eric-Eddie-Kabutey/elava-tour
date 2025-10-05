@@ -11,52 +11,37 @@ import { Menu } from "lucide-react";
 import LaunchUI from "@/components/logos/launch-ui";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import telephoneIcon from "@/public/assets/icons/telephone.svg"
+import Image from "next/image";
 
 export default function Navbar() {
     const { setTheme } = useTheme();
     return (
-        <header className="sticky top-0 z-50 -mb-4 px-4 pb-4">
-            <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div>
-            <div className="relative mx-auto max-w-container">
+        <header className="sticky top-0 z-50 px-4 bg-app-primary">
+            {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
+            <div className="max-container relative 2xl:w-[85%] w-[95%] mx-auto text-white">
                 <NavbarComponent>
                     <NavbarLeft>
-                        <Link
+                        {/* <Link
                             href="/"
                             className="flex items-center gap-2 text-xl font-bold"
                         >
                             <LaunchUI />
-                            KtechHub
-                        </Link>
+                            Emirates Holidays
+                        </Link> */}
                         <Navigation />
+                        <div className="px-1 py-5 flex items-center justify-center gap-1 bg-white">
+                            <Image 
+                                src={telephoneIcon}
+                                alt="Telephone icon"
+                                className="w-4 h-fit"
+                            />
+                            <span className="font-semibold text-black">8008501200</span>
+                        </div>
                     </NavbarLeft>
                     <NavbarRight>
-                        <Link href="/" className="hidden text-sm md:block">
-                            Sign in
-                        </Link>
-                        <Button variant="default" asChild>
-                            <Link href="/">Get Started</Link>
-                        </Button>
-                        <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="outline" size="icon">
-                                    <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                                    <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                                    <span className="sr-only">Toggle theme</span>
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end">
-                                <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
-                                <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
-                                <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                        
                         <Sheet>
                             <SheetTrigger asChild>
                                 <Button

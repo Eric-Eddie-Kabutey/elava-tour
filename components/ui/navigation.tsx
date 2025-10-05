@@ -24,14 +24,14 @@ const links: { title: string; href: string; description: string, links?: { title
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-    title: "About Us",
-    href: "/about-us",
+    title: "Special Offers",
+    href: "/",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
-    title: "Product",
-    href: "/product",
+    title: "Destinations",
+    href: "/",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     links: [
@@ -56,14 +56,20 @@ const links: { title: string; href: string; description: string, links?: { title
     ]
   },
   {
-    title: "Blog",
+    title: "Holiday types",
     href: "/blog",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-    title: "Contact Us",
-    href: "/contact-us",
+    title: "Tours",
+    href: "/",
+    description:
+      "Get in touch with our team for any questions or inquiries.",
+  },
+  {
+    title: "Help",
+    href: "/",
     description:
       "Get in touch with our team for any questions or inquiries.",
   },
@@ -79,7 +85,7 @@ export default function Navigation() {
               <NavigationMenuItem key={link.href}>
                 <NavigationMenuTrigger>{link.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] text-white">
                     {link.links.map((sublink) => (
                       <ListItem key={sublink.href} href={sublink.href} title={sublink.title}>
                         {sublink.description}
@@ -99,46 +105,6 @@ export default function Navigation() {
             )
           ))
         }
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Link
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <LaunchUI />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Launch UI
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Landing page template built with React, Shadcn/ui and
-                      Tailwind that you can copy/paste into your project.
-                    </p>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

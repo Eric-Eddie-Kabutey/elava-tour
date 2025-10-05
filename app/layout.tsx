@@ -3,6 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { generateMetadata } from "./metadata";
+import Navbar from "@/components/shared/Navbar";
+import Header from "@/components/shared/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,6 +58,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
+          <Navbar />
           {children}
           <Toaster />
         </ThemeProvider>
