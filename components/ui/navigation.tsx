@@ -13,7 +13,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./navigation-menu";
-import LaunchUI from "../logos/launch-ui";
 
 
 const links: { title: string; href: string; description: string, links?: { title: string; href: string; description: string }[] }[] = [

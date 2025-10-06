@@ -8,28 +8,32 @@ import {
 } from "@/components/ui/navbar";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { useTheme } from "next-themes";
 import Link from "next/link";
 import telephoneIcon from "@/public/assets/icons/telephone.svg"
 import Image from "next/image";
 import Header from "./header";
+import emirateLogo from "@/public/assets/icons/emirates-retina.png";
 
 export default function Navbar() {
+    
     return (
         <div className="sticky top-0 z-50 ">
             <Header />
             <header className="bg-app-primary">
                 {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
-                <div className="max-container relative 2xl:w-[85%] w-[95%] mx-auto text-white">
+                <div className="max-container 2xl:w-[85%] w-[95%] mx-auto text-white">
                     <NavbarComponent>
                         <NavbarLeft>
-                            {/* <Link
+                            <Link
                                 href="/"
-                                className="flex items-center gap-2 text-xl font-bold"
+                                className="w-20 h-fit relative left-20 top-0 z-[40]"
                             >
-                                <LaunchUI />
-                                Emirates Holidays
-                            </Link> */}
+                                <Image 
+                                    src={emirateLogo}
+                                    alt="Emirate Logo"
+                                    className="w-full h-full"
+                                />
+                            </Link>
                             <Navigation />
                             <div className="px-1 py-5 flex items-center justify-center gap-1 bg-white">
                                 <Image 

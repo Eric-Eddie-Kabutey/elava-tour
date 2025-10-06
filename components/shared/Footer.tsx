@@ -93,7 +93,7 @@ export default function div() {
                     </Typography>
                     <ul className="flex flex-col -gap-[3px] list-inside list-disc">
                         {footer_links.map(data => (
-                            <li>
+                            <li key={data.id}>
                                 <Link href={data.href}
                                     className="hover:underline text-[16px]"
                                 >

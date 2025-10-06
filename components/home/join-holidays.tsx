@@ -27,7 +27,7 @@ function JoinHolidays() {
                         typo="body-medium-regular"
                         className='!leading-normal'
                     >
-                        We're always looking for new ways to inspire your next holiday - fascinating destinations, unique hotels and all the little things that come together to create unforgettable moments for you and your family.
+                        We&apos;re always looking for new ways to inspire your next holiday - fascinating destinations, unique hotels and all the little things that come together to create unforgettable moments for you and your family.
                     </Typography>
                     <div className="flex flex-col gap-3 w-full ">
                     {!expanded ? (

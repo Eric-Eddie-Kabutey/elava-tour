@@ -78,7 +78,7 @@ function Handpicked() {
                 </Typography>
                 <div className='w-full grid grid-cols-4 gap-4'>
                     {handpicked_destinations.map((data, index) => (
-                        <Card className='flex flex-col gap-3 rounded-none bg-white'>
+                        <Card key={data.id} className='flex flex-col gap-3 rounded-none bg-white'>
                             <CardHeader className='w-full h-[300px] p-0'>
                                 <Image 
                                     src={data.img}
@@ -106,7 +106,7 @@ function Handpicked() {
                 </Typography>
                 <div className='w-full grid grid-cols-4 gap-4'>
                     {handpicked_hotels.map((data, index) => (
-                        <Card className='flex flex-col gap-3 rounded-none bg-white'>
+                        <Card key={data.id} className='flex flex-col gap-3 rounded-none bg-white'>
                             <CardHeader className='w-full h-[300px] p-0 relative'>
                                 <Image 
                                     src={data.img}

@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { generateMetadata } from "./metadata";
 import Navbar from "@/components/shared/Navbar";
-import Header from "@/components/shared/header";
 import Footer from "@/components/shared/Footer";
 
 const geistSans = Geist({
