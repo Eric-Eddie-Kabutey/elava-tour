@@ -41,9 +41,7 @@ const services = [
 
 
 function Hero() {
-    const [departing, setDeparting] = useState("");
     const [returning, setReturning] = useState("");
-    const [departingType, setDepartingType] = useState("text");
     const [returningType, setReturningType] = useState("text");
 
   return (
