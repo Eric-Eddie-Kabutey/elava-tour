@@ -24,7 +24,7 @@ export default function Navbar() {
                 <div className="max-container 2xl:w-[85%] w-[95%] mx-auto text-white">
                     <NavbarComponent>
                         <NavbarLeft>
-                            <Link
+                            {/* <Link
                                 href="/"
                                 className="w-20 h-fit relative left-20 top-0 z-[40]"
                             >
@@ -33,7 +33,7 @@ export default function Navbar() {
                                     alt="Emirate Logo"
                                     className="w-full h-full"
                                 />
-                            </Link>
+                            </Link> */}
                             <Navigation />
                             <div className="px-1 py-5 flex items-center justify-center gap-1 bg-white">
                                 <Image 
