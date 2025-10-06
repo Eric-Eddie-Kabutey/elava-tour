@@ -160,7 +160,7 @@ function Hero() {
                                 <div className="flex justify-end">
                                     <Button className="w-full py-3 bg-blue-700 hover:bg-blue-600 text-white px-8">
                                         <span className='flex-1'>
-                                            Search
+                                            Proceed
                                         </span>
                                         <Play fill='#fff' 
                                             className='w-fit'

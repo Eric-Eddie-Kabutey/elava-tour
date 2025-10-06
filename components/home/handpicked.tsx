@@ -131,7 +131,7 @@ function Handpicked() {
         </section>
         <section className='py-12 bg-[#e4e4e4]'></section>
         <section className='w-full'>
-            <div className='max-container w-[95%] mx-auto p-12 grid grid-cols-3 gap-6 bg-[#f0f2f3]'>
+            <div className='max-container w-[95%] mx-auto pt-12 px-12 pb-24 grid grid-cols-3 gap-6 bg-[#f0f2f3]'>
                 {holidaysImgs.map((data, index) => (
                     <div key={`hOLIDAY ${index+1}`} className='w-full xl:h-[400px] h-[300px] '>
                         <Image 
