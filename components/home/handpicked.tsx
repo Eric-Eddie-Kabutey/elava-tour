@@ -5,6 +5,10 @@ import maldivesImg from "@/public/assets/images/home/maldives.jpeg";
 import mauritiusImg from "@/public/assets/images/home/mauritius.jpeg";
 import phuketImg from "@/public/assets/images/home/phuket1.jpeg";
 import lockinImg from "@/public/assets/images/home/lockinImg.jpeg";
+import familyHolidayImg from "@/public/assets/images/home/family_holidays.jpeg"
+import allInclusiveImg from "@/public/assets/images/home/all_inclusiveImg.jpeg"
+import beachHolidaysImg from "@/public/assets/images/home/beach_holidaysImg.jpeg"
+import lastminuteImg from "@/public/assets/images/home/last_minute_holidays.jpeg"
 import Typography from '../shared/typography';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import Image from 'next/image';
@@ -59,6 +63,8 @@ const handpicked_hotels = [
         name: "Atlantis The Royal",
     },
 ]
+
+const holidaysImgs = [familyHolidayImg, allInclusiveImg, beachHolidaysImg, lastminuteImg]
 
 function Handpicked() {
   return (
@@ -134,7 +140,17 @@ function Handpicked() {
         </section>
         <section className='py-8 bg-[#e4e4e4]'></section>
         <section className='w-full'>
-            <div className='max-container w-[95%] mx-auto'></div>
+            <div className='max-container w-[95%] mx-auto grid grid-cols-4 gap-6'>
+                {holidaysImgs.map((data, index) => (
+                    <div key={`hOLIDAY ${index+1}`} className='w-full h-[350px]'>
+                        <Image 
+                            src={data}
+                            alt={`Holiday ${index+1}`}
+                            className='w-full h-full'
+                        />
+                    </div>
+                ))}
+            </div>
         </section>
     </div>
   )

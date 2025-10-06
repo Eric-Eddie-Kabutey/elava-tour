@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel'
-import { Card, CardContent } from '../ui/card'
 import Autoplay from "embla-carousel-autoplay"
 import heroImg1 from "@/public/assets/images/home/hero_img1.jpeg"
 import heroImg2 from "@/public/assets/images/home/hero_img2.jpeg"
@@ -56,7 +55,7 @@ function Hero() {
 
   return (
     <div className='w-full flex flex-col gap-6 bg-gray-100'>
-        <section className='w-full'>
+        <section className='max-container w-full'>
             <Carousel 
                 plugins={[
                     Autoplay({
@@ -81,7 +80,7 @@ function Hero() {
                 <CarouselNext />
             </Carousel>
         </section>
-        <section className='pb-4 bg-[#e4e4e4] z-[20]'>
+        <section className='max-container pb-4 bg-[#e4e4e4] z-[20]'>
             <div className='w-[80%] mx-auto flex flex-col gap-4'>
                 <div className='w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
                     <div className='w-full h-fit pt-3 flex justify-between gap-1'>

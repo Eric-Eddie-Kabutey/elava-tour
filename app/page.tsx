@@ -1,17 +1,14 @@
-import Navbar from "@/components/shared/Navbar"
-import FooterSection from "@/components/shared/Footer";
 import Hero from "@/components/home/Hero";
-import Features from "@/components/home/Features";
 import Handpicked from "@/components/home/handpicked";
+import JoinHolidays from "@/components/home/join-holidays";
 
 export default function Home() {
   return (
     <>
-      <div>
+      <div className="bg-[#e4e4e4]">
           <Hero />
           <Handpicked />
-          <Features />
-          
+          <JoinHolidays />
       </div>
     </>
   );

@@ -1,99 +1,134 @@
-import {
-    Footer,
-    FooterColumn,
-    FooterBottom,
-    FooterContent,
-} from "@/components/ui/footer";
-import LaunchUI from "@/components/logos/launch-ui";
+'use client';
 import Link from "next/link";
-import { Github, Linkedin, Instagram } from "lucide-react";
+import Typography from "./typography";
+import dinerLogoImg from "@/public/assets/icons/diners_club_int_logo.png"
+import visacardLogo from "@/public/assets/icons/visacard_logo.jpg"
+import mastercardLogo from "@/public/assets/icons/mastercard_logo.png"
+import americanexpressLogo from "@/public/assets/icons/american_express_logo.png"
+import Image from "next/image";
 
-export default function FooterSection() {
+const partner_logos = [americanexpressLogo, dinerLogoImg, mastercardLogo, visacardLogo]
+
+const footer_links = [
+    {
+        id: "1",
+        title: "About Emirates Holidays",
+        href: "/"
+    },
+    {
+        id: "2",
+        title: "Emirates Skywards",
+        href: "/"
+    },
+    {
+        id: "3",
+        title: "Flight Only",
+        href: "/"
+    },
+    {
+        id: "4",
+        title: "Frequently Asked Questions",
+        href: "/"
+    },
+    {
+        id: "5",
+        title: "Holiday Booking Conditions",
+        href: "/"
+    },
+    {
+        id: "6",
+        title: "Privacy Notice",
+        href: "/"
+    },
+    {
+        id: "7",
+        title: "Sitemap",
+        href: "/"
+    },
+    {
+        id: "8",
+        title: "Website Terms of Use",
+        href: "/"
+    },
+    {
+        id: "9",
+        title: "Why Book with Us?",
+        href: "/"
+    },
+    {
+        id: "10",
+        title: "Cookie Policy",
+        href: "/"
+    },
+    {
+        id: "11",
+        title: "Update your preferences",
+        href: "/"
+    },
+    {
+        id: "12",
+        title: "Cookie Details",
+        href: "/"
+    },
+]
+
+export default function div() {
     return (
-        <footer className="w-full bg-background px-4">
-            <div className="mx-auto max-w-container">
-                <Footer className="border-t pt-8">
-                    <FooterContent className="sm:grid-cols-2 md:grid-cols-3">
-                        <FooterColumn className="col-span-2 flex-row items-center justify-between gap-8 border-b pb-8 md:col-span-1 md:flex-col md:items-start md:justify-start md:border-b-0">
-                            <div className="flex items-center gap-2">
-                                <LaunchUI />
-                                <h3 className="text-xl font-bold">KtechHub</h3>
-                            </div>
-                            <div className="ml-2.5 flex gap-4 sm:ml-0">
-                                <Link
-                                    href="/"
-                                    className="text-muted-foreground"
-                                >
-                                    <span className="sr-only">GitHub</span>
-                                    <Github className="h-5 w-5" />
-                                </Link>
-                                <Link
-                                    href="/"
-                                    className="text-muted-foreground"
-                                >
-                                    <span className="sr-only">Twitter</span>
-                                    <Linkedin className="h-5 w-5" />
-                                </Link>
-                                <Link href="/" className="text-muted-foreground">
-                                    <span className="sr-only">Discord</span>
-                                    <Instagram className="h-5 w-5" />
-                                </Link>
-                            </div>
-                        </FooterColumn>
-                        <FooterColumn>
-                            <h3 className="text-md pt-1 font-semibold">Product</h3>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Changelog
-                            </Link>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Documentation
-                            </Link>
-                        </FooterColumn>
-                        <FooterColumn>
-                            <h3 className="text-md pt-1 font-semibold">Company</h3>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                About
-                            </Link>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Careers
-                            </Link>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Blog
-                            </Link>
-                        </FooterColumn>
-                        <FooterColumn>
-                            <h3 className="text-md pt-1 font-semibold">Contact</h3>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Discord
-                            </Link>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Twitter
-                            </Link>
-                            <Link
-                                href="/"
-                                className="text-sm text-muted-foreground"
-                            >
-                                Github
-                            </Link>
-                        </FooterColumn>
-                        <FooterColumn>
-                            <h3 className="text-md pt-1 font-semibold">Legal</h3>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Privacy Policy
-                            </Link>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Terms of Service
-                            </Link>
-                            <Link href="#" className="text-sm text-muted-foreground">
-                                Cookie Policy
-                            </Link>
-                        </FooterColumn>
-                    </FooterContent>
-                    <FooterBottom className="border-0">
-                        <div>© 2024 KtechHub. All rights reserved</div>
-                    </FooterBottom>
-                </Footer>
+        <div className="w-full flex flex-col">
+            <div className="w-full bg-app-primary">
+                <section className="max-container relative 2xl:w-[85%] w-[95%] mx-auto py-4 text-white">
+                    <Typography
+                        typo="header-6-medium"
+                    >
+                        Useful Links
+                    </Typography>
+                </section>
             </div>
-        </footer>
+            <div className="w-full bg-app-secondary">
+                <section className="max-container relative 2xl:w-[85%] w-[95%] mx-auto py-4 flex flex-col gap-4 text-white">
+                    <Typography
+                        typo="body-large-medium"
+                    >
+                        About Us
+                    </Typography>
+                    <ul className="flex flex-col -gap-[3px] list-inside list-disc">
+                        {footer_links.map(data => (
+                            <li>
+                                <Link href={data.href}
+                                    className="hover:underline text-[16px]"
+                                >
+                                    {data.title}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            </div>
+            <div className="w-full py-6 bg-app-primary">
+                <section className="max-container relative 2xl:w-[85%] w-[95%] mx-auto flex flex-col gap-10">
+                    <div className="flex flex-col gap-2 text-white">
+                        <Typography
+                            typo="header-4-semibold"
+                        >
+                            We accept:
+                        </Typography>
+                        <div className="flex items-center gap-3">
+                            {partner_logos.map((logo, index) => (
+                                <div key={`Logo on${index+1}`} className={`w-fit h-8`}>
+                                    <Image 
+                                        src={logo}
+                                        alt={`Logo ${index+1}`}
+                                        className="w-full h-full  bg-white rounded-sm"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="w-full ">
+                        <div className="text-center text-[14px] text-white">© 2025 Emirates Holidays</div>
+                    </div>
+                </section>
+            </div>
+        </div>
     );
 }

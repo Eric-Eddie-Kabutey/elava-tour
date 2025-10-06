@@ -8,83 +8,84 @@ import {
 } from "@/components/ui/navbar";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import LaunchUI from "@/components/logos/launch-ui";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import telephoneIcon from "@/public/assets/icons/telephone.svg"
 import Image from "next/image";
+import Header from "./header";
 
 export default function Navbar() {
-    const { setTheme } = useTheme();
     return (
-        <header className="sticky top-0 z-50 px-4 bg-app-primary">
-            {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
-            <div className="max-container relative 2xl:w-[85%] w-[95%] mx-auto text-white">
-                <NavbarComponent>
-                    <NavbarLeft>
-                        {/* <Link
-                            href="/"
-                            className="flex items-center gap-2 text-xl font-bold"
-                        >
-                            <LaunchUI />
-                            Emirates Holidays
-                        </Link> */}
-                        <Navigation />
-                        <div className="px-1 py-5 flex items-center justify-center gap-1 bg-white">
-                            <Image 
-                                src={telephoneIcon}
-                                alt="Telephone icon"
-                                className="w-4 h-fit"
-                            />
-                            <span className="font-semibold text-black">8008501200</span>
-                        </div>
-                    </NavbarLeft>
-                    <NavbarRight>
-                        
-                        <Sheet>
-                            <SheetTrigger asChild>
-                                <Button
-                                    variant="ghost"
-                                    size="icon"
-                                    className="shrink-0 md:hidden"
-                                >
-                                    <Menu className="h-5 w-5" />
-                                    <span className="sr-only">Toggle navigation menu</span>
-                                </Button>
-                            </SheetTrigger>
-                            <SheetContent side="right">
-                                <nav className="grid gap-6 text-lg font-medium">
-                                    <Link
-                                        href="/"
-                                        className="flex items-center gap-2 text-xl font-bold"
+        <div className="sticky top-0 z-50 ">
+            <Header />
+            <header className="bg-app-primary">
+                {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
+                <div className="max-container relative 2xl:w-[85%] w-[95%] mx-auto text-white">
+                    <NavbarComponent>
+                        <NavbarLeft>
+                            {/* <Link
+                                href="/"
+                                className="flex items-center gap-2 text-xl font-bold"
+                            >
+                                <LaunchUI />
+                                Emirates Holidays
+                            </Link> */}
+                            <Navigation />
+                            <div className="px-1 py-5 flex items-center justify-center gap-1 bg-white">
+                                <Image 
+                                    src={telephoneIcon}
+                                    alt="Telephone icon"
+                                    className="w-4 h-fit"
+                                />
+                                <span className="font-semibold text-black">8008501200</span>
+                            </div>
+                        </NavbarLeft>
+                        <NavbarRight>
+                            
+                            <Sheet>
+                                <SheetTrigger asChild>
+                                    <Button
+                                        variant="ghost"
+                                        size="icon"
+                                        className="shrink-0 md:hidden"
                                     >
-                                        <span>KtechHub</span>
-                                    </Link>
-                                    <Link
-                                        href="/"
-                                        className="text-muted-foreground hover:text-foreground"
-                                    >
-                                        Getting Started
-                                    </Link>
-                                    <Link
-                                        href="/"
-                                        className="text-muted-foreground hover:text-foreground"
-                                    >
-                                        Components
-                                    </Link>
-                                    <Link
-                                        href="/contact-us"
-                                        className="text-muted-foreground hover:text-foreground"
-                                    >
-                                        Contact Us
-                                    </Link>
-                                </nav>
-                            </SheetContent>
-                        </Sheet>
-                    </NavbarRight>
-                </NavbarComponent>
-            </div>
-        </header>
+                                        <Menu className="h-5 w-5" />
+                                        <span className="sr-only">Toggle navigation menu</span>
+                                    </Button>
+                                </SheetTrigger>
+                                <SheetContent side="right">
+                                    <nav className="grid gap-6 text-lg font-medium">
+                                        <Link
+                                            href="/"
+                                            className="flex items-center gap-2 text-xl font-bold"
+                                        >
+                                            <span>KtechHub</span>
+                                        </Link>
+                                        <Link
+                                            href="/"
+                                            className="text-muted-foreground hover:text-foreground"
+                                        >
+                                            Getting Started
+                                        </Link>
+                                        <Link
+                                            href="/"
+                                            className="text-muted-foreground hover:text-foreground"
+                                        >
+                                            Components
+                                        </Link>
+                                        <Link
+                                            href="/contact-us"
+                                            className="text-muted-foreground hover:text-foreground"
+                                        >
+                                            Contact Us
+                                        </Link>
+                                    </nav>
+                                </SheetContent>
+                            </Sheet>
+                        </NavbarRight>
+                    </NavbarComponent>
+                </div>
+            </header>
+        </div>
     );
 }
