@@ -55,7 +55,7 @@ function Hero() {
 
   return (
     <div className='w-full flex flex-col gap-6 bg-[#e4e4e4]'>
-        <section className='max-container w-full'>
+        <section className=' w-full'>
             <Carousel 
                 plugins={[
                     Autoplay({
@@ -66,7 +66,7 @@ function Hero() {
                 <CarouselContent>
                     {heroImages.map((image, index) => (
                     <CarouselItem key={index} >
-                        <div className="w-full 2xl:h-[480px] h-fit">
+                        <div className="w-full 2xl:h-[550px] h-fit">
                             <Image 
                                 src={image}
                                 alt={`Image ${index+1}`}
