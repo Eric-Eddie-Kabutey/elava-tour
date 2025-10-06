@@ -35,7 +35,7 @@ export default function Navbar() {
                                 />
                             </Link> */}
                             <Navigation />
-                            <div className="px-1 py-5 flex items-center justify-center gap-1 bg-white">
+                            <div className="px-1 sm:py-5 py-3 flex items-center justify-center gap-1 bg-white">
                                 <Image 
                                     src={telephoneIcon}
                                     alt="Telephone icon"

@@ -95,7 +95,7 @@ export default function div() {
                         {footer_links.map(data => (
                             <li key={data.id}>
                                 <Link href={data.href}
-                                    className="hover:underline text-[16px]"
+                                    className="hover:underline sm:text-[16px] text-[14px]"
                                 >
                                     {data.title}
                                 </Link>
@@ -114,7 +114,7 @@ export default function div() {
                         </Typography>
                         <div className="flex items-center gap-3">
                             {partner_logos.map((logo, index) => (
-                                <div key={`Logo on${index+1}`} className={`w-fit h-8`}>
+                                <div key={`Logo on${index+1}`} className={`w-fit sm:h-8 h-6`}>
                                     <Image 
                                         src={logo}
                                         alt={`Logo ${index+1}`}

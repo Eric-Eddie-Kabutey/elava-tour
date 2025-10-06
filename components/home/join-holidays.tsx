@@ -9,11 +9,11 @@ function JoinHolidays() {
     const [expanded, setExpanded] = useState(false);
   return (
     <div className='ekb w-full py-16 bg-white'>
-        <section className='max-container w-[80%] mx-auto grid grid-cols-2 gap-12'>
+        <section className='max-container w-[80%] mx-auto grid lg:grid-cols-2 gap-12'>
             <div className='flex flex-col gap-4'>
                 <Typography
                     typo="header-6-medium"
-                    className='!text-2xl'
+                    className='sm:!text-2xl'
                 >
                     Join the Emirates Holidays Community
                 </Typography>
@@ -53,32 +53,32 @@ function JoinHolidays() {
                                     animate={{ opacity: 1, height: "auto" }}
                                     exit={{ opacity: 0, height: 0 }}
                                     transition={{ duration: 0.4, ease: "easeOut" }}
-                                    className="w-full flex items-center gap-1 py-2 rounded-md bg-white shadow-sm"
+                                    className="w-full flex xl:flex-row lg:flex-col sm:flex-row flex-col items-center xl:gap-1 gap-3 py-2 rounded-md bg-white shadow-sm"
                                 >
-                                    <div className="flex flex-col md:flex-row gap-1">
+                                    <div className="xl:flex-1 w-full flex sm:flex-row flex-col lg:flex-col xl:flex-row xl:gap-1 gap-3">
                                         <input
                                             type="email"
                                             placeholder="Email Address"
-                                            className="max-w-[160px] flex-1 px-2 py-1 placeholder:font-light text-sm border border-gray-700 outline-none focus:ring-0"
+                                            className="xl:max-w-[160px] lg:w-full xl:flex-1  sm:max-w-[160px] sm:flex-1 w-full px-2 py-1 placeholder:font-light text-sm border border-gray-700 outline-none focus:ring-0"
                                         />
                                         <input
                                             type="text"
                                             placeholder="First Name"
-                                            className="max-w-[160px] flex-1 px-2 py-1 border border-gray-700 text-sm outline-none focus:ring-0"
+                                            className="xl:max-w-[160px] lg:w-full xl:flex-1 sm:max-w-[160px] sm:flex-1 w-full px-2 py-1 border border-gray-700 text-sm outline-none focus:ring-0"
                                         />
                                         <input
                                             type="text"
                                             placeholder="Last Name"
-                                            className="max-w-[160px] flex-1 px-2 py-1 border border-gray-700 text-sm outline-none focus:ring-0"
+                                            className="xl:max-w-[160px] lg:w-full xl:flex-1 sm:max-w-[160px] sm:flex-1 w-full px-2 py-1 border border-gray-700 text-sm outline-none focus:ring-0"
                                         />
                                     </div>
 
-                                    <div className="flex-1 flex justify-end gap-2">
+                                    <div className="xl:flex-1 lg:w-full sm:flex-1 w-full flex justify-end gap-2">
                                     
                                         <Button
                                             type="submit"
                                             variant="primary"
-                                            className="py-[6px] bg-black hover:bg-gray-700"
+                                            className="xl:fit w-full py-[6px] bg-black hover:bg-gray-700"
                                         >
                                             Join Now
                                         </Button>
@@ -92,7 +92,7 @@ function JoinHolidays() {
             <div className='flex flex-col gap-2'>
                 <Typography
                     typo="header-6-medium"
-                    className='!text-2xl'
+                    className='sm:!text-2xl'
                 >
                     Why Emirates Holidays?
                 </Typography>
@@ -105,7 +105,7 @@ function JoinHolidays() {
                 </ul>
                 <Typography
                     typo="header-6-medium"
-                    className=''
+                    className='sm:!text-xl !text-base'
                 >
                     <span>For more information, please click </span>
                     <Link href="/"

@@ -59,14 +59,14 @@ function Hero() {
             <Carousel 
                 plugins={[
                     Autoplay({
-                    delay: 2000,
+                    delay: 5000,
                     }),
                 ]}
                 className="w-full">
                 <CarouselContent>
                     {heroImages.map((image, index) => (
                     <CarouselItem key={index} >
-                        <div className="w-full h-[480px]">
+                        <div className="w-full 2xl:h-[480px] h-fit">
                             <Image 
                                 src={image}
                                 alt={`Image ${index+1}`}
@@ -80,21 +80,21 @@ function Hero() {
                 <CarouselNext />
             </Carousel>
         </section>
-        <section className='max-container pb-4 bg-[#e4e4e4] z-[20]'>
-            <div className='w-[80%] mx-auto flex flex-col gap-4'>
+        <section className='max-container w-full pb-4 bg-[#e4e4e4] z-[20]'>
+            <div className='lg:w-[80%] w-[90%] mx-auto flex flex-col gap-4'>
                 <div className='w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
                     <div className='w-full h-fit pt-3 flex justify-between gap-1'>
                         <button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-red-600'>
-                            <Plane color='#000' size={28} />
-                            <span className='text-lg'>Search Holidays</span>
+                            <Plane color='#000' size={28} className='xs:flex hidden' />
+                            <span className='sm:text-lg'>Search Holidays</span>
                         </button>
                         
                         <button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-red-600'>
-                            <Tag color='#000' size={28} />
-                            <span className='text-lg'>Manage Booking</span>
+                            <Tag color='#000' size={28} className='xs:flex hidden' />
+                            <span className='sm:text-lg'>Manage Booking</span>
                         </button>
                     </div>
-                    <form className="px-2 grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+                    <form className="px-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 mt-4">
                         <div className="flex flex-col gap-2">
                             <Select>
                                 <SelectTrigger >
@@ -184,17 +184,19 @@ function Hero() {
                         </div>
                     </form>
                 </div>
-                <div className='w-full grid grid-cols-5 gap-[2px]'>
-                    {services.map((data, index) => (
-                        <div key={data.id} className='p-3 flex flex-col justify-center items-center gap-2 bg-white hover:border-b-2 hover:border-red-800'>
-                            <Image 
-                                src={data.icon}
-                                alt={`services ${index+1}`}
-                                className='w-12 h-fit'
-                            />
-                            <div className='text-center font-medium text-gray-400 leading-5'>{data.title}</div>
-                        </div>
-                    ))}
+                <div className='w-full sm:block hidden overflow-auto'>
+                    <div className=' w-full grid grid-cols-5 sm:gap-[2px] gap-4'>
+                        {services.map((data, index) => (
+                            <div key={data.id} className='p-3 flex flex-col justify-center items-center gap-2 bg-white hover:border-b-2 hover:border-red-800'>
+                                <Image 
+                                    src={data.icon}
+                                    alt={`services ${index+1}`}
+                                    className='w-12 h-fit'
+                                />
+                                <div className='text-center font-medium text-gray-400 leading-5'>{data.title}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
