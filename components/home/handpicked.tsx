@@ -59,8 +59,8 @@ const holidaysImgs = [familyHolidayImg, allInclusiveImg, beachHolidaysImg]
 
 function Handpicked() {
   return (
-    <div className='hidden w-full pt-5 lg:flex flex-col bg-[#e4e4e4]'>
-        <section className='max-container w-[95%] mx-auto p-10 flex flex-col gap-4 bg-[#f0f2f3]'>
+    <div className='hidden w-full pt-10 lg:flex flex-col bg-[#e4e4e4]'>
+        <section className='max-container w-[95%] mx-auto p-12 flex flex-col gap-4 bg-[#f0f2f3]'>
             <div className='w-full flex flex-col gap-4 text-black'>
                 <Typography
                     typo="header-5-medium"
@@ -89,7 +89,7 @@ function Handpicked() {
                     ))}
                 </div>
             </div>
-            <div className='w-full py-8 flex flex-col gap-6 text-black'>
+            <div className='w-full py-16 flex flex-col gap-6 text-black'>
                 <Typography
                     typo="header-5-medium"
                 >
@@ -131,7 +131,7 @@ function Handpicked() {
         </section>
         <section className='py-12 bg-[#e4e4e4]'></section>
         <section className='w-full'>
-            <div className='max-container w-[95%] mx-auto p-10 grid grid-cols-3 gap-6 bg-[#f0f2f3]'>
+            <div className='max-container w-[95%] mx-auto p-12 grid grid-cols-3 gap-6 bg-[#f0f2f3]'>
                 {holidaysImgs.map((data, index) => (
                     <div key={`hOLIDAY ${index+1}`} className='w-full xl:h-[400px] h-[300px] '>
                         <Image 

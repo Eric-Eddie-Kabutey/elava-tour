@@ -8,12 +8,10 @@ import heroImg3 from "@/public/assets/images/home/hero_img3.jpeg"
 import executiveIcon from "@/public/assets/icons/executive_icon.jpeg";
 import depositIcon from "@/public/assets/icons/deposit_icon.jpeg";
 import personalizedIcon from "@/public/assets/icons/personalized_icon.jpeg";
-import earnIcon from "@/public/assets/icons/earn_icon.jpeg";
 import customerIcon from "@/public/assets/icons/customer_service_icon.jpeg";
 import Image from 'next/image';
 import { Plane, Play, Tag } from 'lucide-react';
 import { Button } from '../ui/button';
-import { Label } from '../ui/label';
 import { Input } from '../ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 
@@ -36,11 +34,6 @@ const services = [
     },
     {
         id: "4",
-        icon: earnIcon,
-        title: "Earn and redeem Skywards Miles",
-    },
-    {
-        id: "1",
         icon: customerIcon,
         title: "24/7 Customer Service and in-resort representation"
     },
@@ -66,7 +59,7 @@ function Hero() {
                 <CarouselContent>
                     {heroImages.map((image, index) => (
                     <CarouselItem key={index} >
-                        <div className="w-full 2xl:h-[550px] h-fit">
+                        <div className="w-full h-[75vh] max-h-[700px]">
                             <Image 
                                 src={image}
                                 alt={`Image ${index+1}`}
@@ -81,113 +74,110 @@ function Hero() {
             </Carousel>
         </section>
         <section className='max-container w-full pb-4 bg-[#e4e4e4] z-[20]'>
-            <div className='lg:w-[80%] w-[90%] mx-auto flex flex-col gap-4'>
+            <div className='lg:w-[75%] w-[80%] mx-auto flex flex-col gap-8'>
                 <div className='w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
-                    <div className='w-full h-fit pt-3 flex justify-between gap-1'>
-                        <button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-red-600'>
-                            <Plane color='#000' size={28} className='xs:flex hidden' />
-                            <span className='sm:text-lg'>Search Holidays</span>
-                        </button>
-                        
-                        <button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-red-600'>
-                            <Tag color='#000' size={28} className='xs:flex hidden' />
-                            <span className='sm:text-lg'>Manage Booking</span>
-                        </button>
+                    <div className='w-full flex justify-between items-start gap-1'>
+                        <div className='flex-1 flex flex-col gap-3'>
+                            <button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-blue-700 hover:border-black'>
+                                <Plane color='#000' size={28} className='xs:flex hidden' />
+                                <span className='sm:text-lg'>Search Holidays</span>
+                            </button>
+                            <form className="px-2 flex flex-col gap-3 mt-4">
+                                <div className='w-full flex justify-between gap-2'>
+                                    <div className="flex-1 flex flex-col gap-2">
+                                        <Select>
+                                            <SelectTrigger >
+                                                <SelectValue className='!py-4 border' placeholder="-- Where to --" />
+                                            </SelectTrigger>
+                                            <SelectContent >
+                                                <SelectItem value="gambia">Gambia</SelectItem>
+                                                <SelectItem value="uk">UK</SelectItem>
+                                                <SelectItem value="canada">Canada</SelectItem>
+                                            </SelectContent>    
+                                        </Select>
+                                    </div>
+
+                                    <div className="flex-1 flex flex-col">
+                                        <Input 
+                                            type={returningType}
+                                            value={returning}
+                                            onFocus={() => setReturningType("date")}
+                                            onBlur={(e) => {
+                                                if (!e.target.value) setReturningType("text");
+                                            }}
+                                            onChange={(e) => setReturning(e.target.value)}
+                                            placeholder="Date"
+
+                                            className='!py-4 border border-black'
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex justify-end">
+                                    <Button className="w-full py-3 bg-blue-700 hover:bg-blue-600 text-white px-8">
+                                        <span className='flex-1'>
+                                            Search
+                                        </span>
+                                        <Play fill='#fff' 
+                                            className='w-fit'
+                                        />
+                                    </Button>
+                                </div>
+
+                                
+                            </form>
+                        </div>
+                        <div className='w-[1.5px] h-10 mt-2 bg-gray-300'></div>
+                        <div className='flex-1 flex flex-col gap-3'>
+                            <button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-blue-700 hover:border-black'>
+                                <Tag color='#000' size={28} className='xs:flex hidden' />
+                                <span className='sm:text-lg'>Customize Plan</span>
+                            </button>
+                            <form className="px-2 flex flex-col gap-3 mt-4">
+                                <div className='w-full flex justify-between gap-2'>
+                                    <div className="flex-1 flex flex-col gap-2">
+                                        <Select>
+                                            <SelectTrigger >
+                                                <SelectValue className='!py-4 border' placeholder="-- How many are you? --" />
+                                            </SelectTrigger>
+                                            <SelectContent >
+                                                <SelectItem value="2-4">2 - 5</SelectItem>
+                                                <SelectItem value="6-10">6 - 10</SelectItem>
+                                                <SelectItem value="11-15">11 - 15</SelectItem>
+                                            </SelectContent>    
+                                        </Select>
+                                    </div>
+                                    <div className="flex-1 flex flex-col gap-2">
+                                        <Select>
+                                            <SelectTrigger >
+                                                <SelectValue className='!py-4 border' placeholder="-- What is your budget? --" />
+                                            </SelectTrigger>
+                                            <SelectContent >
+                                                <SelectItem value="1000-2500">$1,000 - $2,500</SelectItem>
+                                                <SelectItem value="3000-5000">$3,000 - $8,000</SelectItem>
+                                                <SelectItem value="5500-8000">$5,500 - $8,000</SelectItem>
+                                            </SelectContent>    
+                                        </Select>
+                                    </div>
+                                </div>
+                                <div className="flex justify-end">
+                                    <Button className="w-full py-3 bg-blue-700 hover:bg-blue-600 text-white px-8">
+                                        <span className='flex-1'>
+                                            Search
+                                        </span>
+                                        <Play fill='#fff' 
+                                            className='w-fit'
+                                        />
+                                    </Button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <form className="px-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 mt-4">
-                        <div className="flex flex-col gap-2">
-                            <Select>
-                                <SelectTrigger >
-                                    <SelectValue className='!py-4 border' placeholder="-- Select Default Airport --" />
-                                </SelectTrigger>
-                                <SelectContent >
-                                    <SelectItem value="accra">Accra</SelectItem>
-                                    <SelectItem value="kumasi">Kumasi</SelectItem>
-                                    <SelectItem value="takoradi">Takoradi</SelectItem>
-                                </SelectContent>
-                            </Select>
-                        </div>
-
-                        <div className="flex flex-col">
-                            <Input placeholder="Enter a destination or hotel name" 
-                                className='!py-4 border border-black'
-                            />
-                        </div>
-
-                        <div className="px-3 flex gap-3 border border-black rounded-md bg-white">
-                            <div className="flex flex-col flex-1">
-                                <Label className="text-[13px] font-normal">Departing</Label>
-                                <Input
-                                    type={departingType}
-                                    value={departing}
-                                    onFocus={() => setDepartingType("date")}
-                                    onBlur={(e) => {
-                                        if (!e.target.value) setDepartingType("text");
-                                    }}
-                                    onChange={(e) => setDeparting(e.target.value)}
-                                    placeholder="Check-In"
-                                    className="px-0 text-[12px] border-none focus:ring-0 outline-none"
-                                />
-                            </div>
-
-                            {/* Returning */}
-                            <div className="flex flex-col flex-1">
-                                <Label className="text-[13px] font-normal">Returning</Label>
-                                <Input
-                                    type={returningType}
-                                    value={returning}
-                                    onFocus={() => setReturningType("date")}
-                                    onBlur={(e) => {
-                                        if (!e.target.value) setReturningType("text");
-                                    }}
-                                    onChange={(e) => setReturning(e.target.value)}
-                                    placeholder="Check-Out"
-                                    className="px-0 text-[12px] border-none focus:ring-0 outline-none"
-                                />
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col">
-                            <Select>
-                            <SelectTrigger>
-                                <SelectValue placeholder="1 Room (2 Adults)" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectItem value="1room">1 Room (2 Adults)</SelectItem>
-                                <SelectItem value="2room">2 Rooms (4 Adults)</SelectItem>
-                                <SelectItem value="3room">3 Rooms (6 Adults)</SelectItem>
-                            </SelectContent>
-                            </Select>
-                        </div>
-
-                        <div className="flex flex-col">
-                            <Select>
-                                <SelectTrigger>
-                                    <SelectValue placeholder="Economy" />
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectItem value="economy">Economy</SelectItem>
-                                    <SelectItem value="business">Business</SelectItem>
-                                    <SelectItem value="first">First Class</SelectItem>
-                                </SelectContent>
-                            </Select>
-                        </div>
-                        <div className="flex justify-end">
-                            <Button className="w-full py-3 bg-red-600 hover:bg-red-700 text-white px-8">
-                                <span className='flex-1'>
-                                    Search
-                                </span>
-                                <Play fill='#fff' 
-                                    className='w-fit'
-                                />
-                            </Button>
-                        </div>
-                    </form>
+                    
                 </div>
                 <div className='w-full sm:block hidden overflow-auto'>
-                    <div className=' w-full grid grid-cols-5 sm:gap-[2px] gap-4'>
+                    <div className=' w-full grid grid-cols-4 sm:gap-[3px] gap-4'>
                         {services.map((data, index) => (
-                            <div key={data.id} className='p-3 flex flex-col justify-center items-center gap-2 bg-white hover:border-b-2 hover:border-red-800'>
+                            <div key={data.id} className='p-6 flex flex-col justify-center items-center gap-2 bg-white hover:border-b-2 hover:border-blue-800'>
                                 <Image 
                                     src={data.icon}
                                     alt={`services ${index+1}`}
