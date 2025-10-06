@@ -71,7 +71,7 @@ function Hero() {
                 <CarouselNext />
             </Carousel>
         </section>
-        <section className='max-container w-full pb-4 bg-[#e4e4e4] z-[20]'>
+        <section className='max-container w-full pb-4 bg-[#] z-[20]'>
             <div className='lg:w-[75%] w-[80%] mx-auto flex flex-col gap-[55px]'>
                 <div className='w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
                     <div className='w-full flex justify-between items-start gap-1'>

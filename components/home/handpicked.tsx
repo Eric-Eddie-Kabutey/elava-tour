@@ -70,7 +70,7 @@ function Handpicked() {
                 </div>
             </div>
             <Button
-                variant="primary"
+                variant="outline"
                 className='w-fit mx-auto px-8 py-3 flex items-center gap-4'
             >
                 View All
@@ -99,7 +99,7 @@ function Handpicked() {
                     ))}
                 </div>
                 <Button
-                    variant="primary"
+                    variant="outline"
                     className='w-fit mx-auto px-8 py-3 flex items-center gap-4'
                 >
                     View All

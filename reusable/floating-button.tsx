@@ -18,7 +18,7 @@ function FloatingButton() {
         return () => clearInterval(interval);
     }, [open]);
   return (
-    <div className='fixed bottom-16  z-[999]'
+    <div className='fixed bottom-16  z-[50]'
         style={{ right: "50px", bottom: "50px", }}
     >
         <AnimatePresence>
