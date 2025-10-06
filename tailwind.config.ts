@@ -57,6 +57,16 @@ export default {
   				foreground: 'hsl(var(--brand-foreground))'
   			}
   		},
+		screens: {
+  			xm: '350px',
+  			xs: '475px',
+  			sm: '640px',
+  			md: '768px',
+  			lg: '1024px',
+  			xl: '1280px',
+  			'2xl': '1530px',
+  			'3xl': '2500px',
+  		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

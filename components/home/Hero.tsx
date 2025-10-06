@@ -54,7 +54,7 @@ function Hero() {
     const [returningType, setReturningType] = useState("text");
 
   return (
-    <div className='w-full flex flex-col gap-6 bg-gray-100'>
+    <div className='w-full flex flex-col gap-6 bg-[#e4e4e4]'>
         <section className='max-container w-full'>
             <Carousel 
                 plugins={[

@@ -3,7 +3,6 @@ import React from 'react';
 import dubaiImg from "@/public/assets/images/home/dubai.jpeg";
 import maldivesImg from "@/public/assets/images/home/maldives.jpeg";
 import mauritiusImg from "@/public/assets/images/home/mauritius.jpeg";
-import phuketImg from "@/public/assets/images/home/phuket1.jpeg";
 import lockinImg from "@/public/assets/images/home/lockinImg.jpeg";
 import familyHolidayImg from "@/public/assets/images/home/family_holidays.jpeg"
 import allInclusiveImg from "@/public/assets/images/home/all_inclusiveImg.jpeg"
@@ -12,7 +11,6 @@ import lastminuteImg from "@/public/assets/images/home/last_minute_holidays.jpeg
 import kandimaImg from "@/public/assets/images/home/kandima_img.jpeg"
 import riuImg from "@/public/assets/images/home/riu_img.jpeg"
 import seasideImg from "@/public/assets/images/home/seaside_img.jpeg"
-import atlantisImg from "@/public/assets/images/home/atlantis_img.jpeg"
 import Typography from '../shared/typography';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import Image from 'next/image';
@@ -35,11 +33,6 @@ const handpicked_destinations = [
         price: "6,769",
         img: mauritiusImg,
     },
-    {
-        id: "4",
-        price: "4,089",
-        img: phuketImg,
-    },
 ]
 
 const handpicked_hotels = [
@@ -61,19 +54,13 @@ const handpicked_hotels = [
         img: seasideImg,
         name: "Seaside Finolhu Baa Atoll Maldives",
     },
-    {
-        id: "4",
-        price: "4,089",
-        img: atlantisImg,
-        name: "Atlantis The Royal",
-    },
 ]
 
 const holidaysImgs = [familyHolidayImg, allInclusiveImg, beachHolidaysImg, lastminuteImg]
 
 function HandpickedCarousel() {
   return (
-    <div className='xl:hidden w-full py-5 flex flex-col gap-6 bg-[#f0f2f3]'>
+    <div className='lg:hidden w-full py-5 flex flex-col gap-6 bg-[#f0f2f3]'>
         <section className='max-container w-[95%] mx-auto flex flex-col gap-4'>
             <div className='w-full flex flex-col gap-4 text-black'>
                 <Typography
@@ -87,7 +74,7 @@ function HandpickedCarousel() {
                         {handpicked_destinations.map((data, index) => (
                             <CarouselItem key={data.id} className="sm:basis-1/2 lg:basis-1/3">
                                 <Card  className='flex flex-col gap-3 rounded-none bg-white'>
-                                    <CardHeader className='w-full md:h-[300px] h-[250px] p-0'>
+                                    <CardHeader className='w-full md:h-[250px] h-[250px] p-0'>
                                         <Image 
                                             src={data.img}
                                             alt={`HandpickedCarousel ${index+1}`}
