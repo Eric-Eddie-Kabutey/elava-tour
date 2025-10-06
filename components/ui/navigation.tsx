@@ -23,26 +23,26 @@ const links: { title: string; href: string; description: string, links?: { title
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-    title: "Special Offers",
+    title: "Destinations",
     href: "/",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
-    title: "Destinations",
+    title: "Tours",
     href: "/",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     links: [
       {
-        title: "Introduction",
-        href: "/docs",
+        title: "Trip Types",
+        href: "/",
         description:
           "Re-usable components built using Radix UI and Tailwind CSS.",
       },
       {
         title: "Installation",
-        href: "/docs/installation",
+        href: "/",
         description:
           "How to install dependencies and structure your app.",
       },
@@ -55,13 +55,13 @@ const links: { title: string; href: string; description: string, links?: { title
     ]
   },
   {
-    title: "Holiday types",
-    href: "/blog",
+    title: "About",
+    href: "/",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-    title: "Tours",
+    title: "Insights",
     href: "/",
     description:
       "Get in touch with our team for any questions or inquiries.",

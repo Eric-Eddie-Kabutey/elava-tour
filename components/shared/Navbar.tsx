@@ -19,7 +19,7 @@ export default function Navbar() {
     return (
         <div className="sticky top-0 z-50 ">
             <Header />
-            <header className="bg-app-primary">
+            <header className="bg-blue-700">
                 {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
                 <div className="max-container 2xl:w-[85%] w-[95%] mx-auto text-white">
                     <NavbarComponent>
@@ -41,7 +41,7 @@ export default function Navbar() {
                                     alt="Telephone icon"
                                     className="w-4 h-fit"
                                 />
-                                <span className="font-semibold text-black">8008501200</span>
+                                <span className="font-semibold text-black">+27 60 982 5693</span>
                             </div>
                         </NavbarLeft>
                         <NavbarRight>

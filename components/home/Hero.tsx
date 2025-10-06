@@ -45,7 +45,7 @@ function Hero() {
     const [returningType, setReturningType] = useState("text");
 
   return (
-    <div className='w-full flex flex-col gap-6 bg-[#e4e4e4]'>
+    <div className='w-full pb-12 flex flex-col gap-6 bg-[#e4e4e4]'>
         <section className=' w-full'>
             <Carousel 
                 plugins={[
@@ -72,7 +72,7 @@ function Hero() {
             </Carousel>
         </section>
         <section className='max-container w-full pb-4 bg-[#e4e4e4] z-[20]'>
-            <div className='lg:w-[75%] w-[80%] mx-auto flex flex-col gap-8'>
+            <div className='lg:w-[75%] w-[80%] mx-auto flex flex-col gap-[55px]'>
                 <div className='w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
                     <div className='w-full flex justify-between items-start gap-1'>
                         <div className='flex-1 flex flex-col gap-3'>
@@ -170,7 +170,6 @@ function Hero() {
                             </form>
                         </div>
                     </div>
-                    
                 </div>
                 <div className='w-full sm:block hidden overflow-auto'>
                     <div className=' w-full grid grid-cols-4 sm:gap-[3px] gap-4'>
