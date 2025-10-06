@@ -12,7 +12,7 @@ import Link from "next/link";
 import telephoneIcon from "@/public/assets/icons/telephone.svg"
 import Image from "next/image";
 import Header from "./header";
-import emirateLogo from "@/public/assets/icons/emirates-retina.png";
+// import emirateLogo from "@/public/assets/icons/emirates-retina.png";
 
 export default function Navbar() {
     
