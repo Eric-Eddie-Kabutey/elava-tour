@@ -8,7 +8,7 @@ import Link from 'next/link';
 function JoinHolidays() {
     const [expanded, setExpanded] = useState(false);
   return (
-    <div className='ekb w-full py-16 bg-white'>
+    <div className='ekb w-full py-24 bg-white'>
         <section className='max-container w-[80%] mx-auto grid lg:grid-cols-2 gap-12'>
             <div className='flex flex-col gap-4'>
                 <Typography
@@ -22,7 +22,7 @@ function JoinHolidays() {
                 >
                     Sign up to receive exclusive offers and new holiday inspiration direct to your inbox.
                 </Typography>
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-5'>
                     <Typography
                         typo="body-medium-regular"
                         className='!leading-normal'
