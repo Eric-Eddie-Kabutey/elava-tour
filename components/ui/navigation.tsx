@@ -17,16 +17,90 @@ import {
 
 const links: { title: string; href: string; description: string, links?: { title: string; href: string; description: string }[] }[] = [
   {
-    title: "Home",
-    href: "/",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
     title: "Destinations",
     href: "/",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    links: [
+      {
+        title: "Ghana",
+        href: "/",
+        description:
+          "How to install dependencies and structure your app.",
+      },
+      {
+        title: "South Africa",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Namibia",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Morocco",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Kenya",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Europe",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Zimbabwe",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Dubai",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Thailand",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Egypt",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Mauritius",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Turkey",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "India",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+    ]
   },
   {
     title: "Tours",
@@ -35,20 +109,88 @@ const links: { title: string; href: string; description: string, links?: { title
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
     links: [
       {
-        title: "Trip Types",
-        href: "/",
-        description:
-          "Re-usable components built using Radix UI and Tailwind CSS.",
-      },
-      {
-        title: "Installation",
+        title: "South Africa Tours",
         href: "/",
         description:
           "How to install dependencies and structure your app.",
       },
       {
-        title: "Typography",
-        href: "/doc/typography",
+        title: "Zimbabwe Tours ",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Namibia Tours",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Kenya Tours",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Morocco Tours",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Safaris",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+    ]
+  },
+  {
+    title: "Trip Types",
+    href: "/",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+    links: [
+      {
+        title: "All-inclusive Holiday",
+        href: "/",
+        description:
+          "Re-usable components built using Radix UI and Tailwind CSS.",
+      },
+      {
+        title: "Beach Holiday",
+        href: "/",
+        description:
+          "How to install dependencies and structure your app.",
+      },
+      {
+        title: "City Breaks",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Family Holidays",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Romantic Retreats",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Business Trips",
+        href: "/",
+        description:
+          "Styles for headings, paragraphs, lists...etc",
+      },
+      {
+        title: "Group Tours",
+        href: "/",
         description:
           "Styles for headings, paragraphs, lists...etc",
       },
@@ -84,7 +226,7 @@ export default function Navigation() {
               <NavigationMenuItem key={link.href}>
                 <NavigationMenuTrigger>{link.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] text-white">
+                  <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] text-">
                     {link.links.map((sublink) => (
                       <ListItem key={sublink.href} href={sublink.href} title={sublink.title}>
                         {sublink.description}

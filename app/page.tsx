@@ -1,7 +1,6 @@
 import Hero from "@/components/home/Hero";
 import Handpicked from "@/components/home/handpicked";
 import HandpickedCarousel from "@/components/home/handpicked-carousel";
-import JoinHolidays from "@/components/home/join-holidays";
 import Testimonial from "@/components/home/testimonial";
 import FloatingButton from "@/reusable/floating-button";
 
@@ -12,7 +11,6 @@ export default function Home() {
           <Hero />
           <Handpicked />
           <HandpickedCarousel />
-          <JoinHolidays />
           <Testimonial />
           <FloatingButton />
       </div>
