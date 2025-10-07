@@ -39,7 +39,7 @@ const holidaysImgs = [familyHolidayImg, allInclusiveImg, beachHolidaysImg, kandi
 
 function Handpicked() {
   return (
-    <div className='hidden w-full pt-10 pb-24 lg:flex flex-col bg-[#e4e4e4]'>
+    <div className='hidden w-full py-10 lg:flex flex-col bg-[#e4e4e4]'>
         <section className='max-container w-[95%] mx-auto px-12 pt-12 pb-16 flex flex-col gap-12 bg-[#f0f2f3]'>
             <div className='w-full flex flex-col gap-4 text-black'>
                 <Typography

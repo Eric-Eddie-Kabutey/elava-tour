@@ -16,7 +16,7 @@ import { testimonial_clients } from '@/constants';
 
 function Testimonial() {
   return (
-    <div className='w-full py-32 bg-[#e4e4e4]'>
+    <div className='w-full py-24 bg-[#e4e4e4]'>
         <section className='max-container 2xl:w-[85%] w-[95%] mx-auto flex flex-col gap-4'>
             <div className='w-full pb-4 flex flex-col items-center gap-5'>
                 <Typography
