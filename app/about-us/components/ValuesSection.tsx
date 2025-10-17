@@ -1,4 +1,4 @@
-const ValuesSection = () => {
+const ValuesSection = ({id}: {id: string}) => {
   const values = [
     {
       title: "Innovation",
@@ -15,7 +15,7 @@ const ValuesSection = () => {
   ];
 
   return (
-    <section className="mb-16">
+    <section id={id} className="mb-16">
       <h2 className="text-3xl font-bold mb-6">Our Values</h2>
       <div className="grid md:grid-cols-3 gap-8">
         {values.map((value, index) => (
