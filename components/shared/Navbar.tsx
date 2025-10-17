@@ -1,5 +1,5 @@
 "use client"
-import Navigation from "@/components/ui/navigation";
+// import Navigation from "@/components/ui/navigation";
 import { Button } from "@/components/ui/button";
 import {
     Navbar as NavbarComponent,
@@ -12,6 +12,7 @@ import Link from "next/link";
 import telephoneIcon from "@/public/assets/icons/telephone.svg"
 import Image from "next/image";
 import Header from "./header";
+import Nav from "../ui/nav";
 // import emirateLogo from "@/public/assets/icons/emirates-retina.png";
 
 export default function Navbar() {
@@ -34,7 +35,8 @@ export default function Navbar() {
                                     className="w-full h-full"
                                 />
                             </Link> */}
-                            <Navigation />
+                            {/* <Navigation /> */}
+                            <Nav />
                             <div className="px-1 sm:py-5 py-3 flex items-center justify-center gap-1 bg-white">
                                 <Image 
                                     src={telephoneIcon}
