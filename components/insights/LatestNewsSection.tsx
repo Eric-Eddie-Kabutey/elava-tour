@@ -125,7 +125,7 @@ export const LatestNewsSection = () => {
                 </PaginationItem>
                 {/* For simplicity, we'll use a text indicator. You can add page numbers here if needed. */}
                 <PaginationItem>
-                  <span className="px-4 py-2 text-sm text-blue-700">
+                  <span className="px-4 py-2 text-base text-blue-700">
                     Page {currentPage} of {totalPages}
                   </span>
                 </PaginationItem>
