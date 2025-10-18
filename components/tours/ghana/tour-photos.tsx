@@ -32,9 +32,9 @@ function TourPhotos() {
                 <Typography
                     typo="header-4-semibold"
                 >Belize tour photos from our travellers</Typography>
-                <div className='w-full p-6 grid grid-cols-5 gap-4 bg-white rounded-md'>
+                <div className='w-full p-6 columns-5 gap-4 bg-white rounded-md'>
                     {tourImages.map((image, index) => (
-                        <div className='relative w-auto h-[200px]'>
+                        <div className='relative mb-4 break-inside-avoid w-auto h-[200px]'>
                             <Image 
                                 src={image}
                                 alt={`Photo ${index+1}`}
