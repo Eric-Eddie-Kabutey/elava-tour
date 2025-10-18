@@ -68,14 +68,22 @@ export const navigationData: NavigationItem[] = [
     },
     {
         title: "Trip Types",
-        href: "/trip-types",
-        links: [
-            { title: "All-inclusive Holiday", href: "/trip-types/all-inclusive", description: "Everything you need for a perfect getaway." },
-            { title: "Beach Holiday", href: "/trip-types/beach", description: "Relax and unwind on sun-kissed shores." },
-            { title: "City Breaks", href: "/trip-types/city-breaks", description: "Explore the world's most exciting cities." },
-            { title: "Family Holidays", href: "/trip-types/family", description: "Create unforgettable memories with your loved ones." },
-            { title: "Romantic Retreats", href: "/trip-types/romantic", description: "Escape with your special someone." },
-            { title: "Group Tours", href: "/trip-types/group", description: "Adventure with a group of like-minded travelers." },
+        columns: [
+            {
+                title: "Popular Types",
+                links: [
+                    { title: "All-inclusive Holiday", href: "/trip-types/all-inclusive", description: "Everything you need for a perfect getaway." },
+                    { title: "Beach Holiday", href: "/trip-types/beach", description: "Relax and unwind on sun-kissed shores." },
+                    { title: "Romantic Retreats", href: "/trip-types/city-breaks", description: "Escape with your special someone." },        
+                ],
+            },
+            {
+                title: "More Types",
+                links: [
+                    { title: "Group Tours", href: "/trip-types/adventure", description: "Thrilling experiences for the adventurous spirit." },                    
+                    { title: "Family Holiday", href: "/trip-types/wildlife", description: "Get up close with nature's most incredible creatures." },
+                ],
+            },
         ],
     },
     {
