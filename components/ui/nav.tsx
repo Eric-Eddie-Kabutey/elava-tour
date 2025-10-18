@@ -49,12 +49,12 @@ export default function Nav() {
                   </div>
                 </NavigationMenuContent>
               </>
-            ) : /* Case 2: Item has a single list of links (e.g., "Trip Types") */
+            ) : /* Case 2: Item has a single list of links (e.g., "Insights") */
             item.links ? (
               <>
                 <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
+                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-1">
                     {item.links.map((link) => (
                       <ListItem key={link.title} href={link.href} title={link.title}>
                         {link.description}
