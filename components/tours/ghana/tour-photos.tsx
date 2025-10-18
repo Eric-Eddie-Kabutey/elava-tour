@@ -40,7 +40,7 @@ function TourPhotos() {
                                 alt={`Photo ${index+1}`}
                                 className='w-full h-full object-cover rounded-md'
                             />
-                            <div className='absolute inset-0 group hover:bg-black/40 transition-all duration-200'>
+                            <div className='absolute inset-0 group hover:bg-black/40 transition-all duration-400 ease-in-out'>
                                 <div className='w-full p-4 flex items-center gap-2'>
                                     <Instagram color='#fff' size={20} />
                                     <Typography
