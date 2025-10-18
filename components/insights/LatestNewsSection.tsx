@@ -47,7 +47,7 @@ export const LatestNewsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[#e4e4e4]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -70,7 +70,7 @@ export const LatestNewsSection = () => {
         {/* Responsive Grid for News Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {paginatedPosts.map((post) => (
-            <Card key={post.id} className="flex flex-col overflow-hidden shadow-md transition-shadow hover:shadow-xl">
+            <Card key={post.id} className="bg-white flex flex-col overflow-hidden shadow-md transition-shadow hover:shadow-xl">
               <CardHeader className="p-0 relative">
                 <Image
                   src={post.image}
@@ -120,12 +120,12 @@ export const LatestNewsSection = () => {
                       e.preventDefault();
                       setCurrentPage((prev) => Math.max(1, prev - 1));
                     }}
-                    className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                    className={currentPage === 1 ? "pointer-events-none opacity-50 text-gray-700" : "text-gray-900 hover:text-gray-700"}
                   />
                 </PaginationItem>
                 {/* For simplicity, we'll use a text indicator. You can add page numbers here if needed. */}
                 <PaginationItem>
-                  <span className="px-4 py-2 text-sm">
+                  <span className="px-4 py-2 text-sm text-blue-700">
                     Page {currentPage} of {totalPages}
                   </span>
                 </PaginationItem>
@@ -136,7 +136,7 @@ export const LatestNewsSection = () => {
                       e.preventDefault();
                       setCurrentPage((prev) => Math.min(totalPages, prev + 1));
                     }}
-                    className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                    className={currentPage === totalPages ? "pointer-events-none opacity-50 text-gray-700" : "text-gray-900 hover:text-gray-700"}
                   />
                 </PaginationItem>
               </PaginationContent>
