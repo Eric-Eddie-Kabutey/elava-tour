@@ -52,7 +52,7 @@ export const FeaturedNewsCarousel = () => {
   }
 
   return (
-    <section className="py-12 bg-[#f0f8ff]">
+    <section className="py-12 bg-[#e4e4e4]">
       <div className="container mx-auto px-4">
         <div className="relative">
           {/* Embla Viewport */}
