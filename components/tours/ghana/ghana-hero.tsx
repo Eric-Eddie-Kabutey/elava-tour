@@ -1,11 +1,10 @@
 'use client';
 import Typography from '@/components/shared/typography'
 import React from 'react';
-import ghanaflag from "@/public/assets/images/Flag_of_Ghana.png"
 import ghanaExperienceImg from "@/public/assets/images/home/lockinImg.jpeg"
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
-function GhanaTourHero() {
+function GhanaTourHero({ img }: { img: StaticImageData }) {
   return (
     <div className='w-full py-12 bg-gradient-to-br from-gray-50 to-gray-100'>
         <section className='max-container w-[85%] mx-auto flex flex-col gap-8'>
@@ -16,7 +15,7 @@ function GhanaTourHero() {
             <div className='w-full grid grid-cols-2'>
                 <div className='w-full h-[400px]'>
                     <Image 
-                        src={ghanaflag}
+                        src={img}
                         alt='Ghana flag'
                         className='w-full h-full object-cover'
                     />

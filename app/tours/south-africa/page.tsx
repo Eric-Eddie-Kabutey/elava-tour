@@ -3,13 +3,13 @@ import GhanaTourHero from '@/components/tours/ghana/ghana-hero'
 import GhanaTourFaqs from '@/components/tours/ghana/ghana-tour-faqs'
 import TourPhotos from '@/components/tours/ghana/tour-photos'
 import React from 'react'
-import ghanaflag from "@/public/assets/images/Flag_of_Ghana.png"
+import southAfricaImg from "@/public/assets/images/south_africa_flag.png"
 
 
-function GhanaTourPage() {
+function SouthAfricaPage() {
   return (
     <div>
-        <GhanaTourHero img={ghanaflag}/>
+        <GhanaTourHero img={southAfricaImg} />
         <CurrentTrips />
         <TourPhotos />
         <GhanaTourFaqs />
@@ -17,4 +17,4 @@ function GhanaTourPage() {
   )
 }
 
-export default GhanaTourPage
+export default SouthAfricaPage
