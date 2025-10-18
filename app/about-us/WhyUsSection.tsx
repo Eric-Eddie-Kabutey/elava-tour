@@ -1,69 +1,46 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { UserCheck, MapPin, ShieldCheck, Wallet } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { whyUsData } from "@/data/why-us";
 
-// Define a type for our feature data for better type safety
-type WhyUsFeature = {
-  icon: React.ElementType; // We'll pass the icon component directly
-  title: string;
-  description: string;
+// The component accepts an optional 'limit' prop
+type FeaturesSectionProps = {
+  limit?: number;
 };
 
-// Array containing the data for the four feature cards
-const whyUsData: WhyUsFeature[] = [
-  {
-    icon: UserCheck,
-    title: "Personalized Itineraries",
-    description: "Every trip is uniquely crafted to match your interests and travel style, ensuring a truly personal experience.",
-  },
-  {
-    icon: MapPin,
-    title: "Expert Local Guides",
-    description: "Discover hidden gems and authentic culture with our knowledgeable and passionate local guides.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Safety & 24/7 Support",
-    description: "Travel with peace of mind knowing our team is available around the clock to support you.",
-  },
-  {
-    icon: Wallet,
-    title: "Transparent Pricing",
-    description: "Enjoy fair, upfront pricing with no hidden fees. We believe in providing exceptional value for your journey.",
-  },
-];
+export const WhyUsSection = ({ limit }: FeaturesSectionProps) => {
+  // If a limit is provided, slice the array. Otherwise, use the full array.
+  const displayedFeatures = limit ? whyUsData.slice(0, limit) : whyUsData;
 
-export const WhyUsSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800">Why Travel With Us?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">The G Adventures Difference</h2>
           <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
-            We are dedicated to creating unforgettable travel experiences with a personal touch and unwavering support.
+            We’re the small-group adventure travel experts, and have been for over 30 years.
           </p>
         </div>
 
         {/* Responsive Grid for the Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {whyUsData.map((feature) => (
-            <Card
-              key={feature.title}
-              className="text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-            >
-              <CardHeader>
-                {/* Icon Wrapper */}
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-indigo-100 mb-4">
-                  <feature.icon className="h-8 w-8 text-indigo-600" />
-                </div>
-                <CardTitle>{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">{feature.description}</p>
-              </CardContent>
-            </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {displayedFeatures.map((feature) => (
+            <div key={feature.title} className="bg-purple-50 p-8 rounded-xl">
+              <feature.icon className="h-10 w-10 text-purple-700 mb-6" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+            </div>
           ))}
         </div>
+
+        {/* Conditionally render the "See More" button */}
+        {limit && whyUsData.length > limit && (
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg">
+              <Link href="/why-us">See More</Link>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

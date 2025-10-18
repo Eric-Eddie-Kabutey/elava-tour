@@ -32,3 +32,52 @@ export const processSteps: ProcessStep[] = [
         image: "/assets/images/process/48.png",
     },
 ];
+
+
+// new data for the new design
+import { Mail, Calendar, FileText } from 'lucide-react';
+
+// Define the type for our feature cards
+type Feature = {
+    icon: React.ElementType;
+    tag: string;
+    title: string;
+    description: string;
+    image: string;
+    variant: 'default' | 'primary'; // To handle the blue card
+};
+
+export const featuresData: Feature[] = [
+    {
+        icon: Mail,
+        tag: 'Gmail',
+        title: 'Look professional with custom email @yourcompany',
+        description: 'Stand out with a professional email at your company domain. Create branded layouts and personalize messaging.',
+        image: '/assets/images/process/45.png',
+        variant: 'default',
+    },
+    {
+        icon: Calendar,
+        tag: 'Calendar',
+        title: 'Simplify booking with appointment scheduling',
+        description: 'Let customers book time with you directly within Google Calendar via a personal booking page.',
+        image: '/assets/images/process/46.png',
+        variant: 'default',
+    },
+    {
+        icon: FileText,
+        tag: 'Docs',
+        title: 'Streamline contract management with eSignature',
+        description: 'Request electronic signatures and easily manage vendor agreements, customer contracts, and more.',
+        image: '/assets/images/process/47.png',
+        variant: 'primary',
+    },
+    {
+        icon: FileText,
+        tag: 'Docs',
+        title: 'Streamline contract management with eSignature',
+        description: 'Request electronic signatures and easily manage vendor agreements, customer contracts, and more.',
+        image: '/assets/images/process/48.png',
+        variant: 'primary',
+    },
+];
