@@ -9,7 +9,7 @@ import southAfricaImg from "@/public/assets/images/south_africa_flag.png"
 function SouthAfricaPage() {
   return (
     <div>
-        <GhanaTourHero img={southAfricaImg} />
+        <GhanaTourHero img={southAfricaImg} name="South Africa" />
         <CurrentTrips />
         <TourPhotos />
         <GhanaTourFaqs />

@@ -9,7 +9,7 @@ import ghanaflag from "@/public/assets/images/Flag_of_Ghana.png"
 function GhanaTourPage() {
   return (
     <div>
-        <GhanaTourHero img={ghanaflag}/>
+        <GhanaTourHero img={ghanaflag} name="Ghana" />
         <CurrentTrips />
         <TourPhotos />
         <GhanaTourFaqs />

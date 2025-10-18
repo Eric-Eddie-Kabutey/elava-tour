@@ -8,7 +8,7 @@ import kenyaFlag from "@/public/assets/images/kenya-flag.png"
 function KenyaPage() {
   return (
     <div>
-        <GhanaTourHero img={kenyaFlag} />
+        <GhanaTourHero img={kenyaFlag} name="Kenya" />
         <CurrentTrips  />
         <TourPhotos />
         <GhanaTourFaqs />

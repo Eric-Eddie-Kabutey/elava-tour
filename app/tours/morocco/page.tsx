@@ -9,7 +9,7 @@ import moroccoImg from "@/public/assets/images/morocco_flag.png"
 function MoroccoPage() {
   return (
     <div>
-        <GhanaTourHero img={moroccoImg} />
+        <GhanaTourHero img={moroccoImg} name="Morocco" />
         <CurrentTrips />
         <TourPhotos />
         <GhanaTourFaqs />

@@ -4,14 +4,14 @@ import React from 'react';
 import ghanaExperienceImg from "@/public/assets/images/home/lockinImg.jpeg"
 import Image, { StaticImageData } from 'next/image';
 
-function GhanaTourHero({ img }: { img: StaticImageData }) {
+function GhanaTourHero({ img, name }: { img: StaticImageData, name: string }) {
   return (
     <div className='w-full py-12 bg-gradient-to-br from-gray-50 to-gray-100'>
         <section className='max-container w-[85%] mx-auto flex flex-col gap-8'>
             <Typography
                 typo="header-2-semibold"
                 className='text-center'
-            >The Ghana Experience</Typography>
+            >The {name} Experience</Typography>
             <div className='w-full grid grid-cols-2'>
                 <div className='w-full h-[400px]'>
                     <Image 
