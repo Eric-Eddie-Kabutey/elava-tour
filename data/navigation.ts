@@ -88,7 +88,7 @@ export const navigationData: NavigationItem[] = [
     },
     {
         title: "About",
-        href: "/about",
+        href: "/about-us",
     },
     {
         title: "Insights",
