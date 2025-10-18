@@ -3,7 +3,6 @@ import Typography from '@/components/shared/typography'
 import React from 'react';
 import firstTourImg from "@/public/assets/images/first_tour.jpg";
 import secondTourImg from "@/public/assets/images/second_tour.jpg";
-import thirdTourImg from "@/public/assets/images/third_tour.jpg";
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';

@@ -34,7 +34,7 @@ function TourPhotos() {
                 >Belize tour photos from our travellers</Typography>
                 <div className='w-full p-6 columns-5 gap-4 bg-white rounded-md'>
                     {tourImages.map((image, index) => (
-                        <div className='relative mb-4 break-inside-avoid w-auto h-[200px]'>
+                        <div key={`tour image+${index+1}`} className='relative mb-4 break-inside-avoid w-auto h-[200px]'>
                             <Image 
                                 src={image}
                                 alt={`Photo ${index+1}`}
