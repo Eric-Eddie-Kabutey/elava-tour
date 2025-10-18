@@ -7,31 +7,38 @@ import Link from 'next/link'
 const faqs = [
   {
     id: 1,
-    question: "What do you need from me to be successful?",
-    answer: `Clear communication, commitment to the process and timely
-              feedback. We know you're busy, and we do everything possible to
-              respect your time.`,
+    question: "What types of tours does Eleva Tours offer?",
+    answer: `We create curated travel experiences across Africa, from adventure safaris and cultural immersions to 
+                wellness retreats and group getaways.`,
   },
   {
     id: 2,
-    question: "What’s the time commitment for me?",
-    answer: `You should expect to invest ~1-2 hours per week as a standard
-              (during the onboarding and ramp-up phases, it may be a bit
-              more). Most of this time is spent reading your content and
-              providing us with feedback on it.`,
+    question: "Can I customize a tour package?",
+    answer: `Yes! We specialize in tailor-made itineraries based on your preferences, whether you’re traveling solo, as a 
+                couple, or in a group.`,
   },
   {
     id: 3,
-    question: "What’s the typical timeline to get started?",
-    answer: `Our goal with new Members is to begin publishing within 30 days
-              of their Kickoff Call, we ramp-up production during days 30-60,
-              and then we settle into a “steady state”.`,
+    question: "Do you handle flights and visas as well?",
+    answer: `We focus on tours, accommodations, and activities. However, we can guide you on trusted partners for flights 
+                and visa assistance.`,
   },
   {
     id: 4,
-    question: "What type of content do you support?",
-    answer: `We produce original written content and supporting graphic
-              designs.`,
+    question: "What makes Eleva Tours different from other travel agencies?",
+    answer: `Our tours highlight authentic local experiences, connecting you with communities, culture, and hidden gems 
+                beyond the typical tourist path.`,
+  },
+  {
+    id: 5,
+    question: "Is Eleva Tours suitable for large groups?",
+    answer: `Definitely. We organize group tours for families, friends, and corporate retreats, with full logistical 
+                support from start to finish.`,
+  },
+  {
+    id: 6,
+    question: "How can I book a tour with Eleva Tours?",
+    answer: `Simply contact us via our website or email, and our team will help you plan and confirm your dream trip step by step.`,
   },
 ]
 
@@ -39,18 +46,18 @@ function HelpFaqs() {
   return (
     <div className="w-full py-32 bg-gradient-to-br from-gray-50 to-gray-100">
       <section className="max-container w-[85%] mx-auto flex flex-col gap-8 text-black">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 class">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col space-y-8">
               <h1 className="text-4xl text-black">FAQ</h1>
                 <p className="text-lg text-gray-900 md:max-w-sm">
                   Here are some of the most common questions we get about working
                   together.
                 </p>           
-                <Button variant="secondary" className="max-w-[280px] py-4">
+                <Button variant="secondary" className="w-fit py-4 bg-black hover:bg-gray-800">
                   <Link href="#">Partner With Elava Tour</Link>
                 </Button>
             </div>
-            <div className="border-t border-gray-300 ">
+            <div className="flex flex-col gap-12 border-t border-gray-300 ">
               <HoverAccordion
                     items={faqs.map((faq) => ({
                     value: `item-${faq.id}`,
@@ -66,6 +73,9 @@ function HelpFaqs() {
                     ),
                     }))}
                 />
+                <Button
+                    className='w-fit !px-4 !py-3 text-white hover:text-gray-100 bg-black hover:bg-gray-700'
+                >See More</Button>
             </div>
           </div>
 
