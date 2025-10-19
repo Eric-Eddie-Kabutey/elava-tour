@@ -28,7 +28,7 @@ function AllInclusiveHero() {
                 <Typography
                     typo="body-large-regular"
                 >
-                    Thinking of adventuring the world? Whether it's adventure, culture, or just good times, you call the shots.
+                    Thinking of adventuring the world? Whether it&apos;s adventure, culture, or just good times, you call the shots.
                 </Typography>
                 <div>
                     <Button

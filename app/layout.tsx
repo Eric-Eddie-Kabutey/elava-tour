@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
-import { Toaster } from "@/components/ui/toaster"
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 import { generateMetadata } from "./metadata";
 import Navbar from "@/components/shared/Navbar";
 import MainFooter from "@/components/shared/main-footer";
@@ -17,23 +17,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = generateMetadata({
-  title: "KtechHub | Empowering Businesses with Tailored Tech Solutions",
-  description: "KtechHub delivers cutting-edge digital solutions to empower businesses, offering expertise in software development, API integration, and cloud technologies.",
+  title: "Elava Tour | Discover the World with Unforgettable Travel Experiences",
+  description:
+    "Elava Tour brings you closer to the world’s most breathtaking destinations with personalized travel packages, guided tours, and unforgettable adventures designed just for you.",
   url: "/",
 });
 
 const OrganizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "KtechHub",
-  "url": "https://www.ktechhub.com",
-  "logo": "https://ktechhub.s3.amazonaws.com/images/KtechHub.png",
+  "name": "Elava Tour",
+  "url": "https://www.elavatour.com",
+  "logo": "https://elavatour.s3.amazonaws.com/images/elavatour-logo.png",
   "sameAs": [
-    "https://www.instagram.com/ktechhub",
-    "https://www.facebook.com/ktechhub",
-    "https://twitter.com/ktechhub",
-    "https://www.linkedin.com/company/ktechhub"
-  ]
+    "https://www.instagram.com/elavatour",
+    "https://www.facebook.com/elavatour",
+    "https://x.com/elavatour",
+    "https://www.linkedin.com/company/elavatour"
+  ],
+  "description":
+    "Elava Tour is your trusted travel partner, offering unforgettable experiences through curated tours, adventure trips, and cultural explorations around the world.",
+  "foundingDate": "2020",
+  "founder": {
+    "@type": "Person",
+    "name": "Elava Tour Team"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+233-XXX-XXX-XXX",
+    "contactType": "Customer Service",
+    "areaServed": "Worldwide",
+    "availableLanguage": ["English"]
+  }
 };
 
 export default function RootLayout({
@@ -49,9 +64,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(OrganizationSchema) }}
         />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

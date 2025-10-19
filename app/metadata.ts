@@ -7,26 +7,39 @@ interface MetadataProps {
 }
 
 export function generateMetadata({
-    title = "KtechHub | Empowering Businesses with Tailored Tech Solutions",
-    description = "KtechHub delivers cutting-edge digital solutions to empower businesses, offering expertise in software development, API integration, and cloud technologies.",
+    title = "Elava Tour | Discover the World with Unforgettable Travel Experiences",
+    description = "Elava Tour brings you closer to the world’s most breathtaking destinations with personalized travel packages, guided tours, and unforgettable adventures designed just for you.",
     url = "/",
 }: MetadataProps): Metadata {
-    const defaultUrl = process.env.WEBAPP_URL || 'https://www.ktechhub.com';
+    const defaultUrl = process.env.WEBAPP_URL || 'https://www.elavatour.com';
     return {
-        title: { default: title, template: "%s | Empowering Businesses with Tailored Tech Solutions" },
+        title: { default: title, template: "%s | Discover the World with Elava Tour" },
         description: description,
-        applicationName: "KtechHub",
-        authors: [{ name: "KtechHub Team", url: process.env.WEBAPP_URL || 'https://www.ktechhub.com' }],
+        applicationName: "Elava Tour",
+        authors: [{ name: "Elava Tour Team", url: defaultUrl }],
         generator: "Next.js",
-        keywords: ["software development", "API integration", "cloud technologies", "UI/UX design", "DevOps", "business solutions", "technology services", "tailored tech solutions"],
+        keywords: [
+            "travel",
+            "tours",
+            "vacation packages",
+            "adventure travel",
+            "holiday destinations",
+            "Elava Tour",
+            "guided tours",
+            "luxury travel",
+            "group trips",
+            "honeymoon packages",
+            "world travel",
+            "custom tours"
+        ],
         referrer: "origin",
-        creator: "KtechHub Team",
-        publisher: "KtechHub",
+        creator: "Elava Tour Team",
+        publisher: "Elava Tour",
         robots: "index, follow",
         alternates: {
             canonical: `${defaultUrl}${url}`,
             types: {
-                "application/rss+xml": [{ url: "/feed/rss.xml", title: "RSS Feed" }]
+                "application/rss+xml": [{ url: "/feed/rss.xml", title: "Elava Tour RSS Feed" }]
             }
         },
         icons: {
@@ -36,48 +49,44 @@ export function generateMetadata({
         manifest: "/manifest.json",
         openGraph: {
             type: "website",
-            url: process.env.WEBAPP_URL || 'https://www.ktechhub.com',
+            url: defaultUrl,
             title: title,
             description: description,
-            siteName: "KtechHub",
+            siteName: "Elava Tour",
             images: [
                 {
-                    url: `${process.env.WEBAPP_URL}/logo.png`,
+                    url: `${defaultUrl}/og-image.jpg`,
                     width: 1200,
                     height: 630,
-                    alt: "KtechHub - Empowering Businesses with Tailored Tech Solutions",
+                    alt: "Elava Tour - Explore the World Your Way",
                 }
             ],
         },
         twitter: {
             card: "summary_large_image",
-            site: "@KtechHub",
-            creator: "@ktechhub",
+            site: "@ElavaTour",
+            creator: "@ElavaTour",
             title: title,
             description: description,
-            images: "https://www.ktechhub.com/twitter-image.png"
+            images: `${defaultUrl}/twitter-image.jpg`
         },
         verification: {
-            google: "9skpBpwKDtj0DYmqZppulq6euNwztgaLg6JZc4_RZ-g",
-            yandex: "73ac4b10761bb219"
+            google: "YOUR_GOOGLE_SITE_VERIFICATION_CODE",
+            yandex: "YOUR_YANDEX_VERIFICATION_CODE"
         },
         appleWebApp: {
             capable: true,
-            title: "KtechHub",
+            title: "Elava Tour",
             statusBarStyle: "black-translucent",
         },
         formatDetection: {
             telephone: false
         },
-        abstract: "KtechHub delivers cutting-edge digital solutions to empower businesses, offering expertise in software development, API integration, and cloud technologies.",
-        archives: ["https://www.ktechhub.com/archives"],
-        assets: ["https://www.ktechhub.com/assets"],
-        bookmarks: ["https://www.ktechhub.com/bookmarks"],
-        category: "Technology, Business Solutions",
-        classification: "Digital Transformation Services",
-        // other: {
-        //   "msapplication-TileColor": "#2b5797",
-        //   "msapplication-config": "/icons/browserconfig.xml"
-        // }
+        abstract: "Elava Tour curates immersive travel experiences across the globe—adventure, relaxation, culture, and discovery—crafted for every type of traveler.",
+        archives: [`${defaultUrl}/archives`],
+        assets: [`${defaultUrl}/assets`],
+        bookmarks: [`${defaultUrl}/bookmarks`],
+        category: "Travel & Tourism",
+        classification: "Global Travel and Tour Services",
     }
 }
