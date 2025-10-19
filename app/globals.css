@@ -72,6 +72,13 @@
   background-size: cover;
 }
 
+.travel-bg {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.9),  rgba(255, 255, 255, 0.9)), url('/assets/images/inclusive/travel_bg.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
