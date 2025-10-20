@@ -4,6 +4,7 @@ import TeamSection from "./components/TeamSection";
 import { WhyUsSection } from "./WhyUsSection";
 import { ProcessesCarousel } from "@/components/about-us/ProcessesCardCarousel";
 import { MissionVisionSection } from "./components/MissionAndVision";
+import OurStory from "./components/our-story";
 
 
 const AboutUsPage = () => {
@@ -12,7 +13,8 @@ const AboutUsPage = () => {
       <div className="font-[family-name:var(--font-geist-sans)]">
         <HeroSection />     
         <MissionVisionSection />
-        <TeamSection id="team" />                                
+        <TeamSection id="team" /> 
+        <OurStory id="team" />                               
         <ProcessesCarousel />
         <WhyUsSection limit={3} />
         <Testimonial />

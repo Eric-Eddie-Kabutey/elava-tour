@@ -46,7 +46,7 @@ export const ProcessesCarousel = () => {
 
   return (
     <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="container w-[85%] mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800">Our Process</h2>
           <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
@@ -55,32 +55,29 @@ export const ProcessesCarousel = () => {
         </div>
 
         {/* Embla Carousel Structure */}
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex -ml-4">
+        <div className="overflow-hidden my-4" ref={emblaRef}>
+          <div className="py-4 flex items-stretch -ml-4">
             {featuresData.map((feature, index) => (
               <div
                 key={index}
-                // This is the slide container
-                className="flex-shrink-0 flex-grow-0 basis-[90%] pl-4 md:basis-1/2 lg:basis-1/3"
+                className="flex flex-col flex-shrink-0 flex-grow-0 basis-[90%] pl-4 md:basis-1/2 lg:basis-1/3"
               >
                 <div
-                  className="group rounded-2xl shadow-lg flex flex-col bg-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:-translate-y-2 h-[480px]"
+                  className="group h-full rounded-2xl shadow-lg flex flex-col bg-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:-translate-y-2"
                 >
-                  <div className="flex items-center justify-center p-2">
+                  <div className="w-full h-[300px] flex items-center justify-center p-2 rounded-md">
                     <Image
                       src={feature.image}
                       alt={feature.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-auto object-contain"
+                      className="w-full h-full object-cover rounded-md"
                     />
                   </div>
                   <div className="flex flex-col p-10 pt-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="flex items-center justify-center h-8 w-8 rounded-full bg-gray-100 transition-colors duration-300 group-hover:bg-blue-500">
-                        <feature.icon className="h-4 w-4 text-gray-700 transition-colors duration-300 group-hover:text-white" />
+                    <div className="w-fit px-3 py-1 flex items-center gap-3 mb-4 group-hover:bg-white rounded-lg">
+                      <div className="flex items-center justify-center  rounded-full transition-colors duration-300 group-hover:text-blue-500">
+                        Process
                       </div>
-                      <span className="font-medium text-gray-600 transition-colors duration-300 group-hover:text-blue-200">
+                      <span className="font-medium text-gray-800 transition-colors duration-300 group-hover:text-blue-700">
                         {feature.tag}
                       </span>
                     </div>

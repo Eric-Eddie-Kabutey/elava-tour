@@ -218,7 +218,7 @@ export const navigationData: NavigationItem[] = [
     title: "Insights",
     href: "/insights",
     links: [
-      { title: "News & Stories", href: "/insights/news", description: "Read the latest stories from our travels." },
+      { title: "News & Stories", href: "/news", description: "Read the latest stories from our travels." },
       { title: "Client Feedback", href: "/insights/gallery", description: "A visual journey through our amazing destinations." },
       { title: "Media", href: "/insights/gallery", description: "A visual journey through our amazing destinations." },
     ],

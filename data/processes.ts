@@ -36,6 +36,11 @@ export const processSteps: ProcessStep[] = [
 
 // new data for the new design
 import { Mail, Calendar, FileText } from 'lucide-react';
+import processImg1 from "@/public/assets/images/process/45.png"
+import processImg2 from "@/public/assets/images/process/46.png"
+import processImg3 from "@/public/assets/images/process/47.png"
+import processImg4 from "@/public/assets/images/process/48.png"
+import { StaticImageData } from 'next/image';
 
 // Define the type for our feature cards
 type Feature = {
@@ -43,41 +48,41 @@ type Feature = {
     tag: string;
     title: string;
     description: string;
-    image: string;
+    image: string | StaticImageData;
     variant: 'default' | 'primary'; // To handle the blue card
 };
 
 export const featuresData: Feature[] = [
     {
         icon: Mail,
-        tag: 'Gmail',
-        title: 'Look professional with custom email @yourcompany',
+        tag: '01',
+        title: 'Tell us what you want and when',
         description: 'Stand out with a professional email at your company domain. Create branded layouts and personalize messaging.',
-        image: '/assets/images/process/45.png',
+        image: processImg1,
         variant: 'default',
     },
     {
         icon: Calendar,
-        tag: 'Calendar',
-        title: 'Simplify booking with appointment scheduling',
+        tag: '02',
+        title: 'Tell us how we can reach you',
         description: 'Let customers book time with you directly within Google Calendar via a personal booking page.',
-        image: '/assets/images/process/46.png',
+        image: processImg2,
         variant: 'default',
     },
     {
         icon: FileText,
-        tag: 'Docs',
-        title: 'Streamline contract management with eSignature',
+        tag: '03',
+        title: 'Submit your details ofter filling forms',
         description: 'Request electronic signatures and easily manage vendor agreements, customer contracts, and more.',
-        image: '/assets/images/process/47.png',
+        image: processImg3,
         variant: 'primary',
     },
     {
         icon: FileText,
-        tag: 'Docs',
-        title: 'Streamline contract management with eSignature',
+        tag: '04',
+        title: 'Get on a call with our consultants in minutes',
         description: 'Request electronic signatures and easily manage vendor agreements, customer contracts, and more.',
-        image: '/assets/images/process/48.png',
+        image: processImg4,
         variant: 'primary',
     },
 ];

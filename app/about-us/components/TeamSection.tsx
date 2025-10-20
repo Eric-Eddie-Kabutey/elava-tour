@@ -25,7 +25,7 @@ const teamMembers = [
 const TeamSection = ({ id }: { id: string }) => {
   return (
     <section id={id} className="py-16 bg-[#e4e4e4]">
-      <div className="container mx-auto px-4 bg-[#f0f2f3] py-12 lg:pb-24">
+      <div className="w-[85%] container mx-auto px-4 bg-[#f0f2f3] py-12 lg:pb-24">
         <div className="text-start mb-12">
           <h2 className="text-3xl font-bold text-gray-800">Meet Our Team</h2>
           <p className="text-gray-600 mt-2">The passionate people behind our success.</p>
