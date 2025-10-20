@@ -17,14 +17,14 @@ import { navigationData } from "@/data/navigation";
 
 export default function Nav() {
   return (
-    <NavigationMenu className="hidden md:flex">
+    <NavigationMenu className="hidden md:flex ">
       <NavigationMenuList>
         {navigationData.slice(0, 3).map((item) => (
           <NavigationMenuItem key={item.title}>
             {/* Case 1: Item has columns (e.g., "Tours") */}
             {item.columns ? (
               <>
-                <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="uppercase">{item.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[600px] grid-cols-2 gap-x-6 p-4">
                     {item.columns.map((column, index) => (
@@ -36,10 +36,10 @@ export default function Nav() {
                           index > 0 && "border-l border-gray-200 pl-6"
                         )}
                       >
-                        <h3 className="font-bold text-gray-900">{column.title}</h3>
+                        <h3 className="font-bold text-gray-900 capitalize">{column.title}</h3>
                         <ul className="space-y-1">
                           {column.links.map((link) => (
-                            <ListItem key={link.title} href={link.href} title={link.title}>
+                            <ListItem key={link.title} href={link.href} title={link.title} >
                               {link.description}
                             </ListItem>
                           ))}
@@ -52,9 +52,9 @@ export default function Nav() {
             ) : /* Case 2: Item has a single list of links (e.g., "Insights") */
             item.links ? (
               <>
-                <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
+                <NavigationMenuTrigger >{item.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-1">
+                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-1 uppercase">
                     {item.links.map((link) => (
                       <ListItem key={link.title} href={link.href} title={link.title}>
                         {link.description}
@@ -65,7 +65,7 @@ export default function Nav() {
               </>
             ) : (
               /* Case 3: Item is a simple link (e.g., "About") */
-              <Link href={item.href!} legacyBehavior passHref>
+              <Link href={item.href!} legacyBehavior passHref className="">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   {item.title}
                 </NavigationMenuLink>
