@@ -120,9 +120,9 @@ function HelpHero() {
                                 </div>
                             </div>
                         ) : (
-                            <div className="max-w-[300px]  mx-auto rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-700 ">
+                            <div key={member.id}  className="max-w-[300px]  mx-auto rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-700 ">
                                 {/* <div className="relative h-full w-full flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100"> */}
-                                    <div key={member.id} className="w-full h-full flex justify-between items-center">
+                                    <div className="w-full h-full flex justify-between items-center">
                                         <div className="flex-1 h-full flex items-center justify-center bg-red-700">
                                             <Typography
                                             typo="header-4-semibold"
