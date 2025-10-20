@@ -87,6 +87,10 @@ export const navigationData: NavigationItem[] = [
         ],
     },
     {
+        title: "Deals",
+        href: "/deals",
+    },
+    {
         title: "About",
         href: "/about-us",
     },
@@ -97,9 +101,5 @@ export const navigationData: NavigationItem[] = [
             { title: "News & Stories", href: "/insights/news", description: "Read the latest stories from our travels." },
             { title: "Gallery", href: "/insights/gallery", description: "A visual journey through our amazing destinations." },
         ],
-    },
-    {
-        title: "Help",
-        href: "/help",
     },
 ];

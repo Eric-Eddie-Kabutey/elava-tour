@@ -15,11 +15,11 @@ import {
 import { navigationData } from "@/data/navigation";
 
 
-export default function Nav() {
+export default function NavRight() {
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
-        {navigationData.slice(0, 3).map((item) => (
+        {navigationData.slice(3, 6).map((item) => (
           <NavigationMenuItem key={item.title}>
             {/* Case 1: Item has columns (e.g., "Tours") */}
             {item.columns ? (

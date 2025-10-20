@@ -12,30 +12,34 @@ import telephoneIcon from "@/public/assets/icons/telephone.svg"
 import Image from "next/image";
 import Header from "./header";
 import Nav from "../ui/nav";
-// import emirateLogo from "@/public/assets/icons/emirates-retina.png";
+import NavRight from "../ui/nav-right";
+import elavaTourImg from "@/public/assets/images/elava_logo.png";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
-    
+    const router = useRouter();
     return (
         <div className="sticky top-0 z-50 ">
             <Header />
             <header className="bg-blue-700">
                 {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
                 <div className="max-container 2xl:w-[85%] w-[95%] mx-auto text-white">
-                    <NavbarComponent>
+                    <NavbarComponent className="lg:w-[90%] w-full mx-auto">
                         <NavbarLeft>
-                            {/* <Link
+                            <Link
                                 href="/"
-                                className="w-20 h-fit relative left-20 top-0 z-[40]"
+                                className="w-20 h-fit absolute left-20 top-0 z-[40]"
                             >
                                 <Image 
-                                    src={emirateLogo}
+                                    src={elavaTourImg}
                                     alt="Emirate Logo"
                                     className="w-full h-full"
                                 />
-                            </Link> */}
+                            </Link>
                             {/* <Navigation /> */}
-                            <Nav />
+                            <div className="">
+                                <Nav />
+                            </div>
                             <div className="px-1 sm:py-5 py-3 flex items-center justify-center gap-1 bg-white">
                                 <Image 
                                     src={telephoneIcon}
@@ -46,7 +50,12 @@ export default function Navbar() {
                             </div>
                         </NavbarLeft>
                         <NavbarRight>
-                            
+                            <NavRight />
+                            <Button
+                                variant="outline"
+                                onClick={() => router.push("help")}
+                                className="border-white text-white hover:bg-white hover:text-blue-700 "
+                            >Get Help Now</Button>
                             <Sheet>
                                 <SheetTrigger asChild>
                                     <Button
