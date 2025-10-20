@@ -63,13 +63,13 @@ export const ProcessesCarousel = () => {
                 className="flex flex-col flex-shrink-0 flex-grow-0 basis-[90%] pl-4 md:basis-1/2 lg:basis-1/3"
               >
                 <div
-                  className="group h-full rounded-2xl shadow-lg flex flex-col bg-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:-translate-y-2"
+                  className="p-2 group h-full rounded-2xl shadow-lg flex flex-col bg-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:-translate-y-2"
                 >
-                  <div className="w-full h-[300px] flex items-center justify-center p-2 rounded-md">
+                  <div className="w-full h-[320px] bg-[#f5f5f5] flex items-center justify-center p-2 rounded-md">
                     <Image
                       src={feature.image}
                       alt={feature.title}
-                      className="w-full h-full object-cover rounded-md"
+                      className="w-[90%] mx-auto h-fit object-cover rounded-md"
                     />
                   </div>
                   <div className="flex flex-col p-10 pt-6">
