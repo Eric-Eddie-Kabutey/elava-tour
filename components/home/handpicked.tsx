@@ -48,11 +48,11 @@ function Handpicked() {
                 <div className='w-full grid grid-cols-3 gap-6'>
                     {handpicked_destinations.map((data, index) => (
                         <Card key={data.id} className='flex flex-col gap-3 rounded-none bg-white'>
-                            <CardHeader className='w-full xl:h-[400px] h-[300px] p-0'>
+                            <CardHeader className='w-full xl:h-[400px] h-[300px] p-0  overflow-hidden'>
                                 <Image 
                                     src={data.img}
                                     alt={`Handpicked ${index+1}`}
-                                    className='w-full h-full'
+                                    className='w-full h-fullobject-cover'
                                 />
                             </CardHeader>
                             <CardContent className='px-2 flex items-center justify-between gap-3'>
@@ -96,11 +96,11 @@ function Handpicked() {
             <div className='max-container w-[95%] mx-auto p-10 flex flex-col gap-12 bg-[#f0f2f3]'>
                 <div className='w-full grid grid-cols-3 gap-6 '>
                     {holidaysImgs.map((data, index) => (
-                        <div key={`hOLIDAY ${index+1}`} className='w-full xl:h-[400px] h-[300px] '>
+                        <div key={`hOLIDAY ${index+1}`} className='w-full xl:h-[400px] h-[300px] overflow-hidden'>
                             <Image 
                                 src={data}
                                 alt={`Holiday ${index+1}`}
-                                className='w-full h-full'
+                                className='w-full h-full object-cover'
                             />
                         </div>
                     ))}
