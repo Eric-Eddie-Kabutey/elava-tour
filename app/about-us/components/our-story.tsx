@@ -1,28 +1,6 @@
 import story_img from "@/public/assets/images/elava_signature.png";
 import Image from "next/image";
 
-const teamMembers = [
-  // ... Paste the updated teamMembers array from Step 1 here ...
-  {
-    name: "John Doe",
-    role: "CEO & Founder",
-    image: "/assets/images/team/team.avif",
-    linkedinUrl: "https://www.linkedin.com/in/johndoe",
-  },
-  {
-    name: "Jane Smith",
-    role: "Chief Technology Officer",
-    image: "/assets/images/team/team.avif",
-    linkedinUrl: "https://www.linkedin.com/in/janesmith",
-  },
-  {
-    name: "Mike Johnson",
-    role: "Lead Developer",
-    image: "/assets/images/team/team.avif",
-    linkedinUrl: "https://www.linkedin.com/in/mikejohnson",
-  },
-];
-
 const OurStory = ({ id }: { id: string }) => {
   return (
     <section id={id} className="py-16 bg-[#e4e4e4]">
@@ -37,7 +15,7 @@ const OurStory = ({ id }: { id: string }) => {
             Africa is more than just the generic places or a spot on the map. It’s a land alive with rhythm and warmth. 
             Eleva was born from that rhythm.  From the realization that travel across this vast continent deserved to be 
             deeper, more personal, and more connected. Too often, we explore Africa through the same windows, seeing only 
-            what’s been framed for us. But beyond the postcards and popular tours lies another Africa,  one that hums in the 
+            what&apos;s been framed for us. But beyond the postcards and popular tours lies another Africa,  one that hums in the 
             laughter of markets, glows in hidden sunsets, and thrives in places few have walked.
           </p>
           <p>
