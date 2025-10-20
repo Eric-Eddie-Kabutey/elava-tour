@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -13,16 +13,36 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./navigation-menu";
-import { navigationData } from "@/data/navigation";
+import { navigationData, NavigationItem } from "@/data/navigation";
+
+type Tour = {
+  title: string;
+  href: string;
+  img: string | StaticImageData;
+};
+
+type DestinationLink = {
+  title: string;
+  href: string;
+  description?: string;
+  current?: Tour[];
+};
 
 export default function Nav() {
-  const [hoveredDestination, setHoveredDestination] =
-    React.useState<any>(null);
+  const firstItemWithColumns = navigationData.find(
+    (item: NavigationItem) => item.columns && item.columns.length > 0
+  );
+
+  const defaultDestination =
+    firstItemWithColumns?.columns?.[0]?.links?.[0] ?? null;
+
+    const [hoveredDestination, setHoveredDestination] =
+      React.useState<DestinationLink | null>(defaultDestination);
 
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
-        {navigationData.slice(0, 3).map((item) => (
+        {navigationData.slice(0, 3).map((item: NavigationItem) => (
           <NavigationMenuItem key={item.title}>
             {item.columns ? (
               <>
@@ -43,7 +63,9 @@ export default function Nav() {
                           <li
                             key={link.title}
                             onMouseEnter={() => setHoveredDestination(link)}
-                            onMouseLeave={() => setHoveredDestination(null)}
+                            onMouseLeave={() =>
+                              setHoveredDestination(defaultDestination)
+                            }
                           >
                             <ListItem href={link.href} title={link.title}>
                               {link.description}
@@ -55,27 +77,24 @@ export default function Nav() {
 
                     {/* RIGHT COLUMN - Current Destination Preview */}
                     <div className="w-[250px] border-l border-gray-200 pl-6">
-
-                      {hoveredDestination && hoveredDestination.current ? (
+                      {hoveredDestination?.current ? (
                         <div className="flex flex-col gap-4">
-                          {hoveredDestination.current.map(
-                            (tour: any, index: number) => (
-                              <Link
-                                key={index}
-                                href={tour.href}
-                                className="group block overflow-hidden border border-gray-200 hover:shadow-md transition-all duration-200"
-                              >
-                                <div className="relative w-full h-28">
-                                  <Image
-                                    src={tour.img}
-                                    alt={tour.title}
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-200"
-                                  />
-                                </div>
-                              </Link>
-                            )
-                          )}
+                          {hoveredDestination.current.map((tour, index) => (
+                            <Link
+                              key={index}
+                              href={tour.href}
+                              className="group block overflow-hidden border border-gray-200 hover:shadow-md transition-all duration-200"
+                            >
+                              <div className="relative w-full h-28">
+                                <Image
+                                  src={tour.img}
+                                  alt={tour.title}
+                                  fill
+                                  className="object-cover group-hover:scale-105 transition-transform duration-200"
+                                />
+                              </div>
+                            </Link>
+                          ))}
                         </div>
                       ) : (
                         <p className="mt-2 text-sm text-gray-500 italic">
@@ -90,7 +109,7 @@ export default function Nav() {
               <>
                 <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-1 ">
+                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-1">
                     {item.links.map((link) => (
                       <ListItem
                         key={link.title}

@@ -3,7 +3,7 @@ import navImg2 from "@/public/assets/images/home/handpicked_2.png";
 import navImg3 from "@/public/assets/images/home/handpicked_3.png";
 import { StaticImageData } from "next/image";
 
-type NavLinkItem = {
+export type NavLinkItem = {
   title: string;
   href: string;
   description: string;
@@ -15,13 +15,13 @@ type NavLinkItem = {
   }[];
 };
 
-type NavColumn = {
+export type NavColumn = {
   title: string;
   links: NavLinkItem[];
 };
 
 // The main type for each top-level navigation item
-type NavigationItem = {
+export type NavigationItem = {
   title: string;
   href?: string; // Optional for dropdown triggers
   description?: string; // Optional
@@ -129,7 +129,7 @@ export const navigationData: NavigationItem[] = [
             current: [
                 {
                     title: "South African Tour",
-                    img: navImg1,
+                    img: navImg3,
                     href: "/tours/south-africa",
                     description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
                 },
@@ -141,7 +141,7 @@ export const navigationData: NavigationItem[] = [
                 },
                 {
                     title: "Kenya Tour",
-                    img: navImg3,
+                    img: navImg1,
                     href: "/tours/south-africa",
                     description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
                 },
