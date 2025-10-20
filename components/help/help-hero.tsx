@@ -8,6 +8,7 @@ import ghana_flag from "@/public/assets/images/Flag_of_Ghana.png";
 
 const contact_details = [
   {
+    id: "1",
     name: "John Doe",
     role: "CEO & Founder",
     image: "/assets/images/team/contact_1.jpg",
@@ -16,10 +17,12 @@ const contact_details = [
     img: gambia_flag,
   },
   {
+    id: "2",
     ghana_title: "Akwaaba",
     southAfrica_title: "Welcome"
   },
   {
+    id: "3",
     name: "Jane Smith",
     role: "Chief Technology Officer",
     image: "/assets/images/team/contact_3.jpg",
@@ -54,9 +57,9 @@ function HelpHero() {
                     className='text-black'
                 >Contact Details</Typography>
                 <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-">
-                    {contact_details.map((member, index) => (
+                    {contact_details.map((member) => (
                         member.name ? (
-                            <div className="w-full bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100">
+                            <div key={member.id} className="w-full bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100">
                                 <div className="relative h-80 w-full">
                                 <Image
                                     src={member.image}
@@ -117,9 +120,9 @@ function HelpHero() {
                                 </div>
                             </div>
                         ) : (
-                            <div className="max-w-[300px]  mx-auto bg-blue-500 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-700 ">
+                            <div className="max-w-[300px]  mx-auto rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-700 ">
                                 {/* <div className="relative h-full w-full flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100"> */}
-                                    <div className="w-full h-full flex justify-between items-center">
+                                    <div key={member.id} className="w-full h-full flex justify-between items-center">
                                         <div className="flex-1 h-full flex items-center justify-center bg-red-700">
                                             <Typography
                                             typo="header-4-semibold"
