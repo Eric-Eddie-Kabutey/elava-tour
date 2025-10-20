@@ -83,14 +83,14 @@ export default function Nav() {
                             <Link
                               key={index}
                               href={tour.href}
-                              className="group block overflow-hidden border border-gray-200 hover:shadow-md transition-all duration-200"
+                              className="group block overflow-hidden hover:shadow-md transition-all duration-200 rounded-md"
                             >
                               <div className="relative w-full h-28">
                                 <Image
                                   src={tour.img}
                                   alt={tour.title}
                                   fill
-                                  className="object-cover group-hover:scale-105 transition-transform duration-200"
+                                  className="object-cover group-hover:scale-105 transition-transform duration-200 rounded-md"
                                 />
                               </div>
                             </Link>
