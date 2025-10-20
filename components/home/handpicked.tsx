@@ -3,7 +3,8 @@ import React from 'react';
 import dubaiImg from "@/public/assets/images/home/handpicked_1.png";
 import maldivesImg from "@/public/assets/images/home/handpicked_2.png";
 import mauritiusImg from "@/public/assets/images/home/handpicked_3.png";
-import lockinImg from "@/public/assets/images/reserve_spot.png";
+import lockinImg from "@/public/assets/images/home/locking_img.jpg";
+import ransfordImg from "@/public/assets/images/home/ransford_quaye.jpg";
 import familyHolidayImg from "@/public/assets/images/home/holiday_1.png"
 import allInclusiveImg from "@/public/assets/images/home/holiday_2.png"
 import beachHolidaysImg from "@/public/assets/images/home/holiday_3.png"
@@ -74,12 +75,21 @@ function Handpicked() {
                 <ArrowUpRight />
             </Button>
         </section>
-        <section className='max-container w-full h-[470px]'>
-            <Image 
-                src={lockinImg}
-                alt='Lock in image'
-                className='w-full h-full'
-            />
+        <section className='max-container w-full h-[470px] flex items-center'>
+            <div className='flex-1 h-full'>
+                <Image 
+                    src={lockinImg}
+                    alt='Lock in image'
+                    className='w-full h-full object-cover'
+                />
+            </div>
+            <div className='flex-1 h-full'>
+                <Image 
+                    src={ransfordImg}
+                    alt='Lock in image'
+                    className='w-full h-full object-cover'
+                />
+            </div>
         </section>
         <section className='py-12 bg-[#e4e4e4]'></section>
         <section className='w-full '>
