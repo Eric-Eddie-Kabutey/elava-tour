@@ -1,9 +1,6 @@
 'use client';
 import React, { useState } from 'react'
 
-import heroImg1 from "@/public/assets/images/home/hero_img1.jpeg"
-import heroImg2 from "@/public/assets/images/home/hero_img2.jpeg"
-import heroImg3 from "@/public/assets/images/home/hero_img3.jpeg"
 import executiveIcon from "@/public/assets/icons/executive_icon.jpeg";
 import depositIcon from "@/public/assets/icons/deposit_icon.jpeg";
 import personalizedIcon from "@/public/assets/icons/personalized_icon.jpeg";
