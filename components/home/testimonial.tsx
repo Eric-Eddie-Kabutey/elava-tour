@@ -94,7 +94,7 @@ function Testimonial() {
                                             <Image 
                                                 src={data.img}
                                                 alt={`Testimonial ${index+1}`}
-                                                className='w-full h-full object-cover rounded-xl'
+                                                className='w-full h-full object-contain rounded-xl'
                                             />
                                         </div>
                                     </div>

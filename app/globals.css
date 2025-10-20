@@ -79,6 +79,14 @@
   /* background-size: cover; */
 }
 
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); /* makes text start from bottom upwards */
+    text-orientation: mixed;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
