@@ -11,7 +11,7 @@ const contact_details = [
     id: "1",
     name: "John Doe",
     role: "CEO & Founder",
-    image: "/assets/images/team/contact_1.jpg",
+    image: "/assets/images/team/contact_2.jpg",
     whatsAppUrl: "https://www.whatsapp.com/in/johndoe",
     phoneCall: "+220 507 1723",
     img: gambia_flag,
@@ -25,7 +25,7 @@ const contact_details = [
     id: "3",
     name: "Jane Smith",
     role: "Chief Technology Officer",
-    image: "/assets/images/team/contact_3.jpg",
+    image: "/assets/images/team/contact_1.jpg",
     whatsAppUrl: "https://www.whatsapp.com/in/janesmith",
     phoneCall: "+220 507 1723",
     img: ghana_flag,
@@ -120,10 +120,10 @@ function HelpHero() {
                                 </div>
                             </div>
                         ) : (
-                            <div key={member.id}  className="max-w-[300px]  mx-auto rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-700 ">
+                            <div key={member.id}  className="max-w-[250px] w-full  mx-auto  shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-700 ">
                                 {/* <div className="relative h-full w-full flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100"> */}
                                     <div className="w-full h-full flex justify-between items-center">
-                                        <div className="flex-1 h-full flex items-center justify-center bg-red-700">
+                                        <div className="flex-1 h-full flex items-center justify-center bg-red-500">
                                             <Typography
                                             typo="header-4-semibold"
                                             className="writing-vertical text-white"
@@ -134,7 +134,7 @@ function HelpHero() {
 
                                         <div className="w-fit h-full border-l-2 border-dashed border-gray-400"></div>
 
-                                        <div className="flex-1 h-full flex justify-center items-center bg-black text-white">
+                                        <div className="flex-1 h-full flex justify-center items-center bg-gray-700 text-white">
                                             <Typography
                                             typo="header-4-semibold"
                                             className="writing-vertical text-white text-center"
