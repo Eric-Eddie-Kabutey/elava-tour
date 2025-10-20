@@ -7,7 +7,6 @@ const OurStory = ({ id }: { id: string }) => {
       <div className="w-[65%] container mx-auto px-16 bg-[#f0f2f3] py-12 lg:pb-24">
         <div className="text-start mb-12">
           <h2 className="text-3xl font-bold text-gray-800">Our Story</h2>
-          {/* <p className="text-gray-600 mt-2">The passionate people behind our success.</p> */}
         </div>
         
         <div className="pb-8 flex flex-col gap-8">
