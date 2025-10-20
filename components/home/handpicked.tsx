@@ -7,9 +7,6 @@ import lockinImg from "@/public/assets/images/reserve_spot.png";
 import familyHolidayImg from "@/public/assets/images/home/holiday_1.png"
 import allInclusiveImg from "@/public/assets/images/home/holiday_2.png"
 import beachHolidaysImg from "@/public/assets/images/home/holiday_3.png"
-import kandimaImg from "@/public/assets/images/home/kandima_img.jpeg"
-import riuImg from "@/public/assets/images/home/riu_img.jpeg"
-import seasideImg from "@/public/assets/images/home/seaside_img.jpeg"
 import Typography from '../shared/typography';
 import { Card, CardContent, CardHeader } from '../ui/card';
 import Image from 'next/image';

@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel'
-import Autoplay from "embla-carousel-autoplay"
+
 import heroImg1 from "@/public/assets/images/home/hero_img1.jpeg"
 import heroImg2 from "@/public/assets/images/home/hero_img2.jpeg"
 import heroImg3 from "@/public/assets/images/home/hero_img3.jpeg"
@@ -15,7 +14,7 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 
-const heroImages = [heroImg1, heroImg2, heroImg3]
+// const heroImages = [heroImg1, heroImg2, heroImg3]
 const services = [
     {
         id: "1",
