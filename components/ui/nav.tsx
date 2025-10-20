@@ -54,9 +54,6 @@ export default function Nav() {
                   <div className="w-[600px] flex justify-between gap-x-6 p-4">
                     {/* LEFT COLUMN - All Destinations */}
                     <div className="flex-1 flex flex-col space-y-3">
-                      <h3 className="font-bold text-gray-900 capitalize">
-                        All Destinations
-                      </h3>
 
                       <ul className="space-y-1">
                         {item.columns[0].links.map((link) => (
