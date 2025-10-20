@@ -1,6 +1,5 @@
 import HeroSection from "./components/HeroSection";
 import Testimonial from "@/components/home/testimonial";
-import TeamSection from "./components/TeamSection";
 import { WhyUsSection } from "./WhyUsSection";
 import { ProcessesCarousel } from "@/components/about-us/ProcessesCardCarousel";
 import { MissionVisionSection } from "./components/MissionAndVision";
