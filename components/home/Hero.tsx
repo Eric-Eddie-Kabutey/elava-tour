@@ -47,7 +47,33 @@ function Hero() {
   return (
     <div className='w-full pb-12 flex flex-col gap-6 bg-[#e4e4e4]'>
         <section className=' w-full'>
-            <Carousel 
+            <div className="w-full h-[75vh] max-h-[700px] overflow-hidden relative">
+                  <video
+                    className="w-full h-full object-cover"
+                    src="/assets/images/home/elava_hero_vid.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                  <div className="absolute inset-0 bg-black/30" />
+                  <div className="absolute inset-0 flex items-center">
+                        <div className="w-full sm:w-[65%] md:w-[55%] lg:w-[60%] px-8 sm:px-12 md:px-20 flex flex-col gap-6">
+                            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white md:leading-tight drop-shadow-lg">
+                                We Make Your <span className="text-blue-400">CapeTown</span> and <span className="text-blue-400">Ghana</span> Tours Memorable
+                            </h2>
+                            {/* <p className="text-lg text-gray-200  leading-relaxed">
+                                Experience breathtaking destinations, luxury stays, and unforgettable memories — all curated for your comfort.
+                            </p>
+                            <div className="mt-4">
+                                <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all">
+                                Explore Destinations
+                                </button>
+                            </div> */}
+                        </div>
+                    </div>
+                </div>
+            {/* <Carousel 
                 plugins={[
                     Autoplay({
                     delay: 5000,
@@ -69,7 +95,7 @@ function Hero() {
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />
-            </Carousel>
+            </Carousel> */}
         </section>
         <section className='max-container w-full pb-4 bg-[#] z-[20]'>
             <div className='lg:w-[75%] w-[80%] mx-auto flex flex-col gap-[55px]'>

@@ -67,17 +67,26 @@ function Testimonial() {
                                             </Typography>
                                         </CardContent>
                                         <CardFooter className='flex flex-col'>
-                                            <Typography
-                                                typo="body-medium-semibold"
-                                            >
-                                                {data.name}
-                                            </Typography>
-                                            <Typography
-                                                typo="body-medium-regular"
-                                                className='text-gray-500'
-                                            >
-                                                {data.position}
-                                            </Typography>
+                                            <div className='pb-4 flex flex-col '>
+                                                <Typography
+                                                    typo="body-medium-semibold"
+                                                >
+                                                    {data.name}
+                                                </Typography>
+                                                <Typography
+                                                    typo="body-medium-regular"
+                                                    className='text-gray-500'
+                                                >
+                                                    {data.position}
+                                                </Typography>
+                                            </div>
+                                            <div className='w-12 h-8'>
+                                                <Image 
+                                                    src={data.flag}
+                                                    alt='Flag'
+                                                    className='w-full h-full object-cover'
+                                                />
+                                            </div>
                                         </CardFooter>
                                     </div>
                                     <div className='md:block hidden sm:w-[40%] w-full sm:max-h-[320px] relative'>

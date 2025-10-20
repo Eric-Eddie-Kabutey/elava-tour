@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import dubaiImg from "@/public/assets/images/home/dubai.jpeg";
-import maldivesImg from "@/public/assets/images/home/maldives.jpeg";
-import mauritiusImg from "@/public/assets/images/home/mauritius.jpeg";
-import lockinImg from "@/public/assets/images/home/lockinImg.jpeg";
-import familyHolidayImg from "@/public/assets/images/home/family_holidays.jpeg"
-import allInclusiveImg from "@/public/assets/images/home/all_inclusiveImg.jpeg"
-import beachHolidaysImg from "@/public/assets/images/home/beach_holidaysImg.jpeg"
+import dubaiImg from "@/public/assets/images/home/handpicked_1.png";
+import maldivesImg from "@/public/assets/images/home/handpicked_2.png";
+import mauritiusImg from "@/public/assets/images/home/handpicked_3.png";
+import lockinImg from "@/public/assets/images/reserve_spot.png";
+import familyHolidayImg from "@/public/assets/images/home/holiday_1.png"
+import allInclusiveImg from "@/public/assets/images/home/holiday_2.png"
+import beachHolidaysImg from "@/public/assets/images/home/holiday_3.png"
 import kandimaImg from "@/public/assets/images/home/kandima_img.jpeg"
 import riuImg from "@/public/assets/images/home/riu_img.jpeg"
 import seasideImg from "@/public/assets/images/home/seaside_img.jpeg"
@@ -35,7 +35,7 @@ const handpicked_destinations = [
    
 ]
 
-const holidaysImgs = [familyHolidayImg, allInclusiveImg, beachHolidaysImg, kandimaImg, riuImg, seasideImg]
+const holidaysImgs = [familyHolidayImg, allInclusiveImg, beachHolidaysImg]
 
 function Handpicked() {
   return (
