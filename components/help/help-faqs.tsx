@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { HoverAccordion } from '../ui/hover-accordion'
 import { Button } from '../ui/button'
 import Link from 'next/link'
@@ -40,9 +40,32 @@ const faqs = [
     question: "How can I book a tour with Eleva Tours?",
     answer: `Simply contact us via our website or email, and our team will help you plan and confirm your dream trip step by step.`,
   },
+  {
+    id: 7,
+    question: "Which African countries does Eleva Tours operate in?",
+    answer: `We currently curate journeys across Ghana, Kenya, and South Africa, with more destinations being added soon. Each tour is designed to highlight the country’s unique rhythm, culture, and hidden gems.`,
+  },
+  {
+    id: 8,
+    question: "Are your tours suitable for first-time visitors to Africa?",
+    answer: `Absolutely. Whether it’s your first time or your fifteenth, our guided experiences make travel effortless, comfortable, and immersive. We handle the details  so you can focus on the discovery.`,
+  },
+  {
+    id: 9,
+    question: "Does Eleva Tours offer sustainable or community-based travel options?",
+    answer: `Yes, sustainability is at the heart of what we do. We collaborate with local guides, artisans, and small businesses to ensure your travel supports communities and leaves a positive footprint.`,
+  },
+  {
+    id: 10,
+    question: "What should I expect from an Eleva Tours experience?",
+    answer: `Expect authenticity, warmth, and connection. Our trips are crafted to help you see Africa beyond the postcards, to taste, feel, and live its spirit in every journey.`,
+  },
 ]
 
 function HelpFaqs() {
+  const [isMore, setIsMore] = useState(false);
+
+  const moreFaqs = isMore ?  faqs : faqs.slice(0, 5)
   return (
     <div className="w-full py-32 bg-gradient-to-br from-gray-50 to-gray-100">
       <section className="max-container w-[85%] mx-auto flex flex-col gap-8 text-black">
@@ -53,13 +76,13 @@ function HelpFaqs() {
                   Here are some of the most common questions we get about working
                   together.
                 </p>           
-                <Button variant="secondary" className="w-fit py-4 bg-black hover:bg-gray-800">
+                <Button variant="secondary" className="w-fit py-4 text-white bg-black hover:bg-gray-800">
                   <Link href="#">Partner With Elava Tour</Link>
                 </Button>
             </div>
             <div className="flex flex-col gap-12 border-t border-gray-300 ">
               <HoverAccordion
-                    items={faqs.map((faq) => ({
+                    items={moreFaqs.map((faq) => ({
                     value: `item-${faq.id}`,
                     trigger: (
                         <span className="text-2xl font-normal">
@@ -74,8 +97,9 @@ function HelpFaqs() {
                     }))}
                 />
                 <Button
+                  onClick={() => setIsMore(!isMore)}
                     className='w-fit !px-4 !py-3 text-white hover:text-gray-100 bg-black hover:bg-gray-700'
-                >See More</Button>
+                >{isMore ? "See More" : "See Less"}</Button>
             </div>
           </div>
 
