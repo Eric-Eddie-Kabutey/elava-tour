@@ -12,7 +12,6 @@ const AboutUsPage = () => {
       <div className="font-[family-name:var(--font-geist-sans)]">
         <HeroSection />     
         <MissionVisionSection />
-        {/* <TeamSection id="team" />  */}
         <OurStory id="team" />                               
         <ProcessesCarousel />
         <WhyUsSection limit={3} />
