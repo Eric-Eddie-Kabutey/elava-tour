@@ -23,8 +23,8 @@ export default function Navbar() {
             <Header />
             <header className="bg-blue-700">
                 {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
-                <div className="max-container 2xl:w-[85%] w-[95%] mx-auto text-white">
-                    <NavbarComponent className="lg:w-[90%] w-full mx-auto">
+                <div className="max-container 2xl:w-[75%]  w-[95%] mx-auto text-white">
+                    <NavbarComponent className=" w-full mx-auto">
                         <NavbarLeft>
                             <Link
                                 href="/"
