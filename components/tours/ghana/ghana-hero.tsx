@@ -4,18 +4,31 @@ import React from 'react';
 import ghanaExperienceImg from "@/public/assets/images/home/lockinImg.jpeg"
 import Image, { StaticImageData } from 'next/image';
 
-function GhanaTourHero({ img, name }: { img: StaticImageData, name: string }) {
+type CountryContentProp = {
+  name: string;
+  image: StaticImageData;
+  history: {
+    title: string;
+    contents: string[];
+  }
+}
+
+type GhanaTourHeroProps = {
+  country_content: CountryContentProp
+}
+
+function GhanaTourHero({country_content }: GhanaTourHeroProps) {
   return (
     <div className='w-full py-12 bg-gradient-to-br from-gray-50 to-gray-100'>
         <section className='max-container w-[85%] mx-auto flex flex-col gap-8'>
             <Typography
                 typo="header-2-semibold"
                 className='text-center'
-            >The {name} Experience</Typography>
+            >The {country_content?.name} Experience</Typography>
             <div className='w-full grid grid-cols-2'>
                 <div className='w-full h-[400px]'>
                     <Image 
-                        src={img}
+                        src={country_content?.image}
                         alt='Ghana flag'
                         className='w-full h-full object-cover'
                     />
@@ -30,7 +43,23 @@ function GhanaTourHero({ img, name }: { img: StaticImageData, name: string }) {
             </div>
             <div className='w-[70%] py-8 flex flex-col gap-4'>
                 <Typography
-                    typo="header-3-semibold"
+                    typo="header-4-semibold"
+                >
+                    {country_content?.history?.title}
+                </Typography>
+                <div className='flex flex-col gap-4'>
+                    {country_content?.history?.contents.map(data => (
+                        <Typography
+                            typo="body-large-regular"
+                        >
+                            {data}
+                        </Typography>
+                    ))}
+                </div>
+            </div>
+            <div className='w-[70%] pb-8 flex flex-col gap-4'>
+                <Typography
+                    typo="header-4-semibold"
                 >
                     About Ghana
                 </Typography>

@@ -124,25 +124,25 @@ export const navigationData: NavigationItem[] = [
         links: [
           {
             title: "Solo Trips",
-            href: "/tours/south-africa",
+            href: "/trip-types/all-inclusive",
             description: "Witness breathtaking landscapes and diverse wildlife.",
             current: [
                 {
                     title: "South African Tour",
                     img: navImg3,
-                    href: "/tours/south-africa",
+                    href: "/trip-types/all-inclusive",
                     description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
                 },
                 {
                     title: "Ghana Tour",
                     img: navImg2,
-                    href: "/tours/south-africa",
+                    href: "/trip-types/all-inclusive",
                     description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
                 },
                 {
                     title: "Kenya Tour",
                     img: navImg1,
-                    href: "/tours/south-africa",
+                    href: "/trip-types/all-inclusive",
                     description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
                 },
             ]
