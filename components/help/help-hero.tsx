@@ -1,8 +1,6 @@
 'use client';
 import React from 'react'
 import Typography from '../shared/typography'
-import gambia_flag from "@/public/assets/images/Flag_of_The_Gambia.png";
-import ghana_flag from "@/public/assets/images/Flag_of_Ghana.png";
 
 // const contact_details = [
 //   {

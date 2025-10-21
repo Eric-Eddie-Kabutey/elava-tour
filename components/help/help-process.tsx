@@ -1,26 +1,22 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
-import {EmblaOptionsType} from "embla-carousel";
-import useEmblaCarousel from "embla-carousel-react";
 import { featuresData } from "@/data/processes"; 
-import { useMediaQuery } from "@/hooks/use-media-query"; 
 
 
 // Define the responsive options for Embla
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const TWEEN_FACTOR = 4.2;
-const mobileOptions: EmblaOptionsType = { loop: false, align: 'start', slidesToScroll: 1 };
-const desktopOptions: EmblaOptionsType = { loop: false, align: 'start', slidesToScroll: 1 };
+// const TWEEN_FACTOR = 4.2;
+// const mobileOptions: EmblaOptionsType = { loop: false, align: 'start', slidesToScroll: 1 };
+// const desktopOptions: EmblaOptionsType = { loop: false, align: 'start', slidesToScroll: 1 };
 
 export const Helpprocess = () => {
-  const isDesktop = useMediaQuery("(min-width: 1024px)");
+//   const isDesktop = useMediaQuery("(min-width: 1024px)");
   
   // Conditionally select options based on screen size
-  const options = isDesktop ? desktopOptions : mobileOptions;
+//   const options = isDesktop ? desktopOptions : mobileOptions;
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+//   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 //   const [current, setCurrent] = useState(0);
 //   const [count, setCount] = useState(0);
 
@@ -52,7 +48,9 @@ export const Helpprocess = () => {
           </p>
         </div>
 
-        <div className="overflow-hidden my-4" ref={emblaRef}>
+        <div className="overflow-hidden my-4" 
+            // ref={emblaRef}
+        >
           <div className="py-4 grid grid-cols-4 gap-4">
             {featuresData.map((feature, index) => (
               <div
