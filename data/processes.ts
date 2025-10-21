@@ -53,36 +53,40 @@ type Feature = {
 };
 
 export const featuresData: Feature[] = [
-    {
-        icon: Mail,
-        tag: '01',
-        title: 'Tell us what you want and when',
-        description: 'Stand out with a professional email at your company domain. Create branded layouts and personalize messaging.',
-        image: processImg1,
-        variant: 'default',
-    },
-    {
-        icon: Calendar,
-        tag: '02',
-        title: 'Tell us how we can reach you',
-        description: 'Let customers book time with you directly within Google Calendar via a personal booking page.',
-        image: processImg2,
-        variant: 'default',
-    },
-    {
-        icon: FileText,
-        tag: '03',
-        title: 'Submit your details ofter filling forms',
-        description: 'Request electronic signatures and easily manage vendor agreements, customer contracts, and more.',
-        image: processImg3,
-        variant: 'primary',
-    },
-    {
-        icon: FileText,
-        tag: '04',
-        title: 'Get on a call with our consultants in minutes',
-        description: 'Request electronic signatures and easily manage vendor agreements, customer contracts, and more.',
-        image: processImg4,
-        variant: 'primary',
-    },
+  {
+    icon: Mail,
+    tag: '01',
+    title: 'Tell us what you want and when',
+    description:
+      'Share your dream destination, travel dates, and preferences — whether it’s a relaxing beach escape, cultural adventure, or wildlife experience. We’ll help you plan it your way.',
+    image: processImg1,
+    variant: 'default',
+  },
+  {
+    icon: Calendar,
+    tag: '02',
+    title: 'Tell us how we can reach you',
+    description:
+      'Provide your contact details so our travel experts can get in touch quickly to confirm your trip details and assist you throughout your travel planning.',
+    image: processImg2,
+    variant: 'default',
+  },
+  {
+    icon: FileText,
+    tag: '03',
+    title: 'Submit your details after filling forms',
+    description:
+      'Complete our short travel form with your preferences and traveler information. This helps us personalize your itinerary and prepare the best travel options for you.',
+    image: processImg3,
+    variant: 'primary',
+  },
+  {
+    icon: FileText,
+    tag: '04',
+    title: 'Get on a call with our consultants in minutes',
+    description:
+      'Once we receive your request, one of our tour consultants will reach out to discuss your plan, refine your itinerary, and answer any questions you have before your adventure begins.',
+    image: processImg4,
+    variant: 'primary',
+  },
 ];

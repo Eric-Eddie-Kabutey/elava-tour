@@ -51,7 +51,7 @@ function HelpHero() {
                 </Typography>
             </div>
             
-            <div className="w-full py-16 px-24 flex flex-col gap-6 bg-white">
+            {/* <div className="w-full py-16 px-24 flex flex-col gap-6 bg-white">
                 <Typography
                     typo="header-4-semibold"
                     className='text-black'
@@ -121,7 +121,6 @@ function HelpHero() {
                             </div>
                         ) : (
                             <div key={member.id}  className="max-w-[250px] w-full  mx-auto  shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-700 ">
-                                {/* <div className="relative h-full w-full flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100"> */}
                                     <div className="w-full h-full flex justify-between items-center">
                                         <div className="flex-1 h-full flex items-center justify-center bg-red-500">
                                             <Typography
@@ -143,83 +142,13 @@ function HelpHero() {
                                             </Typography>
                                         </div>
                                     </div>
-                                {/* </div> */}
 
                             
                             </div>
                         )
-                        // <React.Fragment key={index}>
-                        //     <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 w-full">
-                        //         <div className="relative h-80 w-full">
-                        //         <Image
-                        //             src={member.image}
-                        //             alt={`Photo of ${member.name}`}
-                        //             fill
-                        //             className="object-cover object-top w-full"
-                        //             sizes="(max-width: 1024px) 100vw, 50vw"
-                        //         />
-                        //         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-
-                        //         <div className="absolute bottom-6 left-6 text-white">
-                        //             <h3 className="text-2xl font-semibold mb-1">{member.name}</h3>
-                        //             <p className="text-gray-200 font-medium">{member.role}</p>
-                        //         </div>
-                        //         </div>
-
-                        //         <div className="p-6 bg-white w-full">
-                        //         <div className="flex justify-between items-center w-full">
-                        //             <div className="space-y-1">
-                        //             <p className="text-sm text-gray-500 font-medium">Contact via</p>
-                        //             <div className='flex items-center gap-2'>
-                        //                 <div className='w-8 h-fit'>
-                        //                     <Image 
-                        //                         src={member.img}
-                        //                         alt={`Member flag ${member}`}
-                        //                     />
-                        //                 </div>
-                        //                 <p className="text-gray-700 font-semibold">{member.phoneCall}</p>
-                        //             </div>
-                        //             </div>
-
-                        //             <div className="flex items-center gap-3">
-                        //             <a
-                        //                 href={member.whatsAppUrl}
-                        //                 target="_blank"
-                        //                 rel="noopener noreferrer"
-                        //                 aria-label={`Contact ${member.name} on WhatsApp`}
-                        //                 className="flex items-center justify-center w-12 h-12 bg-green-50 hover:bg-green-100 rounded-full transition-colors duration-200 group"
-                        //             >
-                        //                 <WhatsappLogo
-                        //                 size={24}
-                        //                 className="text-green-600 group-hover:text-green-700 transition-colors"
-                        //                 />
-                        //             </a>
-
-                        //             <a
-                        //                 href={`tel:${member.phoneCall}`}
-                        //                 aria-label={`Call ${member.name}`}
-                        //                 className="flex items-center justify-center w-12 h-12 bg-blue-50 hover:bg-blue-100 rounded-full transition-colors duration-200 group"
-                        //             >
-                        //                 <PhoneCall
-                        //                 size={20}
-                        //                 className="text-blue-600 group-hover:text-blue-700 transition-colors"
-                        //                 />
-                        //             </a>
-                        //             </div>
-                        //         </div>
-                        //         </div>
-                        //     </div>
-
-                        //     {index !== contact_details.length - 1 && (
-                        //         <div className="w-[300px] hidden lg:flex justify-between items-center gap-2 absolute top-0 bottom-0 left-1/2 -translate-x-1/2 border-[1.5px] border-dashed border-gray-300">
-                        //             <div className='flex-1'></div>
-                        //             <div className='flex-1'></div>
-                        //         </div>
-                        //     )}
-                        // </React.Fragment>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </section>
     </div>
   )
