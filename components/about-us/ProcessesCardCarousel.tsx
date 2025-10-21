@@ -69,7 +69,7 @@ export const ProcessesCarousel = () => {
                     <Image
                       src={feature.image}
                       alt={feature.title}
-                      className="w-[90%] mx-auto h-fit object-cover rounded-md"
+                      className="w-[85%] mx-auto h-fit object-cover rounded-md"
                     />
                   </div>
                   <div className="flex flex-col p-10 pt-6">
