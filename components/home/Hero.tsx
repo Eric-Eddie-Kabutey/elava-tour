@@ -43,7 +43,7 @@ function Hero() {
   return (
     <div className='w-full pb-12 flex flex-col gap-6 bg-[#e4e4e4]'>
         <section className=' w-full'>
-            <div className="w-full h-[75vh] max-h-[700px] overflow-hidden relative">
+            <div className="w-full md:h-[75vh] h-[60vh] max-h-[700px] overflow-hidden relative">
                   <video
                     className="w-full h-full object-cover"
                     src="/assets/images/home/elava_hero_vid.mp4"
@@ -53,8 +53,8 @@ function Hero() {
                     playsInline
                   />
                   <div className="absolute inset-0 bg-black/30" />
-                  <div className="max-container w-[85%] absolute inset-0 flex items-center">
-                        <div className="w-full sm:w-[65%] md:w-[55%] lg:w-[70%] px-8 sm:px-12 md:px-20 flex flex-col gap-6">
+                  <div className="max-w-[1150px] lg:w-[75%] w-[95%] mx-auto absolute inset-0 flex items-center ">
+                        <div className="lg:w-[800px] flex flex-col gap-6 ">
                             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white md:leading-tight drop-shadow-lg">
                                 We Make Your <span className="text-blue-400">CapeTown</span> and <span className="text-blue-400">Ghana</span> Tours Memorable
                             </h2>
@@ -94,16 +94,16 @@ function Hero() {
             </Carousel> */}
         </section>
         <section className='max-container w-full pb-4 bg-[#] z-[20]'>
-            <div className='lg:w-[75%] w-[80%] mx-auto flex flex-col gap-[55px]'>
+            <div className='lg:w-[75%] w-[95%] mx-auto flex flex-col gap-[85px]'>
                 <div className='w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
-                    <div className='w-full flex justify-between items-start gap-1'>
-                        <div className='flex-1 flex flex-col gap-3'>
+                    <div className='w-full flex xs:flex-row flex-col justify-between items-start xs:gap-1 gap-6'>
+                        <div className='xs:flex-1 w-full flex flex-col gap-3'>
                             <button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-blue-700 hover:border-black'>
                                 <Plane color='#000' size={28} className='xs:flex hidden' />
                                 <span className='sm:text-lg'>Search Holidays</span>
                             </button>
                             <form className="px-2 flex flex-col gap-3 mt-4">
-                                <div className='w-full flex justify-between gap-2'>
+                                <div className='w-full flex md:flex-row flex-col justify-between gap-2'>
                                     <div className="flex-1 flex flex-col gap-2">
                                         <Select>
                                             <SelectTrigger >
@@ -146,14 +146,14 @@ function Hero() {
                                 
                             </form>
                         </div>
-                        <div className='w-[1.5px] h-10 mt-2 bg-gray-300'></div>
-                        <div className='flex-1 flex flex-col gap-3'>
+                        <div className='xs:block hidden w-[1.5px] h-10 mt-2 bg-gray-300'></div>
+                        <div className='xs:flex-1 w-full flex flex-col gap-3'>
                             <button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-blue-700 hover:border-black'>
                                 <Tag color='#000' size={28} className='xs:flex hidden' />
                                 <span className='sm:text-lg'>Customize Plan</span>
                             </button>
                             <form className="px-2 flex flex-col gap-3 mt-4">
-                                <div className='w-full flex justify-between gap-2'>
+                                <div className='w-full flex md:flex-row flex-col justify-between gap-2'>
                                     <div className="flex-1 flex flex-col gap-2">
                                         <Select>
                                             <SelectTrigger >

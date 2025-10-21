@@ -48,7 +48,7 @@ function Testimonial() {
                                     className='w-full min-h-[330px] sm:p-4 flex md:flex-row flex-col justify-between items-stretch sm:gap-8 gap-4 border-none bg-white'
                                 >
                                     <div className='md:hidden block md:w-[40%] w-full relative'>
-                                        <div className='w-full md:h-full xs:h-[250px] h-[200px]'>
+                                        <div className='w-full md:h-full xs:h-[350px] h-[200px]'>
                                             <Image 
                                                 src={data.img}
                                                 alt={`Testimonial ${index+1}`}

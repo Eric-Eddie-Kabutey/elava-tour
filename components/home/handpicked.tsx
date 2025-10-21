@@ -38,14 +38,14 @@ const holidaysImgs = [familyHolidayImg, allInclusiveImg, beachHolidaysImg]
 function Handpicked() {
   return (
     <div className='hidden w-full py-10 lg:flex flex-col bg-[#e4e4e4]'>
-        <section className='max-container w-[95%] mx-auto px-12 pt-12 pb-16 flex flex-col gap-12 bg-[#f0f2f3]'>
+        <section className='max-container w-[95%] mx-auto px-12 pt-12 pb-24 flex flex-col gap-12 bg-[#f0f2f3]'>
             <div className='w-full flex flex-col gap-4 text-black'>
                 <Typography
                     typo="header-5-medium"
                 >
                     Our Handpicked Destinations
                 </Typography>
-                <div className='w-full grid grid-cols-3 gap-6'>
+                <div className='w-full pb-3 grid grid-cols-3 gap-6'>
                     {handpicked_destinations.map((data, index) => (
                         <Card key={data.id} className='flex flex-col gap-3 rounded-none bg-white'>
                             <CardHeader className='w-full fit p-0  overflow-hidden'>
@@ -75,7 +75,7 @@ function Handpicked() {
                 <ArrowUpRight />
             </Button>
         </section>
-        <section className='max-container w-full h-[470px] flex items-center'>
+        <section className='max-container w-full h-[470px] pb-8 flex items-center'>
             <div className='flex-1 h-full'>
                 <Image 
                     src={lockinImg}
@@ -91,9 +91,9 @@ function Handpicked() {
                 />
             </div>
         </section>
-        <section className='py-12 bg-[#e4e4e4]'></section>
+        <section className='py-16 bg-[#e4e4e4]'></section>
         <section className='w-full '>
-            <div className='max-container w-[95%] mx-auto p-10 flex flex-col gap-12 bg-[#f0f2f3]'>
+            <div className='max-container w-[95%] mx-auto p-12 flex flex-col gap-12 bg-[#f0f2f3]'>
                 <div className='w-full grid grid-cols-3 gap-6 '>
                     {holidaysImgs.map((data, index) => (
                         <div key={`hOLIDAY ${index+1}`} className='w-full fit overflow-hidden'>

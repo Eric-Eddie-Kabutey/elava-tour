@@ -40,7 +40,7 @@ export default function Nav() {
       React.useState<DestinationLink | null>(defaultDestination);
 
   return (
-    <NavigationMenu className="hidden md:flex">
+    <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList>
         {navigationData.slice(0, 3).map((item: NavigationItem) => (
           <NavigationMenuItem key={item.title}>

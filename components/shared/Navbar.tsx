@@ -42,7 +42,7 @@ export default function Navbar() {
                                 <div className="">
                                     <Nav />
                                 </div>
-                                <div className="px-1 sm:py-5 py-3 flex items-center justify-center gap-1 bg-white">
+                                <div className="px-1 sm:py-5 py-3 hidden xs:flex items-center justify-center gap-1 bg-white">
                                     <Image 
                                         src={telephoneIcon}
                                         alt="Telephone icon"
@@ -63,7 +63,7 @@ export default function Navbar() {
                                         <Button
                                             variant="ghost"
                                             size="icon"
-                                            className="shrink-0 md:hidden"
+                                            className="shrink-0 lg:hidden"
                                         >
                                             <Menu className="h-5 w-5" />
                                             <span className="sr-only">Toggle navigation menu</span>

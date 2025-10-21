@@ -17,7 +17,7 @@ import { navigationData } from "@/data/navigation";
 
 export default function NavRight() {
   return (
-    <NavigationMenu className="hidden md:flex">
+    <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList>
         {navigationData.slice(3, 6).map((item) => (
           <NavigationMenuItem key={item.title}>
