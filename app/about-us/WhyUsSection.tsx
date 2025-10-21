@@ -1,6 +1,8 @@
-import Link from "next/link";
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { whyUsData } from "@/data/why-us";
+import { useState } from "react";
 
 // The component accepts an optional 'limit' prop
 type FeaturesSectionProps = {
@@ -9,7 +11,8 @@ type FeaturesSectionProps = {
 
 export const WhyUsSection = ({ limit }: FeaturesSectionProps) => {
   // If a limit is provided, slice the array. Otherwise, use the full array.
-  const displayedFeatures = limit ? whyUsData.slice(0, limit) : whyUsData;
+  const [isMore, setIsMore] = useState(false);
+  const displayedFeatures = isMore ?  whyUsData : whyUsData.slice(0, 3);
 
   return (
     <section className="py-16 bg-white">
@@ -33,14 +36,14 @@ export const WhyUsSection = ({ limit }: FeaturesSectionProps) => {
           ))}
         </div>
 
-        {/* Conditionally render the "See More" button */}
-        {limit && whyUsData.length > limit && (
-          <div className="text-center mt-12">
-            <Button asChild variant="outline" size="lg">
-              <Link href="/why-us">See More</Link>
+          <div   className="text-center mt-12">
+            <Button variant="outline" size="lg"
+              onClick={() => setIsMore(!isMore)}
+              
+            >
+              {isMore ? "See Less" : "See More"}
             </Button>
           </div>
-        )}
       </div>
     </section>
   );
