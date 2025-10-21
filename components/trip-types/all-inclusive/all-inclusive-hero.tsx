@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 function AllInclusiveHero() {
   return (
     <div className='w-full py-12'>
-        <section className='w-[75%] max-container mx-auto flex items-center gap-8'>
+        <section className='w-[80%] max-container mx-auto flex items-center gap-8'>
             <div className='flex-1 max-w-[600px] flex flex-col gap-3'>
                 <div className='flex flex-col gap- text-black'>
                     <Typography

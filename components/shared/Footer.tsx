@@ -76,7 +76,7 @@ export default function div() {
     return (
         <div className="w-full flex flex-col">
             <div className="w-full bg-app-primary">
-                <section className="max-container relative 2xl:w-[85%] w-[95%] mx-auto py-4 text-white">
+                <section className="max-container relative 2xl:w-[95%] w-[95%] mx-auto py-4 text-white">
                     <Typography
                         typo="header-6-medium"
                     >

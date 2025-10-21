@@ -20,7 +20,7 @@ type GhanaTourHeroProps = {
 function GhanaTourHero({country_content }: GhanaTourHeroProps) {
   return (
     <div className='w-full py-12 bg-gradient-to-br from-gray-50 to-gray-100'>
-        <section className='max-container w-[85%] mx-auto flex flex-col gap-8'>
+        <section className='max-container w-[95%] mx-auto flex flex-col gap-8'>
             <Typography
                 typo="header-2-semibold"
                 className='text-center'

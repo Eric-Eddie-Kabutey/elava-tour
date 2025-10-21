@@ -205,9 +205,9 @@ export const navigationData: NavigationItem[] = [
     title: "Deals",
     href: "/deals",
     links: [
-      { title: "Trip Saving ", href: "/insights/news", description: "Make a Deposit for next Trip " },
-      { title: "Loyalty Discount ", href: "/insights/gallery", description: "Get 10% Discount on Next Trip" },
-      { title: "Student Discounts", href: "/insights/gallery", description: "Get Student travel voucher" },
+      { title: "Trip Saving ", href: "/deals/trip-saving", description: "Make a Deposit for next Trip " },
+      { title: "Loyalty Discount ", href: "/deals/loyalty-discount", description: "Get 10% Discount on Next Trip" },
+      { title: "Student Discounts", href: "/deals/student-discounts", description: "Get Student travel voucher" },
     ],
   },
   {

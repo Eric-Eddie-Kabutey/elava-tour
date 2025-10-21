@@ -46,14 +46,13 @@ export const FeaturedNewsCarousel = () => {
   }, [emblaApi]);
 
 
-  // Don't render the carousel if there are no featured posts
   if (featuredPosts.length === 0) {
     return null;
   }
 
   return (
     <section className="py-12 bg-[#e4e4e4]">
-      <div className="container mx-auto px-4">
+      <div className="max-container w-[78%] mx-auto">
         <div className="relative">
           {/* Embla Viewport */}
           <div className="overflow-hidden" ref={emblaRef}>

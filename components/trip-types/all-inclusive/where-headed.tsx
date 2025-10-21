@@ -55,7 +55,7 @@ const headedTrip = [
 function WhereHeaded() {
   return (
     <div className='w-full py-16 bg-gradient-to-br from-gray-50 to-gray-100'>
-        <section className='w-[85%] max-container mx-auto flex flex-col gap-6'>
+        <section className='w-[75%] max-container mx-auto flex flex-col gap-6'>
             <div className='w-full flex justify-between items-center gap-4'>
                 <Typography
                     typo="header-3-bold"

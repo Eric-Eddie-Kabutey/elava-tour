@@ -48,7 +48,7 @@ const tourReasons = [
 function TravelReasons() {
   return (
     <div className='travel-bg w-full pt-16 pb-80 '>
-        <section className='max-container w-[85%] mx-auto flex flex-col gap-6'>
+        <section className='max-container w-[75%] mx-auto flex flex-col gap-6'>
             <Typography
                 typo="header-3-bold"
             >Five reasons to travel with us</Typography>

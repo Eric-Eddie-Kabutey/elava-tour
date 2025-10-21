@@ -37,7 +37,7 @@ const things_experienced = [
 function ThingsExperience() {
   return (
     <div className='w-full py-16 bg-gradient-to-br from-gray-50 to-gray-100'>
-        <section className='max-container w-[85%] mx-auto flex flex-col gap-6'>
+        <section className='max-container w-[75%] mx-auto flex flex-col gap-6'>
             <Typography 
                 typo="header-2-bold"
             >
@@ -48,7 +48,7 @@ function ThingsExperience() {
                     <div className='w-full '
                         key={data.id}
                     >
-                        <div className='w-full h-[350px]'>
+                        <div className='w-full h-[250px]'>
                             <Image 
                                 src={data.img}
                                 alt={`Experienced ${index+1}`}
@@ -61,7 +61,7 @@ function ThingsExperience() {
                             >{data.title}</Typography>
                             <Typography
                                 typo="body-medium-regular"
-                                className='!leading-tight'
+                                className='!leading-tight line-clamp-3'
                             >{data.description}</Typography>
                         </div>
                     </div>

@@ -46,7 +46,7 @@ export const ProcessesCarousel = () => {
 
   return (
     <section className="py-16 md:py-24 bg-gray-50">
-      <div className="container w-[85%] mx-auto px-4">
+      <div className="max-container w-[78%] mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800">Our Process</h2>
           <p className="text-gray-600 mt-2 max-w-2xl mx-auto">

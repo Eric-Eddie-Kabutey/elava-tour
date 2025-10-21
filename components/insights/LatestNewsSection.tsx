@@ -48,7 +48,7 @@ export const LatestNewsSection = () => {
 
   return (
     <section className="py-16 bg-[#e4e4e4]">
-      <div className="container mx-auto px-4">
+      <div className="max-container w-[95%] mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-4 md:mb-0">Latest News</h2>

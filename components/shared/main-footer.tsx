@@ -36,7 +36,7 @@ const nav_links = [
 function MainFooter() {
   return (
     <div className='w-full flex flex-col bg-[#04174d]'>
-        <section className='max-container 2xl:w-[85%] w-[95%] mx-auto py-16 flex flex-col gap-10'>
+        <section className='max-container 2xl:w-[95%] w-[95%] mx-auto py-16 flex flex-col gap-10'>
             <Typography 
                 typo="header-3-regular"
                 className='xl:w-[450px] lg:w-[400px] md:w-[350px] text-white'
@@ -66,13 +66,13 @@ function MainFooter() {
         <div className='w-full py-4 flex justify-center items-center border-y border-gray-500'>
             <Typography
                 typo="header-1-semibold"
-                className='text-white xl:!text-[12rem] lg:!text-[9rem] md:!text-[7rem] !text-[6rem] font-bold uppercase !leading-normal'
+                className='text-white xl:!text-[14rem] lg:!text-[9rem] md:!text-[7rem] !text-[6rem] font-bold uppercase !leading-normal'
             >
                 Elava tour
             </Typography>
         </div>
         <div className='w-full py-10'>
-            <section className='max-container 2xl:w-[85%] w-[95%] mx-auto flex flex-col gap-10'>
+            <section className='max-container 2xl:w-[95%] w-[95%] mx-auto flex flex-col gap-10'>
                 <div className='flex justify-center items-center gap-4'>
                     <div className="text-center text-[14px] text-gray-400">© 2025 Emirates Holidays All rights reserved</div>
                     <Link 

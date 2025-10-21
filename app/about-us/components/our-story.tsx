@@ -4,7 +4,7 @@ import Image from "next/image";
 const OurStory = ({ id }: { id: string }) => {
   return (
     <section id={id} className="py-16 bg-[#e4e4e4]">
-      <div className="w-[65%] container mx-auto px-16 bg-[#f0f2f3] py-12 lg:pb-24">
+      <div className="w-[65%] max-container mx-auto px-16 bg-[#f0f2f3] py-12 lg:pb-24">
         <div className="text-start mb-12">
           <h2 className="text-3xl font-bold text-gray-800">Our Story</h2>
         </div>

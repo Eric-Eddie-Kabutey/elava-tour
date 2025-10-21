@@ -34,7 +34,7 @@ const current_tours = [
 function CurrentTrips() {
   return (
     <div className='w-full py-16 bg-gradient-to-br from-gray-50 to-gray-100'>
-        <section className='w-[85%] mx-auto flex flex-col gap-6 text-black'>
+        <section className='w-[95%] mx-auto flex flex-col gap-6 text-black'>
             <Typography
                 typo="header-3-semibold"
             >

@@ -54,7 +54,7 @@ const feast_tours = [
 function FeastTours() {
   return (
     <div className='w-full py-16 bg-[#ededf6]'>
-        <section className='max-container w-[85%] mx-auto flex flex-col gap-6'>
+        <section className='max-container w-[75%] mx-auto flex flex-col gap-6'>
             <div className='flex flex-col '>
                 <Typography
                     typo="header-2-bold"
@@ -74,7 +74,7 @@ function FeastTours() {
                                 <Card 
                                     className='max-w-[350px] w-full bg-white rounded-b-md'
                                 >
-                                    <div className='w-full h-[230px]'>
+                                    <div className='w-full h-[200px]'>
                                         <Image 
                                             src={data.img}
                                             alt={`Feast tour+${index+1}`}

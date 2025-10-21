@@ -24,19 +24,20 @@ export default function Navbar() {
             <div className="w-full bg-blue-700">
                 <header className="max-container">
                     {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
-                    <div className="max-container h-[70px] 2xl:w-[75%]  w-[95%] mx-auto text-white">
-                        <NavbarComponent className="h-full w-full mx-auto overflow-visible">
+                    <div className="max-container h-[70px] w-[95%] mx-auto flex items-center text-white">
+                        <Link
+                            href="/"
+                            className="w-20 h-fit relative left- top-5 z-[40]"
+                        >
+                            <Image 
+                                src={elavaTourImg}
+                                alt="Elava Logo"
+                                className="w-full h-full"
+                            />
+                        </Link>
+                        <NavbarComponent className="h-full w-[87%] mx-auto overflow-visible">
                             <NavbarLeft>
-                                <Link
-                                    href="/"
-                                    className="w-20 h-fit relative left- top-5 z-[40]"
-                                >
-                                    <Image 
-                                        src={elavaTourImg}
-                                        alt="Elava Logo"
-                                        className="w-full h-full"
-                                    />
-                                </Link>
+                                
                                 {/* <Navigation /> */}
                                 <div className="">
                                     <Nav />

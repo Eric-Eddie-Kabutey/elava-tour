@@ -32,8 +32,7 @@ const HeroSection = () => {
       </Button>
     </div>
 
-      {/* hero image should be wrap in container with class 'max-w-container'  use Next.js Image*/}
-      <div className="mt-10 max-container 2xl:w-[85%] w-[95%] mx-auto">
+      <div className="mt-10 max-container 2xl:w-[75%] w-[95%] mx-auto">
         <Image
           src="/assets/images/home/lockinImg.jpeg"
           alt="About Us Hero"

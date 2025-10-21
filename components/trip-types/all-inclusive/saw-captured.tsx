@@ -48,7 +48,7 @@ function SawCaptured() {
     const moreImages = isMore ? tourImages : tourImages.slice(0, 12)
   return (
     <div className='w-full py-12 bg-gradient-to-br from-gray-50 to-gray-100'>
-        <section className='w-[85%] max-container mx-auto flex justify-between gap-10'>
+        <section className='w-[78%] max-container mx-auto flex justify-between gap-10'>
             <div className='w-[500px] h-fit pb-8 relative'> 
                 <div className='absolute bottom-0 left-0 w-[250px] h-[250px] bg-[#f0609e] -z-[5]'></div>
                 <div className='w-[95%] ml-auto px-6 pb-4 flex flex-col gap-5 bg-[#eff1f5] z-[20]'>
@@ -132,18 +132,18 @@ function SawCaptured() {
                 <div className='w-full h-[500px] flex flex-col gap-6 overflow-auto'>
                     <div className='w-full h-fit grid grid-cols-4 gap-3 border'>
                         {moreImages.map((image, index) => (
-                            <div key={`tour image+${index+1}`} className='relative break-inside-avoid w-auto h-[170px]'>
+                            <div key={`tour image+${index+1}`} className='relative break-inside-avoid w-auto h-[150px]'>
                                 <Image 
                                     src={image}
                                     alt={`Photo ${index+1}`}
                                     className='w-full h-full object-cover rounded-md'
                                 />
-                                <div className='absolute inset-0 group hover:bg-black/40 transition-all duration-400 ease-in-out'>
+                                <div className='absolute inset-0 group hover:bg-black/40 transition-all duration-400 ease-in-out rounded-md'>
                                     <div className='w-full p-4 flex items-center gap-2'>
                                         <Instagram color='#fff' size={20} />
                                         <Typography
                                             typo="body-medium-medium"
-                                            className='hidden group-hover:block'
+                                            className='hidden group-hover:block text-white'
                                         >Konongo</Typography>
                                     </div>
                                 </div>
