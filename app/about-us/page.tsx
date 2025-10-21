@@ -14,7 +14,7 @@ const AboutUsPage = () => {
         <MissionVisionSection />
         <OurStory id="team" />                               
         <ProcessesCarousel />
-        <WhyUsSection limit={3} />
+        <WhyUsSection />
         <Testimonial />
       </div>      
     </>

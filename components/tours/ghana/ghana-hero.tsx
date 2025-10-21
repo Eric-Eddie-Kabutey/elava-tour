@@ -50,6 +50,7 @@ function GhanaTourHero({country_content }: GhanaTourHeroProps) {
                 <div className='flex flex-col gap-4'>
                     {country_content?.history?.contents.map(data => (
                         <Typography
+                            key={data}
                             typo="body-large-regular"
                         >
                             {data}

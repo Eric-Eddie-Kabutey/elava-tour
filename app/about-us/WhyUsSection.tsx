@@ -5,11 +5,9 @@ import { whyUsData } from "@/data/why-us";
 import { useState } from "react";
 
 // The component accepts an optional 'limit' prop
-type FeaturesSectionProps = {
-  limit?: number;
-};
 
-export const WhyUsSection = ({ limit }: FeaturesSectionProps) => {
+
+export const WhyUsSection = () => {
   // If a limit is provided, slice the array. Otherwise, use the full array.
   const [isMore, setIsMore] = useState(false);
   const displayedFeatures = isMore ?  whyUsData : whyUsData.slice(0, 3);
