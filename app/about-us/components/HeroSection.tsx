@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -32,14 +31,22 @@ const HeroSection = () => {
       </Button>
     </div>
 
-      <div className="mt-10 max-container 2xl:w-[75%] w-[95%] mx-auto">
-        <Image
+      <div className="mt-10 max-container 2xl:w-[75%] w-[95%] h-[450px] mx-auto">
+        <video
+          className="w-full h-full object-cover rounded-lg"
+          src="/assets/images/home/about-vid.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        {/* <Image
           src="/assets/images/home/lockinImg.jpeg"
           alt="About Us Hero"
           className="w-full h-auto mx-auto shadow-lg"
           width={1600}
           height={900}
-        />
+        /> */}
       </div>
     </section>
   );
