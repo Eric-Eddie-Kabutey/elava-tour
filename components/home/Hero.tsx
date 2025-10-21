@@ -53,8 +53,8 @@ function Hero() {
                     playsInline
                   />
                   <div className="absolute inset-0 bg-black/30" />
-                  <div className="absolute inset-0 flex items-center">
-                        <div className="w-full sm:w-[65%] md:w-[55%] lg:w-[60%] px-8 sm:px-12 md:px-20 flex flex-col gap-6">
+                  <div className="max-container w-[85%] absolute inset-0 flex items-center">
+                        <div className="w-full sm:w-[65%] md:w-[55%] lg:w-[70%] px-8 sm:px-12 md:px-20 flex flex-col gap-6">
                             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white md:leading-tight drop-shadow-lg">
                                 We Make Your <span className="text-blue-400">CapeTown</span> and <span className="text-blue-400">Ghana</span> Tours Memorable
                             </h2>
