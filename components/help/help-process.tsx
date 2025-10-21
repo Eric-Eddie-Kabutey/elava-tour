@@ -21,26 +21,25 @@ export const Helpprocess = () => {
   const options = isDesktop ? desktopOptions : mobileOptions;
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
+//   const [current, setCurrent] = useState(0);
+//   const [count, setCount] = useState(0);
 
-  // This state management logic is almost identical to the previous version
-  useEffect(() => {
-    if (!emblaApi) return;
+//   useEffect(() => {
+//     if (!emblaApi) return;
 
-    setCount(emblaApi.scrollSnapList().length);
-    setCurrent(emblaApi.selectedScrollSnap());
+//     setCount(emblaApi.scrollSnapList().length);
+//     setCurrent(emblaApi.selectedScrollSnap());
 
-    const onSelect = () => {
-      setCurrent(emblaApi.selectedScrollSnap());
-    };
+//     const onSelect = () => {
+//       setCurrent(emblaApi.selectedScrollSnap());
+//     };
 
-    emblaApi.on("select", onSelect);
+//     emblaApi.on("select", onSelect);
 
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
-  }, [emblaApi]);
+//     return () => {
+//       emblaApi.off("select", onSelect);
+//     };
+//   }, [emblaApi]);
 
 
   return (
@@ -53,7 +52,6 @@ export const Helpprocess = () => {
           </p>
         </div>
 
-        {/* Embla Carousel Structure */}
         <div className="overflow-hidden my-4" ref={emblaRef}>
           <div className="py-4 grid grid-cols-4 gap-4">
             {featuresData.map((feature, index) => (

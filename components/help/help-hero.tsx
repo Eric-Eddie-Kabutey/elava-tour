@@ -1,36 +1,34 @@
 'use client';
 import React from 'react'
 import Typography from '../shared/typography'
-import Image from 'next/image';
-import { WhatsappLogo, PhoneCall } from '@phosphor-icons/react';
 import gambia_flag from "@/public/assets/images/Flag_of_The_Gambia.png";
 import ghana_flag from "@/public/assets/images/Flag_of_Ghana.png";
 
-const contact_details = [
-  {
-    id: "1",
-    name: "John Doe",
-    role: "CEO & Founder",
-    image: "/assets/images/team/contact_2.jpg",
-    whatsAppUrl: "https://www.whatsapp.com/in/johndoe",
-    phoneCall: "+220 507 1723",
-    img: gambia_flag,
-  },
-  {
-    id: "2",
-    ghana_title: "Akwaaba",
-    southAfrica_title: "Welcome"
-  },
-  {
-    id: "3",
-    name: "Jane Smith",
-    role: "Chief Technology Officer",
-    image: "/assets/images/team/contact_1.jpg",
-    whatsAppUrl: "https://www.whatsapp.com/in/janesmith",
-    phoneCall: "+220 507 1723",
-    img: ghana_flag,
-  },
-];
+// const contact_details = [
+//   {
+//     id: "1",
+//     name: "John Doe",
+//     role: "CEO & Founder",
+//     image: "/assets/images/team/contact_2.jpg",
+//     whatsAppUrl: "https://www.whatsapp.com/in/johndoe",
+//     phoneCall: "+220 507 1723",
+//     img: gambia_flag,
+//   },
+//   {
+//     id: "2",
+//     ghana_title: "Akwaaba",
+//     southAfrica_title: "Welcome"
+//   },
+//   {
+//     id: "3",
+//     name: "Jane Smith",
+//     role: "Chief Technology Officer",
+//     image: "/assets/images/team/contact_1.jpg",
+//     whatsAppUrl: "https://www.whatsapp.com/in/janesmith",
+//     phoneCall: "+220 507 1723",
+//     img: ghana_flag,
+//   },
+// ];
 
 function HelpHero() {
   return (
