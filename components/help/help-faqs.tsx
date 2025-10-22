@@ -68,7 +68,7 @@ function HelpFaqs() {
   const moreFaqs = isMore ?  faqs : faqs.slice(0, 5)
   return (
     <div className="w-full py-32 bg-gradient-to-br from-gray-50 to-gray-100">
-      <section className="max-container w-[85%] mx-auto flex flex-col gap-8 text-black">
+      <section className="max-container w-[95%] mx-auto flex flex-col gap-8 text-black">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col space-y-8">
               <h1 className="text-4xl text-black">FAQ</h1>
@@ -102,7 +102,6 @@ function HelpFaqs() {
                 >{isMore ? "See More" : "See Less"}</Button>
             </div>
           </div>
-
       </section>
     </div>
   )

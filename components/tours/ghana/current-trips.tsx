@@ -34,19 +34,19 @@ const current_tours = [
 function CurrentTrips() {
   return (
     <div className='w-full py-16 bg-gradient-to-br from-gray-50 to-gray-100'>
-        <section className='w-[95%] mx-auto flex flex-col gap-6 text-black'>
+        <section className='max-container w-[95%] mx-auto flex flex-col gap-6 text-black'>
             <Typography
                 typo="header-3-semibold"
             >
                 Current Trips
             </Typography>
-            <div className='w-full py-8 grid grid-cols-3 gap-12'>
+            <div className='w-full py-8 grid md:grid-cols-3 sm:grid-cols-2 gap-12'>
                 {current_tours.map((data, index) => (
                     <Card
                         key={data.id}
                         className='w-full flex flex-col gap-1 border-none rounded-none'
                     >
-                        <div className='w-full h-[300px]'>
+                        <div className='w-full lg:h-[300px] sm:h-[250px] h-[300px]'>
                             <Image 
                                 src={data.img}
                                 alt={`Tour image ${index+1}`}

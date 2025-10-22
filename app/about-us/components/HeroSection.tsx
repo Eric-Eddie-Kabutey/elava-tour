@@ -5,8 +5,8 @@ const HeroSection = () => {
     <section className="bg-gradient-to-r bg-[#e4e4e4] py-20">
       <div className="max-w-container mx-auto px-4 text-justify-center text-center mb-4 md:mb-20">
         <h3 className="text-xl md:text-2xl font-thin mb-2 text-blue-500">About Eleva Tours</h3>
-        <h1 className="text-4xl text-black md:text-5xl font-bold mb-6">Giving A Better Travel Experience</h1>
-        <p className="text-xl text-black ">
+        <h1 className="xs:text-4xl text-3xl text-black md:text-5xl font-bold mb-6">Giving A Better Travel Experience</h1>
+        <p className="xs:text-xl text-lg text-black ">
           We are a team of passionate individuals dedicated to creating innovative solutions that make a difference.
         </p>
       </div>
@@ -31,7 +31,7 @@ const HeroSection = () => {
       </Button>
     </div>
 
-      <div className="mt-10 max-container 2xl:w-[75%] w-[95%] h-[450px] mx-auto">
+      <div className="mt-10 max-container 2xl:w-[75%] w-[95%] md:h-[450px] xs:h-[400px] h-[350px] mx-auto">
         <video
           className="w-full h-full object-cover rounded-lg"
           src="/assets/images/home/about-vid.mp4"

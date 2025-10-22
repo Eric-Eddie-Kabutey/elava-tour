@@ -4,12 +4,12 @@ import Image from "next/image";
 const OurStory = ({ id }: { id: string }) => {
   return (
     <section id={id} className="py-16 bg-[#e4e4e4]">
-      <div className="w-[65%] max-container mx-auto px-16 bg-[#f0f2f3] py-12 lg:pb-24">
-        <div className="text-start mb-12">
-          <h2 className="text-3xl font-bold text-gray-800">Our Story</h2>
+      <div className="2xl:w-[65%] xl:w-[75%] w-[95%] max-container mx-auto md:px-16 xs:px-8 px-4 bg-[#f0f2f3] py-12 lg:pb-24">
+        <div className="text-start md:mb-12 mb-6">
+          <h2 className="xs:text-3xl text-2xl font-bold text-gray-800">Our Story</h2>
         </div>
         
-        <div className="pb-8 flex flex-col gap-8">
+        <div className="pb-8 flex flex-col md:gap-8 gap-4">
           <p>
             Africa is more than just the generic places or a spot on the map. It’s a land alive with rhythm and warmth. 
             Eleva was born from that rhythm.  From the realization that travel across this vast continent deserved to be 
@@ -25,7 +25,7 @@ const OurStory = ({ id }: { id: string }) => {
             laughter of markets, glows in hidden sunsets, and thrives in places few have walked.
           </p>
         </div>
-        <div className="w-[400px] h-fit mx-auto">
+        <div className="md:w-[400px] sm:w-[300px] w-[250px] h-fit mx-auto">
             <Image 
                 src={story_img}
                 alt="Signature image"

@@ -40,7 +40,7 @@ export const Helpprocess = () => {
 
   return (
     <section className="py-16 md:py-24 bg-gray-50">
-      <div className="max-container w-[85%] mx-auto px-4">
+      <div className="max-container w-[95%] mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800">Our Process</h2>
           <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
@@ -51,7 +51,7 @@ export const Helpprocess = () => {
         <div className="overflow-hidden my-4" 
             // ref={emblaRef}
         >
-          <div className="py-4 grid grid-cols-4 gap-4">
+          <div className="py-4 grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
             {featuresData.map((feature, index) => (
               <div
                 key={index}
@@ -60,7 +60,7 @@ export const Helpprocess = () => {
                 <div
                   className="p-2 group h-full rounded-2xl shadow-lg flex flex-col bg-white transition-all duration-300 ease-in-out hover:bg-blue-600 hover:-translate-y-2"
                 >
-                  <div className="w-full h-[250px] bg-[#f5f5f5] flex items-center justify-center p-2 rounded-md">
+                  <div className="w-full h-[300px] bg-[#f5f5f5] flex items-center justify-center p-2 rounded-md">
                     <Image
                       src={feature.image}
                       alt={feature.title}

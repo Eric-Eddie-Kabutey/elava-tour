@@ -22,12 +22,12 @@ export default function Navbar() {
         <div className="sticky top-0 z-50 ">
             <Header />
             <div className="w-full bg-blue-700">
-                <header className="max-container">
+                <header className="max-container mx-auto w-[95%]">
                     {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
-                    <div className="max-container h-[70px] w-[95%] mx-auto flex items-center text-white">
+                    <div className=" h-[70px]  flex items-center text-white">
                         <Link
                             href="/"
-                            className="w-20 h-fit relative left- top-5 z-[40]"
+                            className="w-20 h-fit relative top-5 z-[40]"
                         >
                             <Image 
                                 src={elavaTourImg}

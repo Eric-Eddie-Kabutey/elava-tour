@@ -47,7 +47,7 @@ function SawCaptured() {
 
     const moreImages = isMore ? tourImages : tourImages.slice(0, 12)
   return (
-    <div className='w-full py-12 bg-gradient-to-br from-gray-50 to-gray-100'>
+    <div className='w-full py-24 bg-gradient-to-br from-gray-50 to-gray-100'>
         <section className='w-[78%] max-container mx-auto flex justify-between gap-10'>
             <div className='w-[500px] h-fit pb-8 relative'> 
                 <div className='absolute bottom-0 left-0 w-[250px] h-[250px] bg-[#f0609e] -z-[5]'></div>

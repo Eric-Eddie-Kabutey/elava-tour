@@ -65,7 +65,7 @@ export default {
   			lg: '1024px',
   			xl: '1280px',
   			'2xl': '1530px',
-  			'3xl': '2500px'
+  			'3xl': '2000px'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

@@ -51,7 +51,7 @@ function GhanaTourFaqs() {
                     items={faqs.map((faq) => ({
                     value: `item-${faq.id}`,
                     trigger: (
-                        <span className="text-2xl font-normal">
+                        <span className="lg:text-2xl text-xl font-normal">
                         {faq.question}
                         </span>
                     ),
