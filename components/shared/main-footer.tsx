@@ -66,7 +66,7 @@ function MainFooter() {
         <div className='w-full py-4 flex justify-center items-center border-y border-gray-500'>
             <Typography
                 typo="header-1-semibold"
-                className='text-white 2xl:!text-[14rem] lg:!text-[12rem] md:!text-[7rem] sm:!text-[6rem] xs:!text-[4.5rem] !text-[3.5rem] font-bold uppercase !leading-normal'
+                className='text-white 2xl:!text-[14rem] xl:!text-[12rem] lg:!text-[10rem] md:!text-[7rem] sm:!text-[6rem] xs:!text-[4.5rem] !text-[3.5rem] font-bold uppercase !leading-normal'
             >
                 Elava tour
             </Typography>

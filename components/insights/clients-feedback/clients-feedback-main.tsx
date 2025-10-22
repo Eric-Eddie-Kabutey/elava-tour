@@ -28,7 +28,7 @@ function ClientsFeedback() {
 
   return (
     <div className="w-full py-20 bg-gray-50 min-h-screen">
-      <section className="max-container 2xl:w-[75%] w-[90%] mx-auto flex flex-col gap-8">
+      <section className="max-container xl:w-[75%] w-[95%] mx-auto flex flex-col gap-8">
         <div className="w-full flex flex-col items-center text-center gap-4">
           <Typography typo="header-2-semibold" className="text-gray-800">
             What Our Travelers Say
@@ -59,7 +59,7 @@ function ClientsFeedback() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
           {filteredTestimonials.length > 0 ? (
             filteredTestimonials.map((data, index) => (
               <Card

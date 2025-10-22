@@ -52,7 +52,7 @@ export const FeaturedNewsCarousel = () => {
 
   return (
     <section className="py-12 bg-[#e4e4e4]">
-      <div className="max-container w-[78%] mx-auto">
+      <div className="max-container xl:w-[75%] w-[95%] mx-auto">
         <div className="relative">
           {/* Embla Viewport */}
           <div className="overflow-hidden" ref={emblaRef}>
@@ -60,7 +60,7 @@ export const FeaturedNewsCarousel = () => {
               {featuredPosts.map((post) => (
                 <div
                   key={post.id}
-                  className="flex-shrink-0 flex-grow-0 basis-full min-w-0 p-2"
+                  className="flex-shrink-0 flex-grow-0 basis-full min-w-0 "
                 >
                   <FeaturedNewsCard post={post} />
                 </div>

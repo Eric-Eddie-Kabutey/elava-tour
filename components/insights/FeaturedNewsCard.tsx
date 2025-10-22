@@ -9,7 +9,7 @@ type FeaturedNewsCardProps = {
 
 export const FeaturedNewsCard = ({ post }: FeaturedNewsCardProps) => {
   return (
-    <div className="bg-sky-50 max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8 items-center">
+    <div className="w-full bg-sky-50 mx-auto p-6 grid md:grid-cols-2 gap-8 items-center">
       {/* Image Container */}
       <div className="relative w-full h-64 md:h-80  overflow-hidden">
         <Image

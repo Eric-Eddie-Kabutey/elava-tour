@@ -68,7 +68,7 @@ export const LatestNewsSection = () => {
         </div>
 
         {/* Responsive Grid for News Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {paginatedPosts.map((post) => (
             <Card key={post.id} className="bg-white flex flex-col overflow-hidden shadow-md transition-shadow hover:shadow-xl">
               <CardHeader className="p-0 relative">
@@ -91,7 +91,7 @@ export const LatestNewsSection = () => {
                 </div>
               </CardHeader>
               <CardContent className="p-6 flex-1">
-                <h3 className="text-lg font-bold text-gray-800 mb-4 h-24">
+                <h3 className="text-lg font-bold text-gray-800 mb-4 h-24 line-clamp-3">
                   {post.title}
                 </h3>
                 <Link
