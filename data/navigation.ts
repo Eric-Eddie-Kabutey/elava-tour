@@ -10,7 +10,7 @@ export type NavLinkItem = {
   current?: {
     title: string;
     href: string;
-    img: StaticImageData;
+    img?: StaticImageData | string;
     description: string;
   }[];
 };
@@ -126,81 +126,72 @@ export const navigationData: NavigationItem[] = [
             title: "Solo Trips",
             href: "/trip-types/all-inclusive",
             description: "Witness breathtaking landscapes and diverse wildlife.",
-            current: [
-                {
-                    title: "South African Tour",
-                    img: navImg3,
-                    href: "/trip-types/all-inclusive",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-                {
-                    title: "Ghana Tour",
-                    img: navImg2,
-                    href: "/trip-types/all-inclusive",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-                {
-                    title: "Kenya Tour",
-                    img: navImg1,
-                    href: "/trip-types/all-inclusive",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-            ]
+            // current: [
+            //     {
+            //         title: "South African Tour",                    
+            //         href: "/trip-types/all-inclusive",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            //     {
+            //         title: "Ghana Tour",                    
+            //         href: "/trip-types/all-inclusive",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            //     {
+            //         title: "Kenya Tour",                    
+            //         href: "/trip-types/all-inclusive",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            // ]
           },
           {
             title: "Group Tours",
             href: "/tours/ghana",
             description: "Explore the vibrant culture and history of Ghana.",
-            current: [
-                {
-                    title: "South African Tour",
-                    img: navImg1,
-                    href: "/tours/south-africa",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-                {
-                    title: "Ghana Tour",
-                    img: navImg2,
-                    href: "/tours/south-africa",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-                {
-                    title: "Kenya Tour",
-                    img: navImg3,
-                    href: "/tours/south-africa",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-            ]
+            // current: [
+            //     {
+            //         title: "South African Tour",                    
+            //         href: "/tours/south-africa",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            //     {
+            //         title: "Ghana Tour",                  
+            //         href: "/tours/south-africa",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            //     {
+            //         title: "Kenya Tour",                    
+            //         href: "/tours/south-africa",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            // ]
           },
           {
             title: "Family Holidays",
             href: "/tours/kenya",
             description: "Discover the magic of savannahs and wildlife safaris.",
-            current: [
-                {
-                    title: "South African Tour",
-                    img: navImg1,
-                    href: "/tours/south-africa",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-                {
-                    title: "Ghana Tour",
-                    img: navImg2,
-                    href: "/tours/south-africa",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-                {
-                    title: "Kenya Tour",
-                    img: navImg3,
-                    href: "/tours/south-africa",
-                    description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
-                },
-            ]
+            // current: [
+            //     {
+            //         title: "South African Tour",                    
+            //         href: "/tours/south-africa",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            //     {
+            //         title: "Ghana Tour",                    
+            //         href: "/tours/south-africa",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            //     {
+            //         title: "Kenya Tour",                    
+            //         href: "/tours/south-africa",
+            //         description: "Experience the Rainbow Nation — vibrant cities, safaris, and coastlines.",
+            //     },
+            // ]
           },
         ],
       },
     ],
-  },
+  },  
   {
     title: "Deals",
     href: "/deals",
