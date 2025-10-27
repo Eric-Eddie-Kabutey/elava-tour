@@ -41,7 +41,7 @@ function GhanaTourHero({country_content }: GhanaTourHeroProps) {
                     />
                 </div>
             </div>
-            <div className='xl:w-[70%] lg:w-[85%] w-full md:py-8 py-5 flex flex-col md:gap-4 gap-3'>
+            <div className='lg:w-[65%] w-full mx-auto text-justify md:py-8 py-5 flex flex-col md:gap-4 gap-3'>
                 <Typography
                     typo="header-4-semibold"
                 >
@@ -59,7 +59,7 @@ function GhanaTourHero({country_content }: GhanaTourHeroProps) {
                 </div>
             </div>
             <div className='xl:w-[70%] lg:w-[85%] w-full md:pb-8 pb-6 flex flex-col gap-4'>
-                <Typography
+                {/* <Typography
                     typo="header-4-semibold"
                 >
                     About Ghana
@@ -68,7 +68,7 @@ function GhanaTourHero({country_content }: GhanaTourHeroProps) {
                     typo="body-large-regular"
                 >
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque hic voluptatibus velit totam qui odio vitae tempora, corrupti obcaecati magnam, numquam ad ducimus repellendus aliquam deleniti, delectus sequi nobis ratione omnis sed. Quam eius beatae ipsum unde? Totam quos quis beatae ullam soluta nesciunt accusamus non dolor aliquam, optio tenetur.
-                </Typography>
+                </Typography> */}
             </div>
         </section>
     </div>
