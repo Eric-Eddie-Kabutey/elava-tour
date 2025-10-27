@@ -18,7 +18,7 @@ import { navigationData, NavigationItem } from "@/data/navigation";
 type Tour = {
   title: string;
   href: string;
-  img: string | StaticImageData;
+  img?: string | StaticImageData;
 };
 
 type DestinationLink = {
@@ -82,9 +82,9 @@ export default function Nav() {
                               href={tour.href}
                               className="group block overflow-hidden hover:shadow-md transition-all duration-200 rounded-md"
                             >
-                              <div className="relative w-full h-28">
+                              <div className="hidden relative w-full h-28">
                                 <Image
-                                  src={tour.img}
+                                  src={tour.img || ""}
                                   alt={tour.title}
                                   fill
                                   className="object-cover group-hover:scale-105 transition-transform duration-200 rounded-md"
