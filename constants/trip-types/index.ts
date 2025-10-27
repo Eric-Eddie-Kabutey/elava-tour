@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import tour1 from '@/public/assets/images/tour_photos/tour_photo1.jpg'
 import tour2 from '@/public/assets/images/tour_photos/tour_photo2.jpg'
 import tour3 from '@/public/assets/images/tour_photos/tour_photo3.jpg'
@@ -15,6 +16,6 @@ import tour14 from '@/public/assets/images/tour_photos/tour_photo14.jpg'
 import tour15 from '@/public/assets/images/tour_photos/tour_photo14.jpg'
 
 export const tourImages = [
-    tour1, tour2, tour3, tour4, tour5, tour6, tour7, tour8, tour9, tour10,
-    tour11, tour12, tour13, tour14, tour15
+    // tour1, tour2, tour3, tour4, tour5, tour6, tour7, tour8, tour9, tour10,
+    // tour11, tour12, tour13, tour14, tour15
 ]
