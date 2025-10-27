@@ -3,13 +3,12 @@ import React from 'react'
 import Typography from './typography'
 import { Facebook, Linkedin, Mail, Music, Twitter, Youtube } from 'lucide-react';
 import Link from 'next/link';
-import dinerLogoImg from "@/public/assets/icons/diners_club_int_logo.png"
 import visacardLogo from "@/public/assets/icons/visacard_logo.jpg"
 import mastercardLogo from "@/public/assets/icons/mastercard_logo.png"
 import americanexpressLogo from "@/public/assets/icons/american_express_logo.png"
 import Image from 'next/image';
 
-const partner_logos = [americanexpressLogo, dinerLogoImg, mastercardLogo, visacardLogo]
+const partner_logos = [americanexpressLogo, mastercardLogo, visacardLogo]
 
 
 const nav_links = [
@@ -39,9 +38,10 @@ function MainFooter() {
         <section className='max-container 2xl:w-[95%] w-[95%] mx-auto py-16 flex flex-col gap-10'>
             <Typography 
                 typo="header-3-regular"
-                className='xl:w-[450px] lg:w-[400px] md:w-[350px] text-white'
-            >
-                Is there a fascinating project <span className='text-gray-300'>brewing in your mind?</span>
+                className='xl:w-[490px] md:w-[450px] sm:w-[390px] text-white'
+              >
+                  Is there a dream destination 
+                <span className='text-gray-300'> waiting to be explored?</span>
             </Typography>
             <div className='w-full flex md:flex-row flex-col justify-between items-center text-white'>
                 <div className='flex items-center gap-3'>
@@ -49,7 +49,7 @@ function MainFooter() {
                     <Typography
                         typo="header-5-regular"
                     >
-                        Info@marcelodesignx.com
+                        Info@elavatour.com
                     </Typography>
                 </div>
                 <div className='flex justify-end items-center gap-6'>
