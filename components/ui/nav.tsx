@@ -82,7 +82,7 @@ export default function Nav() {
                               href={tour.href}
                               className="group block overflow-hidden hover:shadow-md transition-all duration-200 rounded-md"
                             >
-                              <div className="hidden relative w-full h-28">
+                              <div className="relative w-full h-28">
                                 <Image
                                   src={tour.img || ""}
                                   alt={tour.title}
