@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -31,23 +32,21 @@ const HeroSection = () => {
       </Button>
     </div>
 
-      <div className="mt-10 max-container 2xl:w-[75%] w-[95%] md:h-[450px] xs:h-[400px] h-[350px] mx-auto">
-        <video
-          className="w-full h-full object-cover rounded-lg"
-          src="/assets/images/home/about-vid.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-        {/* <Image
-          src="/assets/images/home/lockinImg.jpeg"
-          alt="About Us Hero"
-          className="w-full h-auto mx-auto shadow-lg"
-          width={1600}
-          height={900}
-        /> */}
-      </div>
+      <div
+  className="
+    relative overflow-hidden  shadow-lg
+    mt-10 max-container 2xl:w-[75%] w-[95%]
+    md:h-[450px] xs:h-[400px] h-[350px] mx-auto
+  "
+>
+  <Image
+    src="/assets/images/about-us/about-cover.avif"
+    alt="About Us Hero Cover"
+    fill // Use the fill prop to make the image fill the parent
+    className="object-cover" // This makes the image cover the area without distortion
+    sizes="(max-width: 768px) 95vw, 75vw" // Best practice for performance with 'fill'
+  />
+</div>
     </section>
   );
 };
