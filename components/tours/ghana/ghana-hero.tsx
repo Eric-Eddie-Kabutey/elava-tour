@@ -41,7 +41,7 @@ function GhanaTourHero({country_content }: GhanaTourHeroProps) {
                     />
                 </div>
             </div>
-            <div className='lg:w-[65%] w-full mx-auto text-justify md:py-8 py-5 flex flex-col md:gap-4 gap-3'>
+            <div className='lg:w-[95%] w-full mx-auto text-justify md:py-8 py-5 flex flex-col md:gap-4 gap-3'>
                 <Typography
                     typo="header-4-semibold"
                 >
