@@ -29,11 +29,11 @@ function Testimonial() {
                     typo="body-medium-regular"
                     className='text-gray-600'
                 >
-                    Trusted by clients, proven by results.
+                    Where trust meets remarkable travel experiences.
                 </Typography>
             </div>
             <div className='xl:w-[75%] lg:w-[85%] w-[95%] mx-auto flex flex-col gap-6'>
-                <Carousel 
+               {testimonial_clients.length > 0 ? <Carousel 
                     plugins={[
                         Autoplay({
                             delay: 3000
@@ -104,7 +104,7 @@ function Testimonial() {
                     </CarouselContent>
                     <CarouselPrevious className='md:block hidden' />
                     <CarouselNext className='md:block hidden' />
-                </Carousel>
+                </Carousel> : <p className='text-gray-600 text-lg text-center mt-4'>No Testimonial!</p>}
             </div>
         </section>
     </div>
