@@ -9,37 +9,44 @@ import Link from 'next/link';
 import { tourImages } from '@/constants';
 import { Button } from '@/components/ui/button';
 
-const review_rate = [
-    {
-        id: "1",
-        title: "Excellent",
-        percentage: "78%",
-        color: "#00b67a",
-    },
-    {
-        id: "2",
-        title: "Great",
-        percentage: "17%",
-        color: "#73cf11",
-    },
-    {
-        id: "3",
-        title: "Average",
-        percentage: "5%",
-        color: "#5c5c70",
-    },
-    {
-        id: "4",
-        title: "poor",
-        percentage: "0%",
-        color: "#ebedef",
-    },
-    {
-        id: "5",
-        title: "Bad",
-        percentage: "0%",
-        color: "#ebedef",
-    },
+interface ReviewRate {
+    id: string;
+    title: string;
+    percentage: string;
+    color: string;
+}
+
+const review_rate: ReviewRate[] = [
+        // {
+        //     id: "1",
+        //     title: "Excellent",
+        //     percentage: "78%",
+        //     color: "#00b67a",
+        // },
+        // {
+        //     id: "2",
+        //     title: "Great",
+        //     percentage: "17%",
+        //     color: "#73cf11",
+        // },
+        // {
+        //     id: "3",
+        //     title: "Average",
+        //     percentage: "5%",
+        //     color: "#5c5c70",
+        // },
+        // {
+        //     id: "4",
+        //     title: "poor",
+        //     percentage: "0%",
+        //     color: "#ebedef",
+        // },
+        // {
+        //     id: "5",
+        //     title: "Bad",
+        //     percentage: "0%",
+        //     color: "#ebedef",
+        // },
 ]
 
 function SawCaptured() {
@@ -81,14 +88,14 @@ function SawCaptured() {
                             <Typography
                                 typo="header-5-semibold"
                             >Reviews</Typography>
-                            <Typography
+                            {review_rate && <Typography
                                 typo="header-6-regular"
                                 className='text-gray-500'
-                            >26491</Typography>
+                            >26491</Typography>}
                         </div>  
                         <div className='p-2 flex flex-col gap-3'>
                             <div className='pb-6 flex flex-col gap-2 border-b'>
-                                {review_rate.map(data => (
+                                {review_rate.length > 0 ? review_rate.map(data => (
                                     <div 
                                         className='w-full flex justify-between items-center gap-3'
                                         key={data.id}
@@ -105,14 +112,16 @@ function SawCaptured() {
                                         </div>
                                         <div className='w-10 flex items-center justify-end'>{data.percentage}</div>
                                     </div>
-                                ))}
+                                )) : <p>Expect our 5 start reviews</p>}
                             </div>
                             <div className='py-2 flex flex-col gap-2'>
+                                  {review_rate.length > 0 ? <>
                                 <div className='flex items-center gap-2'>
                                     <span className='font-medium'>Eilish R.,</span>
                                     <span className='font-regular'>July 20</span>
                                 </div>
-                                <StarRating rating={5} />
+                                <StarRating rating={5} /> 
+                                </>: ""}
                             </div>
                         </div>
                     </div>
