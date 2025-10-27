@@ -19,7 +19,7 @@ export const WhyUsSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">The Elava Tours Difference</h2>
           <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
-            We’re the small-group adventure travel experts, and have been for over 30 years.
+            For over three decades, we’ve specialized in small-group travel that inspires connection and discovery.
           </p>
         </div>
 
