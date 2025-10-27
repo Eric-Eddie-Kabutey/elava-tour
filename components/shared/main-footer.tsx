@@ -74,7 +74,7 @@ function MainFooter() {
         <div className='w-full py-10'>
             <section className='max-container 2xl:w-[95%] w-[95%] mx-auto flex flex-col gap-10'>
                 <div className='flex flex-col md:flex-row justify-center items-center gap-4'>
-                      <div className="text-center text-[14px] text-gray-400">© 2025 Emirates Holidays All rights reserved</div>
+                      <div className="text-center text-[14px] text-gray-400">© 2025 Evala Tours All rights reserved</div>
 
                       <div className='md:hidden border-b border-gray-300 w-full'></div>
                       
