@@ -15,7 +15,7 @@ function TourPhotos() {
                 <Typography
                     typo="header-4-semibold"
                 >Belize tour photos from our travellers</Typography>
-                 <div className='w-full p-6 md:columns-5 sm:columns-4 columns-3 gap-4 bg-white rounded-md'>
+                 <div className='w-full p-6 md:columns-5 sm:columns-4 columns-3 gap-4 bg-white rounded-md min-h-[484px]'>
                     {tourImages.length > 0 ? tourImages.map((image, index) => (
                         <div key={`tour image+${index+1}`} className='relative mb-4 break-inside-avoid w-auto md:h-[200px] sm:h-[170px] xs:h-[140px] h-[120px]'>
                             <Image 
@@ -33,7 +33,10 @@ function TourPhotos() {
                                 </div>
                             </div>
                         </div>
-                    )) : <p className='text-lg text-black font-semibold'>No Tour&apos;s Photo.</p>}
+                    )) : <div className='col-span-5 w-full outline'>
+                              <p className='text-lg text-black font-semibold'>No Tour&apos;s Photo.</p>
+                    </div>
+                      }
                 </div>
             </div>
         </section>
