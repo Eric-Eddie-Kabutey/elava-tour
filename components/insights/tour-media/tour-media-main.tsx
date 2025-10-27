@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import dubaiImg from "@/public/assets/images/home/handpicked_1.png";
 import maldivesImg from "@/public/assets/images/home/handpicked_2.png";
 import mauritiusImg from "@/public/assets/images/home/handpicked_3.png";
@@ -12,7 +12,15 @@ const countries = {
   Kenya: ["Nairobi National Park", "Masai Mara Safari", "Mombasa Coastal Tour"],
 };
 
-const tours = [
+interface Tour {
+  id: number;
+  country: string;
+  title: string;
+  image: StaticImageData; // Using 'any' since the image imports are external, could be made more specific with StaticImageData
+  description: string;
+}
+
+const tours: Tour[] = [
   {
     id: 1,
     country: "Ghana",
@@ -132,7 +140,8 @@ export default function TourMediaMain() {
 
       {/* Tour Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        {filteredTours.length > 0 ? (
+        {/* I have fake the conditionally render, it suppose to be 0 when real data is available */}
+        {filteredTours.length > 10 ? (
           filteredTours.map((tour) => (
             <div
               key={tour.id}
