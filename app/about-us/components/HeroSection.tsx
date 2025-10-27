@@ -16,15 +16,15 @@ const HeroSection = () => {
 
        <div className="flex flex-wrap justify-center gap-4 my-6">
       <Button asChild variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300">
-        <a href="#mission-section">Mission & Vision</a>
+        <a href="#mission-and-vision">Mission & Vision</a>
       </Button>
 
       <Button asChild variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300">
-        <a href="#learnership-section">Learnership</a>
+        <a href="#our-story">Our Story</a>
       </Button>
 
       <Button asChild variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300">
-        <a href="#processes-section">Processes</a>
+        <a href="#processes">Processes</a>
       </Button>
 
       <Button asChild variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300">
@@ -42,9 +42,9 @@ const HeroSection = () => {
   <Image
     src="/assets/images/about-us/about-cover.avif"
     alt="About Us Hero Cover"
-    fill // Use the fill prop to make the image fill the parent
-    className="object-cover" // This makes the image cover the area without distortion
-    sizes="(max-width: 768px) 95vw, 75vw" // Best practice for performance with 'fill'
+    fill 
+    className="object-cover" 
+    sizes="(max-width: 768px) 95vw, 75vw" 
   />
 </div>
     </section>

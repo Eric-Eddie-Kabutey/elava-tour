@@ -26,7 +26,8 @@ function AllInclusiveHero() {
                     </Typography>
                 </div>
                 <Typography
-                    typo="body-large-regular"
+                      typo="body-large-regular"
+                      className='max-w-[422px]'
                 >
                     Thinking of adventuring the world? Whether it&apos;s adventure, culture, or just good times, you call the shots.
                 </Typography>
@@ -39,11 +40,12 @@ function AllInclusiveHero() {
                     </Button>
                 </div>
             </div>
-            <div className='flex-1 h-[400px]'>
+            <div className='flex-1 relative overflow-hidden h-[400px]'>
                 <Image 
                     src={inclusiveHeroImg}
-                    alt='Inclusive image'
-                    className='w-full h-full'
+                      alt='Inclusive image'
+                      fill
+                    className='object-cover w-full h-auto'
                 />
             </div>
         </section>
