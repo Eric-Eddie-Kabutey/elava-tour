@@ -42,7 +42,7 @@ export default function Nav() {
   return (
     <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList>
-        {navigationData.slice(0, 3).map((item: NavigationItem) => (
+        {navigationData.map((item: NavigationItem) => (
           <NavigationMenuItem key={item.title}>
             {item.columns ? (
               <>

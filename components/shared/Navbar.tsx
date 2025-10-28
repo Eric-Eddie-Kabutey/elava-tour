@@ -3,17 +3,14 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
-    Navbar as NavbarComponent,
-    NavbarLeft,
+    Navbar as NavbarComponent,    
     NavbarRight,
 } from "@/components/ui/navbar";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, PhoneCall } from "lucide-react";
 import Link from "next/link";
-import telephoneIcon from "@/public/assets/icons/telephone.svg"
 import Image from "next/image";
 import Header from "./header";
-import Nav from "../ui/nav";
 import NavRight from "../ui/nav-right";
 import elavaTourImg from "@/public/assets/images/elava_logo.png";
 import { useRouter } from "next/navigation";
@@ -28,7 +25,7 @@ export default function Navbar() {
             <div className="w-full bg-blue-700">
                 <header className="max-container mx-auto w-[95%]">
                     {/* <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div> */}
-                    <div className=" h-[70px]  flex items-center text-white">
+                    <div className=" h-[70px]  flex items-center justify-between text-white">
                         <Link
                             href="/"
                             className="w-20 h-fit relative top-5 z-[40]"
@@ -39,22 +36,15 @@ export default function Navbar() {
                                 className="w-full h-full"
                             />
                         </Link>
-                        <NavbarComponent className="h-full w-[87%] mx-auto overflow-visible">
-                            <NavbarLeft>
-                                
+                        <NavbarComponent className=" h-full overflow-visible">
                                 {/* <Navigation /> */}
+                            {/* <NavbarLeft>
+                                
                                 <div className="">
                                     <Nav />
                                 </div>
-                                <div className="px-1 sm:py-5 py-3 hidden xs:flex items-center justify-center gap-1 bg-white">
-                                    <Image 
-                                        src={telephoneIcon}
-                                        alt="Telephone icon"
-                                        className="w-4 h-fit"
-                                    />
-                                    <span className="font-semibold text-black">+27 60 982 5693</span>
-                                </div>
-                            </NavbarLeft>
+                                
+                            </NavbarLeft> */}
                             <NavbarRight>
                                 <NavRight />
                                 <Button
@@ -62,6 +52,8 @@ export default function Navbar() {
                                     onClick={() => router.push("help")}
                                     className="border-white text-white hover:bg-white hover:text-blue-700 "
                                 >Get Help Now</Button>
+
+                                {/* Mobile navigation */}
                                 <Sheet open={isOpen} onOpenChange={setIsOpen}>
                                     <SheetTrigger asChild>
                                         <Button
@@ -87,11 +79,7 @@ export default function Navbar() {
                                             <Link
                                                 href='tel:+27609825693'
                                                     className='w-full text-center py-2.5 text-black flex items-center justify-center gap-4'>
-                                                     <Image 
-                                        src={telephoneIcon}
-                                        alt="Telephone icon"
-                                        className="w-4 h-fit"
-                                                    />
+                                                     <PhoneCall className='text-white w-4 h-fit' />
                                                     <span>+27 60 982 5693</span>
                                                 
                                             </Link>
