@@ -3,7 +3,7 @@ import GhanaTourHero from '@/components/tours/ghana/ghana-hero'
 import GhanaTourFaqs from '@/components/tours/ghana/ghana-tour-faqs'
 import TourPhotos from '@/components/tours/ghana/tour-photos'
 import React from 'react'
-import southAfricaImg from "@/public/assets/images/south_africa_flag.png"
+import countryFlag from "@/public/assets/images/south_africa_flag.png"
 import { StaticImageData } from 'next/image'
 
 type CountryContentProp = {
@@ -16,8 +16,8 @@ type CountryContentProp = {
 }
 
 const country_content : CountryContentProp = {
-  name: "Ghana",
-  image: southAfricaImg,
+  name: "South Africa",
+  image: countryFlag,
   history: {
   title: "South Africa, A World in One Country.",
   contents: [
