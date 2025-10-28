@@ -1,4 +1,6 @@
 "use client"
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import {
     Navbar as NavbarComponent,
@@ -15,8 +17,10 @@ import Nav from "../ui/nav";
 import NavRight from "../ui/nav-right";
 import elavaTourImg from "@/public/assets/images/elava_logo.png";
 import { useRouter } from "next/navigation";
+import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false)
     const router = useRouter();
     return (
         <div className="sticky top-0 z-50 ">
@@ -58,7 +62,7 @@ export default function Navbar() {
                                     onClick={() => router.push("help")}
                                     className="border-white text-white hover:bg-white hover:text-blue-700 "
                                 >Get Help Now</Button>
-                                <Sheet>
+                                <Sheet open={isOpen} onOpenChange={setIsOpen}>
                                     <SheetTrigger asChild>
                                         <Button
                                             variant="ghost"
@@ -69,33 +73,30 @@ export default function Navbar() {
                                             <span className="sr-only">Toggle navigation menu</span>
                                         </Button>
                                     </SheetTrigger>
-                                    <SheetContent side="right">
-                                        <nav className="grid gap-6 text-lg font-medium">
+                                    <SheetContent side="right" className='pr-0 flex flex-col p-6'>                                        
+
+                                        <MobileMenu setIsOpen={setIsOpen} />
+
+                                    <div className='mt-auto pt-6'>
+                                        <div className='flex flex-col space-y-2'>
                                             <Link
-                                                href="/"
-                                                className="flex items-center gap-2 text-xl font-bold"
-                                            >
-                                                <span>KtechHub</span>
+                                                href='/get-help'
+                                                className='w-full bg-blue-700 text-white text-center py-2.5'>
+                                                Get Help Now
                                             </Link>
                                             <Link
-                                                href="/"
-                                                className="text-muted-foreground hover:text-foreground"
-                                            >
-                                                Getting Started
+                                                href='tel:+27609825693'
+                                                    className='w-full text-center py-2.5 text-black flex items-center justify-center gap-4'>
+                                                     <Image 
+                                        src={telephoneIcon}
+                                        alt="Telephone icon"
+                                        className="w-4 h-fit"
+                                                    />
+                                                    <span>+27 60 982 5693</span>
+                                                
                                             </Link>
-                                            <Link
-                                                href="/"
-                                                className="text-muted-foreground hover:text-foreground"
-                                            >
-                                                Components
-                                            </Link>
-                                            <Link
-                                                href="/contact-us"
-                                                className="text-muted-foreground hover:text-foreground"
-                                            >
-                                                Contact Us
-                                            </Link>
-                                        </nav>
+                                        </div>
+							        </div>
                                     </SheetContent>
                                 </Sheet>
                             </NavbarRight>

@@ -6,7 +6,7 @@ import { StaticImageData } from "next/image";
 export type NavLinkItem = {
   title: string;
   href: string;
-  description: string;
+  description: string;  
   current?: {
     title: string;
     href: string;
@@ -22,7 +22,7 @@ export type NavColumn = {
 
 // The main type for each top-level navigation item
 export type NavigationItem = {
-  title: string;
+  title: string;  
   href?: string; // Optional for dropdown triggers
   description?: string; // Optional
   links?: NavLinkItem[]; // For single-list dropdowns like "Trip Types"
@@ -32,7 +32,7 @@ export type NavigationItem = {
 // The refactored data using the types above
 export const navigationData: NavigationItem[] = [
   {
-    title: "Destinations",
+    title: "Destinations",    
     columns: [
       { 
         title: "All Destinations",
@@ -118,7 +118,7 @@ export const navigationData: NavigationItem[] = [
   },   
   {
     title: "Trip Types",
-    href: "#",
+    href: "#",    
     links: [
       { title: "Solo Trips", href: "/trip-types/all-inclusive", description: "Witness breathtaking landscapes and diverse wildlife." },
       { title: "Group Tours", href: "/tours/ghana", description: "Explore the vibrant culture and history of Ghana." },
@@ -127,7 +127,7 @@ export const navigationData: NavigationItem[] = [
   },
   {
     title: "Deals",
-    href: "/deals",
+    href: "/deals",    
     links: [
       { title: "Trip Saving ", href: "/deals/trip-saving", description: "Make a Deposit for next Trip " },
       { title: "Loyalty Discount ", href: "/deals/loyalty-discount", description: "Get 10% Discount on Next Trip" },
@@ -136,11 +136,11 @@ export const navigationData: NavigationItem[] = [
   },
   {
     title: "About",
-    href: "/about-us",
+    href: "/about-us",    
   },
   {
     title: "Insights",
-    href: "/insights",
+    href: "/insights",    
     links: [
       { title: "News & Stories", href: "/news", description: "Read the latest stories from our travels." },
       { title: "Client Feedback", href: "/clients-feedback", description: "A visual journey through our amazing destinations." },
