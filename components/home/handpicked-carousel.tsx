@@ -60,7 +60,7 @@ const holidaysImgs = [familyHolidayImg, allInclusiveImg, beachHolidaysImg, lastm
 
 function HandpickedCarousel() {
   return (
-    <div className='lg:hidden w-full py-5 flex flex-col gap-6 bg-[#f0f2f3]'>
+    <div className='lg:hidden w-full py-5 flex flex-col gap-6'>
         <section className='max-container w-[95%] mx-auto flex flex-col gap-4'>
             <div className='w-full flex flex-col gap-4 text-black'>
                 <Typography
