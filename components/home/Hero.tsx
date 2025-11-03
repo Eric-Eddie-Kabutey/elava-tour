@@ -16,6 +16,7 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from '../ui/select'
+import BrandHero from './hero-banner'
 
 // const heroImages = [heroImg1, heroImg2, heroImg3]
 const services = [
@@ -58,7 +59,7 @@ function Hero() {
 						playsInline
 					/>
 					<div className='absolute inset-0 bg-black/30' />
-                    <div className='max-w-[1150px] mx-auto absolute inset-0 flex flex-col items-center justify-center mt-28'>
+                    <div className='xl:max-w-6xl 2xl:max-w-7xl mx-auto absolute inset-0 flex flex-col items-center justify-center mt-28'>
                         
                         {/* mobile hero */}
                         <div className='md:hidden flex flex-col gap-y-0 mb-8 sm:mb-20'>
@@ -110,55 +111,13 @@ function Hero() {
 						</p>
 
                         {/* desktop hero */}
-                        <div className='lg:max-w-5xl flex flex-col gap-y-0  mb-8 sm:mb-20 md:mb-0'>                            
-                            
-                            {/* first line */}
-                            <div className='hidden md:grid grid-cols-5 gap-0'>
-                                {/* col 1 */}
-								<h1 className='font-vamtam-h1 text-white text-[80px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-normal'>
-									ELA
-                                </h1>
-                                {/* col 1: span 2 */}
-								<div className='hidden md:block place-self-center col-span-3 -mr-[280px] 2xl:-mr-[390px]'>
-									<p className='hidden  -mt-8 lg:-mt-4 tracking-wider md:block lg:text-[28px] font-bold text-white md:leading-tight drop-shadow-lg'>
-										We Make Your <br /> <span className='text-blue-700'>CapeTown</span>{' '}
-										& <span className='text-blue-700'>Ghana</span> <br /> Tours
-										Memorable
-                                    </p>
-                                    
-                                </div>
-                                {/* col 3 */}
-								<h1 className='font-vamtam-h1 text-white text-[80px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-tight'>
-									VA
-								</h1>								
-							</div>
-
-                            {/* second line */}
-                            <div className='hidden md:grid grid-cols-5 md:grid-cols-5 gap-4 md:gap-4 2xl:gap-x-20'>
-                                <h1 className='font-vamtam-h1 text-white md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									T
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									O
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									U
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									R
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									S
-                                </h1>
-                            </div>
-						
-						</div>						
+                        <BrandHero />						
 					</div>
 				</div>
 			</section>
-			<section className='hidden max-container w-full pb-4 bg-[#] z-[20]'>
+			<section className=' max-container w-full pb-4 bg-[#e4e4e4] z-[20]'>
 				<div className='lg:w-[75%] w-[95%] mx-auto flex flex-col gap-[85px]'>
-					<div className='w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
+					<div className='hidden w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
 						<div className='w-full flex xs:flex-row flex-col justify-between items-start xs:gap-1 gap-6'>
 							<div className='xs:flex-1 w-full flex flex-col gap-3'>
 								<button className='flex-1 py-3 flex justify-center items-center gap-3 border-b-2 border-blue-700 hover:border-black'>
@@ -259,7 +218,9 @@ function Hero() {
 								</form>
 							</div>
 						</div>
-					</div>
+                    </div>
+                    
+
 					<div className='w-full sm:block hidden overflow-auto'>
 						<div className=' w-full grid grid-cols-4 sm:gap-[3px] gap-4'>
 							{services.map((data, index) => (
