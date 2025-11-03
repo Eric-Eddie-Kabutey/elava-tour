@@ -56,7 +56,7 @@ const Header = () => {
 				{/* Top Bar */}
 				<div
 					className={clsx(
-						'bg-gray-800 transition-all duration-300',
+						'hidden bg-gray-800 transition-all duration-300',
 						isScrolled ? 'h-0 overflow-hidden' : 'h-10'
 					)}>
 					{/* Top bar content can go here */}
@@ -75,57 +75,61 @@ const Header = () => {
 								className='w-full h-full'
 							/>
 						</Link>
+						<div className='flex items-center justify-between gap-8'>
 
-						{/* Desktop Navigation Menu */}
-						<NavigationMenu className='hidden lg:flex'>
-							<NavigationMenuList>
-								{navigationData.map((item) => (
-									<NavigationMenuItem key={item.title}>
-										{item.links ? (
-											<>
-												<NavigationMenuTrigger
-													className={clsx(
-														'text-lg font-medium',
-														isScrolled ? 'text-gray-900' : 'text-white'
-													)}>
-													{item.title}
-												</NavigationMenuTrigger>
-												<NavigationMenuContent>
-													<ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]'>
-														{item.links.map((link) => (
-															<li key={link.title}>
-																<NavigationMenuLink asChild>
-																	<a
-																		href={link.href}
-																		className='block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'>
-																		<div className='text-sm font-medium leading-none'>
-																			{link.title}
-																		</div>
-																	</a>
-																</NavigationMenuLink>
-															</li>
-														))}
-													</ul>
-												</NavigationMenuContent>
-											</>
-										) : (
-											<Link href={item.href || '#'} legacyBehavior passHref>
-												<NavigationMenuLink
-													className={clsx(
-														'text-lg font-medium px-4 py-2',
-														isScrolled ? 'text-gray-900' : 'text-white'
-													)}>
-													{item.title}
-												</NavigationMenuLink>
-											</Link>
-										)}
-									</NavigationMenuItem>
-								))}
-							</NavigationMenuList>
-						</NavigationMenu>
+							{/* Desktop Navigation Menu */}
+							<NavigationMenu className='hidden lg:flex'>
+								<NavigationMenuList>
+									{navigationData.map((item) => (
+										<NavigationMenuItem key={item.title}>
+											{item.links ? (
+												<>
+													<NavigationMenuTrigger
+														className={clsx(
+															'text-lg font-medium',
+															isScrolled ? 'text-gray-900' : 'text-white'
+														)}>
+														{item.title}
+													</NavigationMenuTrigger>
+													<NavigationMenuContent>
+														<ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-1 lg:w-[600px]'>
+															{item.links.map((link) => (
+																<li key={link.title}>
+																	<NavigationMenuLink asChild>
+																		<a
+																			href={link.href}
+																			className='block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'>
+																			<div className='text-sm font-medium leading-none'>
+																				{link.title}
+																			</div>
+																		</a>
+																	</NavigationMenuLink>
+																</li>
+															))}
+														</ul>
+													</NavigationMenuContent>
+												</>
+											) : (
+												<Link href={item.href || '#'} legacyBehavior passHref>
+													<NavigationMenuLink
+														className={clsx(
+															'text-lg font-medium px-4 py-2',
+															isScrolled ? 'text-gray-900' : 'text-white'
+														)}>
+														{item.title}
+													</NavigationMenuLink>
+												</Link>
+											)}
+										</NavigationMenuItem>
+									))}
+								</NavigationMenuList>
+							</NavigationMenu>
 
-						{/* hamburger menu */}
-						<DesktopSheetMenu />
+							{/* hamburger menu */}
+							<DesktopSheetMenu />
+
+						</div>
+
 
 						{/* Mobile Menu Button */}
 						<button
