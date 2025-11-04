@@ -28,6 +28,8 @@ export const destinations: Destination[] = [
                 imageUrl: "/assets/images/tour_photos/ghana-1.webp",
             },
         ],
+        funFactsIntro: "Welcome to the vibrant world of Ghana, a land of rich traditions and captivating wonders. Get ready to be enchanted by the unique charm and colorful culture that make Ghana truly special.",       
+        faqIntro: "Here you'll find answers to some of the most commonly asked questions about our tour destination and what you can expect during your trip.",
     },
     {
         id: 2,
@@ -56,6 +58,8 @@ export const destinations: Destination[] = [
                 imageUrl: "https://images.unsplash.com/photo-1572972401147-3948a9c3a93c?q=80&w=2070",
             },
         ],
+        funFactsIntro: "Discover the secrets of the Rainbow Nation, from its diverse ecosystems to its rich tapestry of cultures. There's more to South Africa than meets the eye.",
+        faqIntro: "Preparing for your South African adventure? Find answers to your questions here to ensure your journey is seamless and unforgettable.",
     },    
     {
         id: 3,
@@ -72,5 +76,45 @@ export const destinations: Destination[] = [
                 imageUrl: "https://images.unsplash.com/photo-1534349762237-72275653da38?q=80&w=2070",
             },
         ],
+        funFactsIntro: "Explore the wild heart of Africa and learn what makes Kenya a jewel of the continent, from its incredible wildlife migrations to its ancient traditions.",
+        faqIntro: "From safari essentials to cultural etiquette, get the answers you need for your upcoming Kenyan safari right here.",
+
     },
 ];
+
+
+// about destination data 
+
+export const ghanaTourData = {
+    title: "GHANA: THE GATEWAY TO AFRICA EXPERIENCE",
+    description: [
+        "The name Ghana means warrior king. It is called the Gateway to Africa because it is often the first country newcomers to the continent visit. It is one of the safest destinations in all of Africa and the people are friendly and welcoming. The port city of Accra is the seat of the government and commercial hub of Ghana. Travel with us to explore the post-colonial country of Ghana on the West Coast of Africa. It’s more than mere sightseeing, it’s an engaging experience to behold. Experience famed Ghanaian cuisine featuring cassava, beans, maize, plantain, rice, and yams. The spices, culture, and love that go into preparing each meal will keep you asking for more. ​",
+        "Come with us to hear the drumbeats and witness the dancing. You will see the national parks, wildlife, waterfalls, mountains, caves, and white-sand beaches. Partake in the joy, the culture, and the traditions. Visit street markets to shop for handicrafts and enjoy delicious street foods and snacks! Come with the expectation of being welcomed in the tropical paradise of Ghana! Watch the Ghana Chronicles, a mini documentary about Ghana: The Gateway to Africa Experience.",
+    ],
+    bookNowLink: "/booking/platinum-experience",
+    funFactsLink: "/destinations/south-africa/fun-facts",
+    heroImageUrl: "https://images.unsplash.com/photo-1547471080-7108bab160a5?q=80&w=2070",
+};
+
+export const kenyaTourData = {
+    title: "KENYA: THE WILD SIDE",
+    description: [
+        "Kenya is affectionately known as the Rainbow Nation due to its diversity of people and cultures. With more than 11 official languages and dozens of ethnic groups, there's something for everyone in Kenya. Experience lush green streets, scrumptious meals, and impressive wildlife. Immerse yourself into Kenyan culture during our 10-day journey through Nairobi and Maasai Mara.",
+        "Your life will certainly change after exploring the wonderful country of Kenya with a professional team of local guides. Enjoy top-level accommodations, walk through history-filled towns, marvel at African wildlife, and get to know welcoming locals. It's time for a change of pace...the city of gold awaits!",
+    ],
+    bookNowLink: "/booking/platinum-experience",
+    funFactsLink: "/destinations/south-africa/fun-facts",
+    heroImageUrl: "https://images.unsplash.com/photo-1547471080-7108bab160a5?q=80&w=2070",
+};
+
+
+export const southAfricaTourData = {
+    title: "SOUTH AFRICA: JOHANNESBURG AND CAPE TOWN - THE PLATINUM EXPERIENCE",
+    description: [
+        "South Africa is affectionately known as the Rainbow Nation due to its diversity of people and cultures. With more than 11 official languages and dozens of ethnic groups, there's something for everyone in South Africa. Experience lush green streets, scrumptious meals, and impressive wildlife. Immerse yourself into South African culture during our 10-day journey through Johannesburg and Cape Town.",
+        "Your life will certainly change after exploring the wonderful country of South Africa with a professional team of local guides. Enjoy top-level accommodations, walk through history-filled towns, marvel at African wildlife, and get to know welcoming locals. It's time for a change of pace...the city of gold awaits!",
+    ],
+    bookNowLink: "/booking/platinum-experience",
+    funFactsLink: "/destinations/south-africa/fun-facts",
+    heroImageUrl: "https://images.unsplash.com/photo-1547471080-7108bab160a5?q=80&w=2070",
+};
