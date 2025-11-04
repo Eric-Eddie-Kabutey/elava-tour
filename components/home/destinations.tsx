@@ -69,7 +69,7 @@ const Destinations: FC = () => {
       viewport={{ once: true, amount: 0.1 }}
       className='bg-[#e4e4e4] py-20 md:py-28'
     >
-      <div className="container mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4">
         {/* --- Header --- */}
         <motion.div variants={itemVariants} className='text-center mb-16'>         
           <Typography
@@ -129,7 +129,7 @@ const Destinations: FC = () => {
         {/* --- Main CTA Button --- */}
         <motion.div variants={itemVariants} className='mt-16 text-center'>
           <Button
-            className='bg-transparent text-blue-700 border border-blue-700 rounded-md px-10 py-4 font-bold'
+            className='bg-transparent text-blue-700 border border-blue-700  px-10 py-4 font-bold hover:bg-blue-700 hover:text-white transition-colors'
           >
             View All
           </Button>
