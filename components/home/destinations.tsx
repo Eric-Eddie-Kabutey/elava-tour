@@ -106,7 +106,7 @@ const Destinations: FC = () => {
               <div className='p-8 text-center flex flex-col flex-grow'>
                 <Typography
                   typo="header-5-medium" // Assuming serif
-                  className="!text-3xl !font-bold"
+                  className="!text-3xl !font-semibold"
                 >
                   {data.title}
                 </Typography>
