@@ -11,7 +11,9 @@ export type Destination = {
     name: string;
     pageDescription: string; // A general description for the destination page
     imageUrl: string; // A main hero image for the destination
-    tours: TourPackage[]; // An array of available tours
+    tours: TourPackage[]; // An array of available tours:
+    funFactsIntro: string; // Intro text for the fun facts section
+    faqIntro: string; // Intro text for the FAQ section
 };
 
 export type ComingSoonDestination = {
