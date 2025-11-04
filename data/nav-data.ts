@@ -3,9 +3,9 @@ export const navigationData = [
     {
         title: "All Destinations",
         links: [
-            { title: "South Africa", href: "/tours/south-africa" },
-            { title: "Ghana Tour", href: "/tours/ghana" },
-            { title: "Kenya Tour", href: "/tours/kenya" },            
+            { title: "South Africa", href: "/tours/south-africa-tour" },
+            { title: "Ghana Tour", href: "/tours/ghana-tour" },
+            { title: "Kenya Tour", href: "/tours/kenya-tour" },
         ],
     },
     {
