@@ -178,14 +178,20 @@ export default {
   				'100%': {
   					opacity: '1'
   				}
-  			}
+				},
+				scroll: {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-100%)' },
+				},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			appear: 'appear 0.6s forwards ease-out',
   			'appear-zoom': 'appear-zoom 0.6s forwards ease-out',
-  			'pulse-hover': 'pulse-hover 6s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+				'pulse-hover': 'pulse-hover 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				'marquee': 'scroll 40s linear infinite',
+				
   		},
   		spacing: {
   			container: '1280px'
@@ -194,7 +200,8 @@ export default {
   			'glow-sm': '0 0 16px 0 hsla(var(--foreground) / 0.08) inset',
   			'glow-md': '0 0 32px 0 hsla(var(--foreground) / 0.08) inset',
   			'glow-lg': '0 0 64px 0 hsla(var(--foreground) / 0.06) inset'
-  		}
+  		},
+		
   	}
   },
   plugins: [require("tailwindcss-animate")],
