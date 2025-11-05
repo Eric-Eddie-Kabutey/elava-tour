@@ -7,7 +7,7 @@ import { ReviewsCta } from '@/components/destination/review-cta'
 import { UpcomingTours } from '@/components/destination/upcoming-tours'
 import { destinations, ghanaTourData } from '@/data/destination'
 import { ghanaImages } from '@/data/image-highlights'
-import { tourDatesData } from '@/data/tour-dates'
+import { upcomingTourDatesData } from '@/data/tour-dates'
 
 export default function GhanaDestinationPage() {
 	return (
@@ -30,7 +30,7 @@ export default function GhanaDestinationPage() {
 			{/* image gallery highlights */}
 			<ImageHighlights tourImages={ghanaImages} />
 
-			<UpcomingTours tourData={tourDatesData} countryName='ghana' />
+			<UpcomingTours upcomingTourData={upcomingTourDatesData} countrySlug='ghana-tour' />
 
 			{/* Fun fact cta section */}
 			<FunFactsCta

@@ -7,7 +7,7 @@ import { ReviewsCta } from "@/components/destination/review-cta";
 import { UpcomingTours } from "@/components/destination/upcoming-tours";
 import { destinations, southAfricaTourData } from "@/data/destination";
 import { southAfricaImages } from "@/data/image-highlights";
-import { tourDatesData } from "@/data/tour-dates";
+import { upcomingTourDatesData } from "@/data/tour-dates";
 
 
 export default function SouthAfricaDestinationPage() {
@@ -31,7 +31,7 @@ export default function SouthAfricaDestinationPage() {
                 <ImageHighlights tourImages={southAfricaImages} />
 
         {/* Upcoming tours */}
-        <UpcomingTours tourData={tourDatesData} countryName="south-africa" />
+        <UpcomingTours upcomingTourData={upcomingTourDatesData} countrySlug="south-africa-tour" />
 
         {/* Fun fact cta section */}
         <FunFactsCta

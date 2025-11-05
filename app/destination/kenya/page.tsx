@@ -7,7 +7,7 @@ import { ReviewsCta } from "@/components/destination/review-cta";
 import { UpcomingTours } from "@/components/destination/upcoming-tours";
 import { destinations, kenyaTourData } from "@/data/destination";
 import { kenyaImages } from "@/data/image-highlights";
-import { tourDatesData } from "@/data/tour-dates";
+import { upcomingTourDatesData } from "@/data/tour-dates";
 
 export default function KenyaDestinationPage() {
     return (<>
@@ -29,7 +29,7 @@ export default function KenyaDestinationPage() {
         {/* image gallery highlights */}
         <ImageHighlights tourImages={kenyaImages} />
 
-        <UpcomingTours tourData={tourDatesData} countryName="kenya" />
+        <UpcomingTours upcomingTourData={upcomingTourDatesData} countrySlug="kenya-tour" />
 
         {/* Fun fact cta section */}
                 <FunFactsCta
