@@ -50,7 +50,7 @@ export function UpcomingTours({ upcomingTourData, countrySlug }: UpcomingToursPr
                     variant="outline"
                     className="bg-white text-[#aa8924] font-semibold text-base px-5 py-4 hover:bg-gray-100 hover:text-[#aa8928] min-w-[200px]"
                   >
-                    <Link href={`/upcoming-tour/${date.slug}`}>
+                    <Link href={`/upcoming-tours/${date.slug}`}>
                       {date.displayDate}
                     </Link>
                   </Button>
