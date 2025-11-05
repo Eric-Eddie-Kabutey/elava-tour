@@ -13,7 +13,9 @@ export default {
   			'app-primary': '#313131',
   			'app-secondary': '#564f49',
   			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
+				foreground: 'hsl(var(--foreground))',
+				'custom-gold': '#a98b2f',
+				'custom-brown-dark': '#b95c37',
   			card: {
   				DEFAULT: 'hsl(var(--card) / 0.2)',
   				foreground: 'hsl(var(--card-foreground))'
