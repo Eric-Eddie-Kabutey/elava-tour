@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Phone, MapPin } from "lucide-react";
 
-import elavaTourImg from '@/public/assets/images/elava_logo.png'
+import elavaToursLogoWhite from '@/public/assets/logo/elava-tours-logo-white.png'
 
 export function TripCta() {
   return (
@@ -12,9 +12,9 @@ export function TripCta() {
           {/* z-10 ensures the logo sits on top of the border line */}
           <div className="relative z-10 ">
             <Image
-              src={elavaTourImg} 
+              src={elavaToursLogoWhite} 
               alt="Maximum Impact Logo"
-              width={80}
+              width={180}
               height={80}
             />
           </div>

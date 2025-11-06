@@ -24,7 +24,7 @@ import {
 import clsx from 'clsx'
 import DesktopSheetMenu from './desktop-sheet-menu'
 
-import elavaTourImg from '@/public/assets/images/elava_logo.png'
+import elavaTourLogoWhite from '@/public/assets/logo/elava-tours-logo-white.png'
 
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false)
@@ -68,11 +68,13 @@ const Header = () => {
 						{/* Logo */}						
 						<Link
 							href='/'
-							className='flex-shrink-0 w-20 h-fit relative top-5 z-[40]'>
+							className='flex-shrink-0 w-20 h-fit relative top-5 z-[40] bg-blue-500 rounded-md p-2'>
 							<Image
-								src={elavaTourImg}
+								src={elavaTourLogoWhite}
 								alt='Elava Logo'
-								className='w-full h-full'
+								width={180}
+								height={100}
+								className='object-cover w-full h-fit'
 							/>
 						</Link>
 						<div className='flex items-center justify-between gap-8'>
@@ -152,12 +154,13 @@ const Header = () => {
 						transition={{ type: 'tween', ease: 'easeInOut', duration: 0.4 }}
 						className='fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[60] shadow-2xl'>
 						<div className='flex justify-between items-center p-4 border-b'>
-							<Link href='/' onClick={() => setIsMenuOpen(false)}>
+							<Link href='/' onClick={() => setIsMenuOpen(false)} className='flex-shrink-0 w-20 h-fit relative top-0 z-[40] bg-blue-700'>
 								<Image
-									src='/placeholder-logo.svg'
-									alt='Heirs Technologies'
-									width={150}
-									height={35}
+									src={elavaTourLogoWhite}
+									alt='Elava Tours Logo'
+									width={180}
+									height={100}
+									className='object-cover w-full h-fit'
 								/>
 							</Link>
 							<button
