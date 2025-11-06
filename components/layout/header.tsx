@@ -68,7 +68,7 @@ const Header = () => {
 						{/* Logo */}						
 						<Link
 							href='/'
-							className='flex-shrink-0 w-20 h-fit relative top-5 z-[40] bg-blue-500 rounded-md p-2'>
+							className={clsx('flex-shrink-0 w-20 h-fit relative top-5 z-[40]  rounded-md p-2', isScrolled ? " bg-blue-700" : "")}>
 							<Image
 								src={elavaTourLogoWhite}
 								alt='Elava Logo'
@@ -154,7 +154,7 @@ const Header = () => {
 						transition={{ type: 'tween', ease: 'easeInOut', duration: 0.4 }}
 						className='fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[60] shadow-2xl'>
 						<div className='flex justify-between items-center p-4 border-b'>
-							<Link href='/' onClick={() => setIsMenuOpen(false)} className='flex-shrink-0 w-20 h-fit relative top-0 z-[40] bg-blue-700'>
+							<Link href='/' onClick={() => setIsMenuOpen(false)} className='flex-shrink-0 w-20 h-fit relative top-0 z-[40] '>
 								<Image
 									src={elavaTourLogoWhite}
 									alt='Elava Tours Logo'

@@ -12,7 +12,7 @@ export function Header() {
 					{/* Left Side: Logo */}
 					<Link
 						href='/'
-						className='flex-shrink-0 w-20 h-fit relative top-5 z-[40] bg-blue-700'>
+						className='flex-shrink-0 w-20 h-fit relative top-5 z-[40] '>
 						<Image
 							src={elavaToursLogoWhite}
 							alt='Elava Logo'
