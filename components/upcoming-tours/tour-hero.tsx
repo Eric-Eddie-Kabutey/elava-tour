@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { BrochureDownloadModal } from "./brochure-download-modal";
 
 type TourHeroProps = {
   title: string;
@@ -17,7 +18,7 @@ export function TourHero({
   brochureUrl,
   bookingSectionId,
 }: TourHeroProps) {
-    console.log('imageUrl', imageUrl);
+     const [isBrochureModalOpen, setIsBrochureModalOpen] = useState(false);
     
 
   const handleBookNowClick = () => {
@@ -28,6 +29,7 @@ export function TourHero({
   };
 
   return (
+    <>
     <section className="relative w-full h-[60vh] md:h-[75vh] text-white">
       {/* Background Image */}
       <Image
@@ -61,17 +63,25 @@ export function TourHero({
                 Book Now
               </Button>
               <Button
-                asChild
-                className="bg-custom-gold hover:bg-custom-gold/90 text-white font-bold py-3"
-              >
-                <Link href={brochureUrl} target="_blank" rel="noopener noreferrer">
-                  Download Brochure
-                </Link>
-              </Button>
+                        onClick={() => setIsBrochureModalOpen(true)}
+                        className="bg-custom-gold hover:bg-custom-gold/90 text-white font-bold py-3"
+                    >
+                        Download Brochure
+                    </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      </section>
+      
+      {/* conditional render brochure download modal */}
+      <BrochureDownloadModal
+        isOpen={isBrochureModalOpen}
+        onClose={() => setIsBrochureModalOpen(false)}
+        tourTitle={title}
+        brochureUrl={brochureUrl}
+      />
+
+    </>
   );
 }
