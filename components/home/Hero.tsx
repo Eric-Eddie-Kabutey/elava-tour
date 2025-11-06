@@ -59,58 +59,7 @@ function Hero() {
 						playsInline
 					/>
 					<div className='absolute inset-0 bg-black/30' />
-                    <div className='xl:max-w-6xl 2xl:max-w-7xl mx-auto absolute inset-0 flex flex-col items-center justify-center mt-28'>
-                        
-                        {/* mobile hero */}
-                        <div className='md:hidden flex flex-col gap-y-0 mb-8 sm:mb-20'>
-                            {/* mobile */}
-                            {/* first line */}
-                            <div className='md:hidden grid grid-cols-5 md:grid-cols-5 gap-4 md:gap-4 2xl:gap-x-20'>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									E
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									L
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									A
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									V
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									A
-                                </h1>
-                            </div>
-
-                            {/* second line */}
-                            <div className='md:hidden grid grid-cols-5 md:grid-cols-5 gap-4 md:gap-4 2xl:gap-x-20'>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									T
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									O
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									U
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									R
-                                </h1>
-                                <h1 className='font-vamtam-h1 text-white !text-[100px] sm:text-[150px] md:text-[140px] lg:text-[200px] 2xl:text-[300px] leading-10 tracking-widest'>
-									S
-                                </h1>
-                            </div>
-
-                        </div>
-
-                        {/* mobile  */}
-						<p className='md:hidden text-2xl sm:text-2xl md:text-2xl lg:text-xl font-bold text-white md:leading-tight drop-shadow-lg'>
-							We Make Your <span className='text-blue-700'>CapeTown</span> and{' '}
-							<span className='text-blue-700'>Ghana</span> Tours Memorable
-						</p>
-
-                        {/* desktop hero */}
+                    <div className='xl:max-w-6xl 2xl:max-w-7xl mx-auto absolute inset-0 flex flex-col items-center justify-center mt-28'>                                                                                              
                         <BrandHero />						
 					</div>
 				</div>
@@ -221,8 +170,8 @@ function Hero() {
                     </div>
                     
 
-					<div className='w-full sm:block hidden overflow-auto'>
-						<div className=' w-full grid grid-cols-4 sm:gap-[3px] gap-4'>
+					<div className='w-full  overflow-auto'>
+						<div className=' w-full grid grid-cols-2 md:grid-cols-4 sm:gap-[3px] gap-4'>
 							{services.map((data, index) => (
 								<div
 									key={data.id}
