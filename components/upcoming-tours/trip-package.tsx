@@ -1,4 +1,4 @@
-import { PackageDetail, PricingPackage } from "@/data/tour-dates";
+import { PackageDetail, PricingPackage, TourDate } from "@/data/tour-dates";
 import { PackageInclusions } from "./package-inclusion";
 import { TripPricingPackages } from "./trip-pricing-packages";
 
@@ -6,10 +6,11 @@ type TripPackageProps = {
   id: string; // For scrolling
   inclusions: PackageDetail[];
     exclusions: PackageDetail[];
-  pricing: PricingPackage[];
+    pricing: PricingPackage[];
+  tourDetails: TourDate & { destinationName: string; year: number };
 };
 
-export function TripPackage({ id, inclusions, exclusions, pricing }: TripPackageProps) {
+export function TripPackage({ id, inclusions, exclusions, pricing, tourDetails }: TripPackageProps) {
   return (
     <div id={id}>
       <section className="py-20 bg-gray-50">
@@ -25,7 +26,7 @@ export function TripPackage({ id, inclusions, exclusions, pricing }: TripPackage
       <PackageInclusions inclusions={inclusions} exclusions={exclusions} />
 
     {/* TODO! Temp rendering */}
-    <TripPricingPackages packages={pricing} />
+    <TripPricingPackages packages={pricing} tourDetails={tourDetails} />
     </div>
   );
 }

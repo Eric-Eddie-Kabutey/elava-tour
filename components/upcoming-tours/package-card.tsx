@@ -1,15 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PricingPackage } from "@/data/tour-dates";
 
 type PackageCardProps = {
-  packageData: PricingPackage;
+    packageData: PricingPackage;
+    onBookNow: () => void;
 };
 
-export function PackageCard({ packageData }: PackageCardProps) {
+export function PackageCard({ packageData, onBookNow }: PackageCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const truncateLength = 100;
 
@@ -47,7 +47,7 @@ export function PackageCard({ packageData }: PackageCardProps) {
               <span className="text-gray-500 line-through">
                 {formatCurrency(packageData.originalPrice!)}
               </span>
-              <span className="text-red-600 font-semibold">
+              <span className="text-blue-600 font-semibold">
                 ({discountPercent.toFixed(2)}% off)
               </span>
             </div>
@@ -64,8 +64,8 @@ export function PackageCard({ packageData }: PackageCardProps) {
         </div>
         {/* Right side: Button */}
         <div className="w-full sm:w-auto flex-shrink-0">
-          <Button asChild className="bg-red-600 hover:bg-red-700 w-full sm:w-auto">
-            <Link href={packageData.buttonLink}>{packageData.buttonText}</Link>
+          <Button onClick={onBookNow} className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
+            {packageData.buttonText}
           </Button>
         </div>
       </div>
