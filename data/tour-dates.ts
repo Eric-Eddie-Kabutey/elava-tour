@@ -12,6 +12,7 @@ export type PricingPackage = {
 	description: string
 	buttonText: string
 	buttonLink: string
+	deposit: number;
 }
 
 export type PackageDetail = {
@@ -231,6 +232,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00
 							},
 							{
 								id: 'double',
@@ -241,6 +243,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00
 							},
 							{
 								id: 'single',
@@ -251,6 +254,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00
 							},
 						],
 						gallery: [
@@ -454,6 +458,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -464,6 +469,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -474,6 +480,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
@@ -682,6 +689,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -692,6 +700,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -702,6 +711,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
@@ -905,6 +915,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -915,6 +926,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -925,6 +937,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
@@ -1139,6 +1152,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -1149,6 +1163,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -1159,6 +1174,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
@@ -1372,6 +1388,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -1382,6 +1399,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -1392,6 +1410,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
@@ -1595,6 +1614,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -1605,6 +1625,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -1615,6 +1636,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
@@ -1829,6 +1851,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -1839,6 +1862,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -1849,6 +1873,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
@@ -2057,6 +2082,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -2067,6 +2093,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -2077,6 +2104,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
@@ -2280,6 +2308,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'For children ages 5 through 11 yrs old accompanied by an adult. If a child is below the age of 12 this must be selected.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-child',
+								deposit: 199.00,
 							},
 							{
 								id: 'double',
@@ -2290,6 +2319,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'This room is based on double occupancy, meaning it is shared with another person. If you do not have a roommate, one will be assigned to you.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-double',
+								deposit: 299.00,
 							},
 							{
 								id: 'single',
@@ -2300,6 +2330,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 									'Single Occupancy (per person). All Sales Final - No Refunds.',
 								buttonText: 'Join Waitlist',
 								buttonLink: '/waitlist/sa-2026-may-single',
+								deposit: 399.00,
 							},
 						],
 						gallery: [
