@@ -25,23 +25,23 @@ const destinationsData: Destination[] = [
   {
     id: 1,
     img: southAfricaImg, 
-    title: "Egypt",
-    description: "Egypt is well-known for its ancient history museums, the Pyramids of Giza, temple complexes, mummies, and the Great Sphinx.",
-    href: "/destinations/egypt",
+    title: "South Africa",
+    description: "South Africa is well-known for its ancient history museums, the Pyramids of Giza, temple complexes, mummies, and the Great Sphinx.",
+    href: "/destination/south-africa",
   },
   {
     id: 2,
     img: ghanaImg,
-    title: "South Africa",
-    description: "South Africa is affectionately known as the Rainbow Nation due to its diversity of people and cultures.",
-    href: "/destinations/south-africa",
+    title: "Ghana",
+    description: "Ghana is affectionately known as the Rainbow Nation due to its diversity of people and cultures.",
+    href: "/destination/ghana",
   },
   {
     id: 3,
     img: kenyaImg,
-    title: "Ghana",
-    description: "The name Ghana means warrior king. It is called the Gateway to Africa because it is the first location newcomers of the continent should go.",
-    href: "/destinations/ghana",
+    title: "Kenya",
+    description: "The name Kenya means warrior king. It is called the Gateway to Africa because it is the first location newcomers of the continent should go.",
+    href: "/destination/kenya",
   },
 ];
 
@@ -74,7 +74,7 @@ const Destinations: FC = () => {
         <motion.div variants={itemVariants} className='text-center mb-16'>         
           <Typography
             typo="header-1-medium" 
-            className="!text-4xl md:!text-5xl !text-blue-600 !font-bold uppercase tracking-widest"
+            className="!text-4xl md:!text-5xl !text-blue-700 !font-bold uppercase tracking-widest"
           >
             Your Next Destinations
           </Typography>
