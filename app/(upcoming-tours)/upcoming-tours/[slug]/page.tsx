@@ -90,6 +90,7 @@ export default async function TourDetailPage({ params }: TourDetailPageProps) {
               inclusions={tourDetails.inclusions}
           exclusions={tourDetails.exclusions}
           pricing={tourDetails.pricing}
+          tourDetails={tourDetails}
             />
       )}
 
