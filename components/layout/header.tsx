@@ -23,6 +23,7 @@ import {
 } from '@/components/ui/accordion'
 import clsx from 'clsx'
 import elavaTourLogoWhite from '@/public/assets/logo/elava-tours-logo-white.png'
+import { Button } from '../ui/button'
 
 // Helper type for our updated navigation data structure
 type NavItem = (typeof navigationData)[0] & {
@@ -59,14 +60,13 @@ const Header = () => {
 					'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
 					isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
 				)}>
-				
 				<div className='container mx-auto px-4'>
 					<div className='flex justify-between items-center h-20'>
 						{/* Logo */}
 						<Link
 							href='/'
 							className={clsx(
-								'flex-shrink-0 w-40 h-32 relative top-2 z-[40] rounded-md py-0 px-0 ', 
+								'flex-shrink-0 w-40 h-32 relative top-2 z-[40] rounded-md py-0 px-0 ',
 								isScrolled ? 'bg-blue-700 mt-2' : ''
 							)}>
 							<Image
@@ -80,88 +80,141 @@ const Header = () => {
 						<div className='flex items-center justify-between gap-8'>
 							{/* ====== DESKTOP NAVIGATION  ====== */}
 							<nav className='hidden lg:flex items-center gap-2'>
-                                {aboutUsItem && (
-                                    <Link href={aboutUsItem.href || '#'} legacyBehavior passHref>
-                                        <a className={clsx(
-                                            navigationMenuTriggerStyle(), 
-                                            isScrolled ? 'text-gray-900' : 'text-white', 
-                                            'bg-transparent text-lg font-medium'
-                                        )}>
-                                            {aboutUsItem.title}
-                                        </a>
-                                    </Link>
-                                )}
+								{aboutUsItem && (
+									<Link href={aboutUsItem.href || '#'} legacyBehavior passHref>
+										<a
+											className={clsx(
+												navigationMenuTriggerStyle(),
+												isScrolled ? 'text-gray-900' : 'text-white',
+												'bg-transparent text-lg font-medium'
+											)}>
+											{aboutUsItem.title}
+										</a>
+									</Link>
+								)}
 
-                                {/* A SINGLE NAVIGATION MENU WRAPS ALL DROPDOWN ITEMS */}
-                                <NavigationMenu>
-                                    <NavigationMenuList>
-                                        {/* "All Destinations" Mega-Menu */}
-                                        {destinationsItem?.links && (
-                                            <NavigationMenuItem>
-                                                <NavigationMenuTrigger className={clsx('text-lg font-medium', isScrolled ? 'text-gray-900' : 'text-white', 'bg-transparent hover:bg-accent/50')}>
-                                                    {destinationsItem.title}
-                                                </NavigationMenuTrigger>
-                                                <NavigationMenuContent>
-                                                    <div className='grid grid-cols-2 gap-4 p-4 w-[500px] lg:w-[500px]'>
-                                                        <div>
-                                                            <h3 className='font-semibold text-gray-500 text-sm px-3 mb-2'>Destinations</h3>
-                                                            <ul>{destinationsItem.links.map(link => <ListItem key={link.title} href={link.href} title={link.title} />)}</ul>
-                                                        </div>
-                                                        <div className='border-l border-gray-200 pl-4'>
-                                                            <h3 className='font-semibold text-gray-500 text-sm px-3 mb-2'>Trip Types</h3>
-                                                            <ul>{destinationsItem.tripTypes?.map(link => <ListItem key={link.title} href={link.href} title={link.title} />)}</ul>
-                                                        </div>
-                                                    </div>
-                                                </NavigationMenuContent>
-                                            </NavigationMenuItem>
-                                        )}
+								{/* A SINGLE NAVIGATION MENU WRAPS ALL DROPDOWN ITEMS */}
+								<NavigationMenu>
+									<NavigationMenuList>
+										{/* "All Destinations" Mega-Menu */}
+										{destinationsItem?.links && (
+											<NavigationMenuItem>
+												<NavigationMenuTrigger
+													className={clsx(
+														'text-sm font-medium',
+														isScrolled ? 'text-gray-900' : 'text-white',
+														'bg-transparent hover:bg-accent/50'
+													)}>
+													{destinationsItem.title}
+												</NavigationMenuTrigger>
+												<NavigationMenuContent>
+													<div className='grid grid-cols-2 gap-4 p-4 w-[500px] lg:w-[500px]'>
+														<div>
+															<h3 className='font-semibold text-gray-500 text-sm  px-3 mb-2'>
+																Destinations
+															</h3>
+															<ul>
+																{destinationsItem.links.map((link) => (
+																	<ListItem
+																		key={link.title}
+																		href={link.href}
+																		title={link.title}
+																	/>
+																))}
+															</ul>
+														</div>
+														<div className='border-l border-gray-200 pl-4'>
+															<h3 className='font-semibold text-gray-500 text-sm px-3 mb-2'>
+																Trip Types
+															</h3>
+															<ul>
+																{destinationsItem.tripTypes?.map((link) => (
+																	<ListItem
+																		key={link.title}
+																		href={link.href}
+																		title={link.title}
+																	/>
+																))}
+															</ul>
+														</div>
+													</div>
+												</NavigationMenuContent>
+											</NavigationMenuItem>
+										)}
 
-                                        {/* "Deals" Simple Dropdown */}
-                                        {dealsItem?.links && (
-                                            <NavigationMenuItem>
-                                                <NavigationMenuTrigger className={clsx('text-lg font-medium', isScrolled ? 'text-gray-900' : 'text-white', 'bg-transparent hover:bg-accent/50')}>
-                                                    {dealsItem.title}
-                                                </NavigationMenuTrigger>
-                                                <NavigationMenuContent>
-                                                    <ul className="grid w-[250px] gap-3 p-4">
-                                                        {dealsItem.links.map(link => <ListItem key={link.title} href={link.href} title={link.title} />)}
-                                                    </ul>
-                                                </NavigationMenuContent>
-                                            </NavigationMenuItem>
-                                        )}
-                                        
-                                        {/* "Insights" Simple Dropdown */}
-                                        {insightsItem?.links && (
-                                            <NavigationMenuItem>
-                                                <NavigationMenuTrigger className={clsx('text-lg font-medium', isScrolled ? 'text-gray-900' : 'text-white', 'bg-transparent hover:bg-accent/50')}>
-                                                    {insightsItem.title}
-                                                </NavigationMenuTrigger>
-                                                <NavigationMenuContent>
-                                                    <ul className="grid w-[250px] gap-3 p-4">
-                                                        {insightsItem.links.map(link => <ListItem key={link.title} href={link.href} title={link.title} />)}
-                                                    </ul>
-                                                </NavigationMenuContent>
-                                            </NavigationMenuItem>
-                                        )}
-                                    </NavigationMenuList>
-                                </NavigationMenu>
+										{/* "Deals" Simple Dropdown */}
+										{dealsItem?.links && (
+											<NavigationMenuItem>
+												<NavigationMenuTrigger
+													className={clsx(
+														'text-sm font-medium',
+														isScrolled ? 'text-gray-900' : 'text-white',
+														'bg-transparent hover:bg-accent/50'
+													)}>
+													{dealsItem.title}
+												</NavigationMenuTrigger>
+												<NavigationMenuContent>
+													<ul className='grid w-[250px] gap-3 p-4'>
+														{dealsItem.links.map((link) => (
+															<ListItem
+																key={link.title}
+																href={link.href}
+																title={link.title}
+															/>
+														))}
+													</ul>
+												</NavigationMenuContent>
+											</NavigationMenuItem>
+										)}
 
-                                {faqsItem && (
-                                    <Link href={faqsItem.href || '#'} legacyBehavior passHref>
-                                        <a className={clsx(
-                                            navigationMenuTriggerStyle(), 
-                                            isScrolled ? 'text-gray-900' : 'text-white', 
-                                            'bg-transparent text-lg font-medium'
-                                        )}>
-                                            {faqsItem.title}
-                                        </a>
-                                    </Link>
-                                )}
+										{/* "Insights" Simple Dropdown */}
+										{insightsItem?.links && (
+											<NavigationMenuItem>
+												<NavigationMenuTrigger
+													className={clsx(
+														'text-sm font-medium',
+														isScrolled ? 'text-gray-900' : 'text-white',
+														'bg-transparent hover:bg-accent/50'
+													)}>
+													{insightsItem.title}
+												</NavigationMenuTrigger>
+												<NavigationMenuContent>
+													<ul className='grid w-[250px] gap-3 p-4'>
+														{insightsItem.links.map((link) => (
+															<ListItem
+																key={link.title}
+																href={link.href}
+																title={link.title}
+															/>
+														))}
+													</ul>
+												</NavigationMenuContent>
+											</NavigationMenuItem>
+										)}
+									</NavigationMenuList>
+								</NavigationMenu>
+
+								{faqsItem && (
+									<Button
+										variant='outline'
+										asChild
+										className={clsx(											
+											'text-sm font-medium bg-transparent',											
+											isScrolled
+												? 'border-gray-800 text-gray-800 hover:bg-gray-100 hover:text-black' 
+												: 'border-white text-white hover:bg-white/20' 
+										)}>
+										<Link href={faqsItem.href || '#'}>{faqsItem.title}</Link>
+									</Button>
+								)}
 							</nav>
 						</div>
 
 						{/* Mobile Menu Button */}
-						<button onClick={() => setIsMenuOpen(true)} className='lg:hidden text-2xl' aria-label='Open menu'>
+						<button
+							onClick={() => setIsMenuOpen(true)}
+							className='lg:hidden text-2xl'
+							aria-label='Open menu'>
 							<Menu className={isScrolled ? 'text-gray-900' : 'text-white'} />
 						</button>
 					</div>
@@ -176,7 +229,7 @@ const Header = () => {
 						animate={{ x: 0 }}
 						exit={{ x: '100%' }}
 						transition={{ type: 'tween', ease: 'easeInOut', duration: 0.4 }}
-						className='fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[60] shadow-2xl'>						
+						className='fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[60] shadow-2xl'>
 						<div className='p-4 h-[calc(100vh-70px)] overflow-y-auto'>
 							<Accordion type='multiple' className='w-full'>
 								{(navigationData as NavItem[]).map((item) =>
