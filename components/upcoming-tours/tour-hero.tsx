@@ -44,16 +44,16 @@ export function TourHero({
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content Container */}
-      <div className="relative h-full container mx-auto px-4">
+      <div className="relative h-full container max-w-6xl mx-auto px-4">
         <div className="absolute bottom-10 left-4 right-4 flex flex-col md:flex-row justify-between items-end gap-8">
           
           {/* Bottom Left: Title */}
-          <h1 className="text-4xl md:text-4xl font-bold text-shadow-md">
+          <h1 className="text-4xl md:text-4xl font-semibold text-shadow-md">
             {title}
           </h1>
 
           {/* Bottom Right: Action Card */}
-          <div className="bg-white text-gray-800 -mb-28 md:-mb-12 p-6 rounded-lg shadow-2xl w-full max-w-xs text-center">
+          <div className="bg-white text-gray-800 -mb-28 md:-mb-12 p-6 rounded-lg shadow-2xl w-full max-w-xs mx-auto md:mx-0 text-center">
             <h2 className="text-xl font-semibold mb-4">Get Started</h2>
             <div className="flex flex-col gap-3">
               <Button
@@ -63,11 +63,11 @@ export function TourHero({
                 Book Now
               </Button>
               <Button
-                        onClick={() => setIsBrochureModalOpen(true)}
-                        className="bg-custom-gold hover:bg-custom-gold/90 text-white font-bold py-3"
-                    >
-                        Download Brochure
-                    </Button>
+                onClick={() => setIsBrochureModalOpen(true)}
+                className="bg-custom-gold hover:bg-custom-gold/90 text-white font-bold py-3"
+              >
+                  Download Brochure
+              </Button>
             </div>
           </div>
         </div>
