@@ -65,14 +65,14 @@ const Header = () => {
 					'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
 					isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
 				)}>
-				{/* ... Top Bar and Logo ... */}
+				
 				<div className='container mx-auto px-4'>
 					<div className='flex justify-between items-center h-20'>
 						{/* Logo */}
 						<Link
 							href='/'
 							className={clsx(
-								'flex-shrink-0 w-40 h-32 relative top-2 z-[40] rounded-md py-0 px-0 ',
+								'flex-shrink-0 w-40 h-32 relative top-2 z-[40] rounded-md py-0 px-0 ', 
 								isScrolled ? 'bg-blue-700 mt-2' : ''
 							)}>
 							<Image
@@ -84,104 +84,90 @@ const Header = () => {
 							/>
 						</Link>
 						<div className='flex items-center justify-between gap-8'>
+							{/* ====== DESKTOP NAVIGATION - UNIFIED LOGIC ====== */}
 							<nav className='hidden lg:flex items-center gap-2'>
-								{/* ====== 2. UPDATED "About Us" LINK ====== */}
-								{aboutUsItem && (
-									<Link href={aboutUsItem.href || '#'} legacyBehavior passHref>
-										<a
-											className={clsx(
-												navigationMenuTriggerStyle(),
-												isScrolled ? 'text-gray-900' : 'text-white',
-												'bg-transparent text-lg font-medium'
-											)}>
-											{aboutUsItem.title}
-										</a>
-									</Link>
-								)}
+                                {aboutUsItem && (
+                                    <Link href={aboutUsItem.href || '#'} legacyBehavior passHref>
+                                        <a className={clsx(
+                                            navigationMenuTriggerStyle(), 
+                                            isScrolled ? 'text-gray-900' : 'text-white', 
+                                            'bg-transparent text-lg font-medium'
+                                        )}>
+                                            {aboutUsItem.title}
+                                        </a>
+                                    </Link>
+                                )}
 
-								<NavigationMenu>
-									<NavigationMenuList>
-										{destinationsItem?.links && (
-											<NavigationMenuItem>
-												<NavigationMenuTrigger
-													className={clsx(
-														'text-lg font-medium',
-														isScrolled ? 'text-gray-900' : 'text-white',
-														'bg-transparent hover:bg-accent/50'
-													)}>
-													{destinationsItem.title}
-												</NavigationMenuTrigger>
-												<NavigationMenuContent>
-													<div className='grid grid-cols-2 gap-4 p-4 w-[500px] lg:w-[500px]'>
-														<div>
-															<h3 className='font-semibold text-gray-500 text-sm px-3 mb-2'>
-																Destinations
-															</h3>
-															<ul>
-																{destinationsItem.links.map((link) => (
-																	<ListItem
-																		key={link.title}
-																		href={link.href}
-																		title={link.title}
-																	/>
-																))}
-															</ul>
-														</div>
-														<div className='border-l border-gray-200 pl-4'>
-															<h3 className='font-semibold text-gray-500 text-sm px-3 mb-2'>
-																Trip Types
-															</h3>
-															<ul>
-																{destinationsItem.tripTypes?.map((link) => (
-																	<ListItem
-																		key={link.title}
-																		href={link.href}
-																		title={link.title}
-																	/>
-																))}
-															</ul>
-														</div>
-													</div>
-												</NavigationMenuContent>
-											</NavigationMenuItem>
-										)}
-									</NavigationMenuList>
-								</NavigationMenu>
+                                {/* A SINGLE NAVIGATION MENU WRAPS ALL DROPDOWN ITEMS */}
+                                <NavigationMenu>
+                                    <NavigationMenuList>
+                                        {/* "All Destinations" Mega-Menu */}
+                                        {destinationsItem?.links && (
+                                            <NavigationMenuItem>
+                                                <NavigationMenuTrigger className={clsx('text-lg font-medium', isScrolled ? 'text-gray-900' : 'text-white', 'bg-transparent hover:bg-accent/50')}>
+                                                    {destinationsItem.title}
+                                                </NavigationMenuTrigger>
+                                                <NavigationMenuContent>
+                                                    <div className='grid grid-cols-2 gap-4 p-4 w-[500px] lg:w-[500px]'>
+                                                        <div>
+                                                            <h3 className='font-semibold text-gray-500 text-sm px-3 mb-2'>Destinations</h3>
+                                                            <ul>{destinationsItem.links.map(link => <ListItem key={link.title} href={link.href} title={link.title} />)}</ul>
+                                                        </div>
+                                                        <div className='border-l border-gray-200 pl-4'>
+                                                            <h3 className='font-semibold text-gray-500 text-sm px-3 mb-2'>Trip Types</h3>
+                                                            <ul>{destinationsItem.tripTypes?.map(link => <ListItem key={link.title} href={link.href} title={link.title} />)}</ul>
+                                                        </div>
+                                                    </div>
+                                                </NavigationMenuContent>
+                                            </NavigationMenuItem>
+                                        )}
 
-								{dealsItem?.links && (
-									<NavDropdown
-										title={dealsItem.title}
-										links={dealsItem.links}
-										isScrolled={isScrolled}
-									/>
-								)}
-								{insightsItem?.links && (
-									<NavDropdown
-										title={insightsItem.title}
-										links={insightsItem.links}
-										isScrolled={isScrolled}
-									/>
-								)}
-								
-								{faqsItem && (
-									<Link href={faqsItem.href || '#'} legacyBehavior passHref>
-										<a
-											className={clsx(
-												navigationMenuTriggerStyle(),
-												isScrolled ? 'text-gray-900' : 'text-white',
-												'bg-transparent text-lg font-medium'
-											)}>
-											{faqsItem.title}
-										</a>
-									</Link>
-								)}
+                                        {/* "Deals" Simple Dropdown */}
+                                        {dealsItem?.links && (
+                                            <NavigationMenuItem>
+                                                <NavigationMenuTrigger className={clsx('text-lg font-medium', isScrolled ? 'text-gray-900' : 'text-white', 'bg-transparent hover:bg-accent/50')}>
+                                                    {dealsItem.title}
+                                                </NavigationMenuTrigger>
+                                                <NavigationMenuContent>
+                                                    <ul className="grid w-[250px] gap-3 p-4">
+                                                        {dealsItem.links.map(link => <ListItem key={link.title} href={link.href} title={link.title} />)}
+                                                    </ul>
+                                                </NavigationMenuContent>
+                                            </NavigationMenuItem>
+                                        )}
+                                        
+                                        {/* "Insights" Simple Dropdown */}
+                                        {insightsItem?.links && (
+                                            <NavigationMenuItem>
+                                                <NavigationMenuTrigger className={clsx('text-lg font-medium', isScrolled ? 'text-gray-900' : 'text-white', 'bg-transparent hover:bg-accent/50')}>
+                                                    {insightsItem.title}
+                                                </NavigationMenuTrigger>
+                                                <NavigationMenuContent>
+                                                    <ul className="grid w-[250px] gap-3 p-4">
+                                                        {insightsItem.links.map(link => <ListItem key={link.title} href={link.href} title={link.title} />)}
+                                                    </ul>
+                                                </NavigationMenuContent>
+                                            </NavigationMenuItem>
+                                        )}
+                                    </NavigationMenuList>
+                                </NavigationMenu>
+
+                                {faqsItem && (
+                                    <Link href={faqsItem.href || '#'} legacyBehavior passHref>
+                                        <a className={clsx(
+                                            navigationMenuTriggerStyle(), 
+                                            isScrolled ? 'text-gray-900' : 'text-white', 
+                                            'bg-transparent text-lg font-medium'
+                                        )}>
+                                            {faqsItem.title}
+                                        </a>
+                                    </Link>
+                                )}
 							</nav>
 						</div>
+
 						{/* Mobile Menu Button */}
-						<button
-							onClick={() => setIsMenuOpen(true)}
-							className='lg:hidden text-2xl'
-							aria-label='Open menu'>
+						<button onClick={() => setIsMenuOpen(true)} className='lg:hidden text-2xl' aria-label='Open menu'>
 							<Menu className={isScrolled ? 'text-gray-900' : 'text-white'} />
 						</button>
 					</div>
