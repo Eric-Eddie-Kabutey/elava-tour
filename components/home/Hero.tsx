@@ -168,9 +168,9 @@ function Hero() {
 							</div>
 						</div>
                     </div>
-                    
 
-					<div className='w-full  overflow-auto'>
+					{/*  Services */}
+					<div className='w-full  overflow-auto pt-20'>
 						<div className=' w-full grid grid-cols-2 md:grid-cols-4 sm:gap-[3px] gap-4'>
 							{services.map((data, index) => (
 								<div

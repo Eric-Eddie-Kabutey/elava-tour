@@ -69,7 +69,7 @@ const Destinations: FC = () => {
       viewport={{ once: true, amount: 0.1 }}
       className='bg-[#e4e4e4] py-20 md:py-28'
     >
-      <div className="container max-w-6xl mx-auto px-4">
+      <div className="max-container w-[95%] mx-auto px-4 lg:px-12">
         {/* --- Header --- */}
         <motion.div variants={itemVariants} className='text-center mb-16'>         
           <Typography
@@ -92,7 +92,7 @@ const Destinations: FC = () => {
             <motion.div
               key={data.id}
               variants={itemVariants}
-              className='bg-white rounded-xl shadow-lg overflow-hidden flex flex-col group'
+              className='bg-white shadow-lg overflow-hidden flex flex-col group'
             >
               <div className='relative aspect-[4/3] overflow-hidden'>
                 <Image 
@@ -116,7 +116,7 @@ const Destinations: FC = () => {
                 <div className="mt-6">
                     <Button
                         asChild
-                        className='bg-blue-600 text-white hover:bg-blue-700 rounded-md px-8 py-3 font-semibold transition-transform group-hover:scale-105'
+                        className='bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 font-semibold transition-transform group-hover:scale-105'
                     >
                         <Link href={data.href}>Learn More</Link>
                     </Button>
