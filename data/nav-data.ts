@@ -1,25 +1,25 @@
-// src/data/header-navigation.ts
 export const navigationData = [
     {
-        title: "All Destinations",
+        title: "About Us",
+        href: "/about-us",
+    },
+    {
+        title: "All Destinations",        
         links: [
             { title: "South Africa", href: "/tours/south-africa-tour" },
             { title: "Ghana Tour", href: "/tours/ghana-tour" },
             { title: "Kenya Tour", href: "/tours/kenya-tour" },
+        ],        
+        tripTypes: [
+            { title: "Solo Trips", href: "/trip-types/solo-trips" },
+            { title: "Group Tours", href: "/trip-types/group-tours" },
+            { title: "Family Holidays", href: "/trip-types/family-holidays" },
         ],
-    },
-    {
-        title: "Trip Types",
-        links: [
-            { title: "Solo Trips", href: "/trip-types/all-inclusive" },
-            { title: "Group Tours", href: "/tours/ghana" },
-            { title: "Family Holidays", href: "/tours/kenya" },           
-        ],
-    },
+    },    
     {
         title: "Deals",
         links: [
-            { title: "Trip Saving", href: "/trip-types/all-inclusive" },
+            { title: "Trip Saving", href: "/deals/trip-saving" },
             { title: "Loyalty Discount", href: "/deals/loyalty-discount" },
             { title: "Student Discounts", href: "/deals/student-discounts" },
         ],
@@ -29,12 +29,12 @@ export const navigationData = [
         links: [
             { title: "News & Stories", href: "/news" },
             { title: "Client Feedback", href: "/client-feedback" },
-            { title: "Media", href: "/tour-media" },           
+            { title: "Media", href: "/tour-media" },
         ],
     },
     {
-        title: "Contact Us",
-        href: "/contact",
+        title: "FAQs",
+        href: "/#faqs",
     },
 ];
 
