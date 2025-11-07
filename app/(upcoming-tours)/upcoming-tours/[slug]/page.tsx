@@ -52,7 +52,7 @@ export default async function TourDetailPage({ params }: TourDetailPageProps) {
   }
 
   // Construct the dynamic title for the hero
-  const heroTitle = `MIT - ${tourDetails.destinationName} - ${tourDetails.displayDate}, ${tourDetails.year}`;
+  const heroTitle = `MIT - ${tourDetails.destinationName} - ${tourDetails.tourLocation} - ${tourDetails.displayDate}, ${tourDetails.year}`;
   const bookingSectionId = "trip-package-details";
 
   return (
