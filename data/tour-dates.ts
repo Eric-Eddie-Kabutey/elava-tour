@@ -32,6 +32,7 @@ export type ItineraryDay = {
 
 export type TourDate = {
 	id: string // A unique ID for React keys
+	tourLocation?: string // Optional tour location info
 	displayDate: string // The text shown on the button
 	slug: string // The unique identifier for the URL
 	heroImageUrl: string
@@ -66,26 +67,27 @@ export const upcomingTourDatesData: DestinationDates[] = [
 				dates: [
 					{
 						id: 'sa-2026-may',
+						tourLocation: "Jo'burg & Cape Town",
 						displayDate: 'May 14 - May 22',
 						slug: 'south-africa-may-2026',
 						heroImageUrl:
-							'/assets/images/upcoming-tours/ghana/ghana-2026/hero-image.jpg',
+							'/assets/images/upcoming-tours/south-africa/south-africa-2026/hero-image.jpg',
 						brochureUrl: '/brochures/south-africa-may-2026.pdf',
 						aboutTrip:
-							'Embark on the journey of a lifetime in Ghana! Picture lush green streets, savor scrumptious meals, and embrace the vibrant culture of West Africa. With a team of passionate local guides, your exploration of this beautiful country will be transformative...',
+							'Embark on the journey of a lifetime in South Africa! Picture lush green streets, savor scrumptious meals, and embrace the vibrant culture of West Africa. With a team of passionate local guides, your exploration of this beautiful country will be transformative...',
 						disclaimer:
 							'All sales are final. No refunds, transfers, or exchanges.',
 						itinerary: [
 							{
 								day: 1,
-								title: 'Arrival to Ghana',
+								title: 'Cape Town - South Africa',
 								date: 'Nov-14-2025',
-								location: 'Accra- Ghana',
-								heading: 'Akwaaba! An Unforgettable Adventure in Ghana Awaits!',
+								location: 'Cape Town - South Africa',
+								heading: 'Akwaaba! An Unforgettable Adventure in South Africa Awaits!',
 								description:
-									'Welcome to Ghana! Your exciting journey kicks off today as you set foot in Kotoka International Airport. No need to worry about a thing; our friendly team will be right there to greet you, handle your luggage, and whisk you away to your comfortable hotel. Take some time to settle in, relax, and get ready for the incredible adventure that lies ahead. The vibrant sights and sounds of Ghana are waiting for you!',
+									'Welcome to South Africa! Your exciting journey kicks off today as you set foot in Cape Town International Airport. No need to worry about a thing; our friendly team will be right there to greet you, handle your luggage, and whisk you away to your comfortable hotel. Take some time to settle in, relax, and get ready for the incredible adventure that lies ahead. The vibrant sights and sounds of South Africa are waiting for you!',
 								imageUrl:
-									'https://images.unsplash.com/photo-1589539134371-20902a247f07?q=80&w=1974',
+									'/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-1.jpg',
 							},
 							{
 								day: 2,
@@ -96,7 +98,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 								description:
 									"Today we dive into the bustling city of Accra. We will visit the historic Jamestown, see the Independence Arch, and explore the vibrant Makola Market. Prepare your senses for a feast of colors, sounds, and smells as we experience the daily life of Ghana's capital. In the evening, we'll enjoy a traditional Ghanaian dinner with live music.",
 								imageUrl:
-									'https://images.unsplash.com/photo-1561332798-749e1f3b39a2?q=80&w=2070',
+									'/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-2.png',
 							},
 							{
 								day: 3,
@@ -107,7 +109,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 								description:
 									"Today we dive into the bustling city of Accra. We will visit the historic Jamestown, see the Independence Arch, and explore the vibrant Makola Market. Prepare your senses for a feast of colors, sounds, and smells as we experience the daily life of Ghana's capital. In the evening, we'll enjoy a traditional Ghanaian dinner with live music.",
 								imageUrl:
-									'https://images.unsplash.com/photo-1561332798-749e1f3b39a2?q=80&w=2070',
+									'/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-3.jpg',
 							},
 							{
 								day: 4,
@@ -118,7 +120,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 								description:
 									"Today we dive into the bustling city of Accra. We will visit the historic Jamestown, see the Independence Arch, and explore the vibrant Makola Market. Prepare your senses for a feast of colors, sounds, and smells as we experience the daily life of Ghana's capital. In the evening, we'll enjoy a traditional Ghanaian dinner with live music.",
 								imageUrl:
-									'https://images.unsplash.com/photo-1561332798-749e1f3b39a2?q=80&w=2070',
+									'/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-4.jpg',
 							},
 							{
 								day: 5,
@@ -129,7 +131,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 								description:
 									"Today we dive into the bustling city of Accra. We will visit the historic Jamestown, see the Independence Arch, and explore the vibrant Makola Market. Prepare your senses for a feast of colors, sounds, and smells as we experience the daily life of Ghana's capital. In the evening, we'll enjoy a traditional Ghanaian dinner with live music.",
 								imageUrl:
-									'https://images.unsplash.com/photo-1561332798-749e1f3b39a2?q=80&w=2070',
+									'/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-5.jpg',
 							},
 							{
 								day: 6,
@@ -140,7 +142,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 								description:
 									"Today we dive into the bustling city of Accra. We will visit the historic Jamestown, see the Independence Arch, and explore the vibrant Makola Market. Prepare your senses for a feast of colors, sounds, and smells as we experience the daily life of Ghana's capital. In the evening, we'll enjoy a traditional Ghanaian dinner with live music.",
 								imageUrl:
-									'https://images.unsplash.com/photo-1561332798-749e1f3b39a2?q=80&w=2070',
+									'/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-6.jpg',
 							},
 							{
 								day: 7,
@@ -151,7 +153,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 								description:
 									"Today we dive into the bustling city of Accra. We will visit the historic Jamestown, see the Independence Arch, and explore the vibrant Makola Market. Prepare your senses for a feast of colors, sounds, and smells as we experience the daily life of Ghana's capital. In the evening, we'll enjoy a traditional Ghanaian dinner with live music.",
 								imageUrl:
-									'https://images.unsplash.com/photo-1561332798-749e1f3b39a2?q=80&w=2070',
+									'/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-7.jpg',
 							},
 							{
 								day: 8,
@@ -162,7 +164,7 @@ export const upcomingTourDatesData: DestinationDates[] = [
 								description:
 									"Today we dive into the bustling city of Accra. We will visit the historic Jamestown, see the Independence Arch, and explore the vibrant Makola Market. Prepare your senses for a feast of colors, sounds, and smells as we experience the daily life of Ghana's capital. In the evening, we'll enjoy a traditional Ghanaian dinner with live music.",
 								imageUrl:
-									'https://images.unsplash.com/photo-1561332798-749e1f3b39a2?q=80&w=2070',
+									'/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-8.jpg',
 							},
 						],
 						inclusions: [
@@ -259,33 +261,53 @@ export const upcomingTourDatesData: DestinationDates[] = [
 						],
 						gallery: [
 							{
-								id: 'gh-gal-1',
-								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/img-1.jpg/photo-1602357283955-f2a8932d54a5',
+								id: 'sa-gal-1',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/day-8.jpg',
 								alt: 'Woman waving a Ghanaian flag',
 							},
 							{
-								id: 'gh-gal-2',
-								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/img-2.jpg',
+								id: 'sa-gal-2',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/sun-set.jpg',
 								alt: 'Kotoka International Airport sign at night',
 							},
 							{
-								id: 'gh-gal-3',
-								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/img-3.jpg',
+								id: 'sa-gal-3', 
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/girrafs.jpg',
 								alt: 'Cape Coast Castle',
 							},
 							{
-								id: 'gh-gal-4',
-								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/img-4.jpg',
+								id: 'sa-gal-4',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/giraff-moutains.jpg',
 								alt: "Cascading Dunn's River Falls in Jamaica",
 							},
 							{
-								id: 'gh-gal-5',
-								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/img-5.jpg',
+								id: 'sa-gal-5',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/vine-glass.jpg',
 								alt: 'Ancient Fasil Ghebbi fortress in Ethiopia',
 							},
 							{
-								id: 'gh-gal-6',
-								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/img-6.jpg',
+								id: 'sa-gal-6',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/city-view.jpg',
+								alt: 'Boats in the clear blue water of Trinidad and Tobago',
+							},
+							{
+								id: 'sa-gal-7',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/prison-walls.jpg',
+								alt: 'Boats in the clear blue water of Trinidad and Tobago',
+							},
+							{
+								id: 'sa-gal-8',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/prison-house.jpg',
+								alt: 'Boats in the clear blue water of Trinidad and Tobago',
+							},
+							{
+								id: 'sa-gal-9',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/melrose-village.jpg',
+								alt: 'Boats in the clear blue water of Trinidad and Tobago',
+							},
+							{
+								id: 'sa-gal-10',
+								src: '/assets/images/upcoming-tours/south-africa/south-africa-2026/trip-itinerary/melrose-village.jpg',
 								alt: 'Boats in the clear blue water of Trinidad and Tobago',
 							},
 						],
