@@ -11,11 +11,9 @@ export default function Home() {
     <>
       <div className="">
         {/* Hero section */}
-        <Hero />
-        {/* Tour highlights section*/}
-        {/* <TourHighlights /> */}
+        <Hero />       
 
-        {/* Destinations section*/}
+        {/* Your next destinations */}
         <Destinations />
 
         {/* AffiliateProgram section */}
