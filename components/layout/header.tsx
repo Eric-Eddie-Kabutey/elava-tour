@@ -13,7 +13,7 @@ import {
 	NavigationMenuLink,
 	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
-import { ChevronDownCircle, Menu } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import { navigationData } from '@/data/nav-data'
 import {
 	Accordion,
@@ -23,12 +23,6 @@ import {
 } from '@/components/ui/accordion'
 import clsx from 'clsx'
 import elavaTourLogoWhite from '@/public/assets/logo/elava-tours-logo-white.png'
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger,
-} from '../ui/dropdown-menu'
 
 // Helper type for our updated navigation data structure
 type NavItem = (typeof navigationData)[0] & {
@@ -84,7 +78,7 @@ const Header = () => {
 							/>
 						</Link>
 						<div className='flex items-center justify-between gap-8'>
-							{/* ====== DESKTOP NAVIGATION - UNIFIED LOGIC ====== */}
+							{/* ====== DESKTOP NAVIGATION  ====== */}
 							<nav className='hidden lg:flex items-center gap-2'>
                                 {aboutUsItem && (
                                     <Link href={aboutUsItem.href || '#'} legacyBehavior passHref>
@@ -182,8 +176,7 @@ const Header = () => {
 						animate={{ x: 0 }}
 						exit={{ x: '100%' }}
 						transition={{ type: 'tween', ease: 'easeInOut', duration: 0.4 }}
-						className='fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[60] shadow-2xl'>
-						{/* ... Mobile Header (no changes) ... */}
+						className='fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[60] shadow-2xl'>						
 						<div className='p-4 h-[calc(100vh-70px)] overflow-y-auto'>
 							<Accordion type='multiple' className='w-full'>
 								{(navigationData as NavItem[]).map((item) =>
@@ -257,39 +250,6 @@ const Header = () => {
 		</>
 	)
 }
-
-// Helper component for simple dropdowns
-const NavDropdown = ({
-	title,
-	links,
-	isScrolled,
-}: {
-	title: string
-	links: { title: string; href: string }[]
-	isScrolled: boolean
-}) => (
-	<DropdownMenu>
-		<DropdownMenuTrigger
-			className={clsx(
-				'group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-lg font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50',
-				isScrolled ? 'text-gray-900' : 'text-white',
-				'hover:bg-accent/50'
-			)}>
-			{title}
-			<ChevronDownCircle
-				className='relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180'
-				aria-hidden='true'
-			/>
-		</DropdownMenuTrigger>
-		<DropdownMenuContent>
-			{links.map((link) => (
-				<DropdownMenuItem key={link.title} asChild>
-					<Link href={link.href}>{link.title}</Link>
-				</DropdownMenuItem>
-			))}
-		</DropdownMenuContent>
-	</DropdownMenu>
-)
 
 // Helper component for Desktop menu items for cleaner code
 const ListItem = ({ href, title }: { href: string; title: string }) => (
