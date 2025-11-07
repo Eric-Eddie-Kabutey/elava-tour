@@ -112,7 +112,7 @@ const Header = () => {
 													{destinationsItem.title}
 												</NavigationMenuTrigger>
 												<NavigationMenuContent>
-													<div className='grid grid-cols-2 gap-4 p-4 w-[500px] lg:w-[600px]'>
+													<div className='grid grid-cols-2 gap-4 p-4 w-[500px] lg:w-[500px]'>
 														<div>
 															<h3 className='font-semibold text-gray-500 text-sm px-3 mb-2'>
 																Destinations
