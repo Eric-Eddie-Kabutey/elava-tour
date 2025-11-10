@@ -17,11 +17,11 @@ export default function Home() {
         {/* Featured Trips section */}
         <FeaturedTrips />
 
-        {/* Your next destinations */}
-        <Destinations />
-
         {/* AffiliateProgram section */}
         <AffiliateProgram />
+
+        {/* Your next destinations */}
+        <Destinations />
 
         {/* Handpicked section */}
         <Handpicked />
