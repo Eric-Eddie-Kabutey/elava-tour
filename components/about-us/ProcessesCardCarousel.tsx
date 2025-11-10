@@ -46,7 +46,7 @@ export const ProcessesCarousel = () => {
 
   return (
     <section className="py-16 md:py-24 bg-gray-50">
-      <div className="max-container xl:w-[78%] w-[95%] mx-auto xl:px-4">
+      <div className="max-container w-[95%] mx-auto px-4 xl:px-0 2xl:px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-green-opaque">Our Process</h2>
           <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
@@ -60,7 +60,7 @@ export const ProcessesCarousel = () => {
             {featuresData.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col flex-shrink-0 flex-grow-0 basis-[90%] pl-4 sm:basis-1/2 lg:basis-1/3"
+                className="flex flex-col flex-shrink-0 flex-grow-0 basis-[90%] pl-4 sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
                 <div
                   className="p-2 group h-full rounded-2xl shadow-lg flex flex-col bg-white transition-all duration-300 ease-in-out hover:bg-yellow-opaque hover:-translate-y-2"
