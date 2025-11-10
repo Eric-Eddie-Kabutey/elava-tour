@@ -64,7 +64,7 @@ function Hero() {
 					</div>
 				</div>
 			</section>
-			<section className=' max-container w-full pb-4 bg-[#e4e4e4] z-[20]'>
+			<section className=' max-container w-full pb-4 bg-white z-[20]'>
 				<div className='lg:w-[75%] w-[95%] mx-auto flex flex-col gap-[85px]'>
 					<div className='hidden w-full -mt-12 pb-8 px-4 flex flex-col bg-white'>
 						<div className='w-full flex xs:flex-row flex-col justify-between items-start xs:gap-1 gap-6'>

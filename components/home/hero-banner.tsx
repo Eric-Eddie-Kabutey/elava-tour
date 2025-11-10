@@ -1,110 +1,138 @@
 'use client'
 
-import type { FC } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from '@/components/ui/select'
+import Link from 'next/link'
 
+// We'll keep your custom font class constant
 const VAMTAM_H1_CLASS = 'font-vamtam-h1'
 
-const BrandHero: FC = () => {
+const BrandHero = () => {
+	// State for the form fields
+	const [destination, setDestination] = useState('')
+	const [month, setMonth] = useState('')
+
+	const handleSearch = (e: React.FormEvent) => {
+		e.preventDefault()
+		// In a real app, you would navigate to a search results page
+		// e.g., router.push(`/tours?destination=${destination}&month=${month}`)
+		console.log('Searching for:', { destination, month })
+		alert(`Searching for tours in ${destination} for ${month}`)
+	}
+
 	return (
-		<section className='relative min-h-screen flex items-center justify-center py-20 px-4 overflow-hidden'>
-			<div className='relative z-10 text-center'>
-				<motion.div
-					initial='hidden'
-					animate='visible'
-					variants={{
-						hidden: { opacity: 0 },
-						visible: {
-							opacity: 1,
-							transition: { staggerChildren: 0.3, delayChildren: 0.2 },
-						},
-					}}
-					className='flex flex-col items-center'>
-					<div className='relative'>
-						<div className='flex'>
-							<motion.h1
-								variants={{
-									hidden: { opacity: 0, y: 20 },
-									visible: { opacity: 1, y: 0 },
-								}}
-								className={`
-                                ${VAMTAM_H1_CLASS} 
-                                text-white 
-                                text-[120px] md:text-[150px] lg:text-[250px] 2xl:text-[300px]
-                                font-black 
-                                tracking-wider
-                                leading-none
-                            `}>
-								ELA
-							</motion.h1>
-
-							{/* --- Tagline Overlay for Desktop --- */}
-							<motion.div
-								variants={{
-									hidden: { opacity: 0, scale: 0.8 },
-									visible: { opacity: 1, scale: 1 },
-								}}
-								className='hidden md:block w-full'>
-								<p className='text-xl lg:text-2xl font-bold text-white leading-tight drop-shadow-lg pt-16'>
-									We Make Your <br />
-									<span className='text-blue-600'>CapeTown</span> &{' '}
-									<span className='text-blue-600'>Ghana</span> <br />
-									Tours Memorable
-								</p>
-							</motion.div>
-
-							<motion.h1
-								variants={{
-									hidden: { opacity: 0, y: 20 },
-									visible: { opacity: 1, y: 0 },
-								}}
-								className={`
-                                ${VAMTAM_H1_CLASS} 
-                                text-white 
-                                text-7xl sm:text-9xl md:text-[150px] lg:text-[250px] 2xl:text-[300px]
-                                font-black 
-                                tracking-wider
-                                leading-none
-                            `}>
-								VA
-							</motion.h1>
-						</div>
-					</div>
-
-					{/* --- Line 2: TOURS --- */}
-					<motion.h1
-						variants={{
-							hidden: { opacity: 0, y: 20 },
-							visible: { opacity: 1, y: 0 },
-						}}
-						className={`
-                    ${VAMTAM_H1_CLASS} 
-                    text-white 
-                    text-[220px] md:text-[150px] lg:text-[280px] 2xl:text-[340px]
-                    font-black 
-                    tracking-wider
-                    leading-none
-                `}>
-						TOURS
-					</motion.h1>
-
-					{/* --- Stacked Tagline for Mobile --- */}
+		<>
+			<div className='grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
+				{/* ====== LEFT COLUMN: BRANDING AND CTAs ====== */}
+				<div className='flex flex-col items-center md:items-start text-center md:text-left'>
+					{/* Reduced size "ELAVA TOURS" */}
 					<motion.div
-						variants={{
-							hidden: { opacity: 0, y: 20 },
-							visible: { opacity: 1, y: 0 },
-						}}
-						className='md:hidden mt-8'>
-						<p className='text-xl font-bold text-white leading-tight drop-shadow-lg'>
-							We Make Your <br />
-							<span className='text-blue-400'>CapeTown</span> &{' '}
-							<span className='text-blue-400'>Ghana</span> <br />
-							Tours Memorable
-						</p>
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}
+						className='flex flex-col'>
+						<h1
+							className={`${VAMTAM_H1_CLASS} text-white text-7xl sm:text-8xl lg:text-9xl font-black tracking-wider leading-none`}>
+							ELEVA
+						</h1>
+						<h1
+							className={`${VAMTAM_H1_CLASS} text-white text-7xl sm:text-8xl lg:text-9xl font-black tracking-wider leading-none -mt-4 sm:-mt-6`}>
+							TOURS
+						</h1>
+						<p className='text-white text-lg mt-4'>Discover unforgettable journeys with ELEVA TOURS</p>
 					</motion.div>
+
+					{/* Call-to-Action Buttons */}
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6, delay: 0.2 }}
+						className='flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto'>
+						<Button
+							asChild
+							size='lg'
+							className='bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque font-bold text-base'>
+							<Link href='/tours'>Explore Tours</Link>
+						</Button>
+						<Button
+							asChild
+							size='lg'
+							variant='outline'
+							className='bg-transparent text-white border-yellow-opaque hover:bg-yellow-opaque  hover:text-green-opaque font-bold text-base'>
+							<Link href='/contact'>Contact Us</Link>
+						</Button>
+					</motion.div>
+				</div>
+
+				{/* ====== RIGHT COLUMN: SEARCH FORM ====== */}
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.4 }}>
+					<form
+						onSubmit={handleSearch}
+						// Glassmorphism effect for the form card
+						className='bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/20 space-y-6'>
+						<h2 className='text-2xl font-bold text-white text-center'>
+							Find Your Next Adventure
+						</h2>
+
+						{/* Destination Field */}
+						<div className='grid w-full items-center gap-1.5'>
+							<Label htmlFor='destination' className='text-white/80'>
+								Destination
+							</Label>
+							<Input
+								type='text'
+								id='destination'
+								placeholder='e.g., Ghana, South Africa'
+								value={destination}
+								onChange={(e) => setDestination(e.target.value)}
+								className='bg-white/80 text-gray-800 placeholder:text-gray-500 border-none'
+							/>
+						</div>
+
+						{/* Month Field */}
+						<div className='grid w-full items-center gap-1.5'>
+							<Label htmlFor='month' className='text-white/80'>
+								Travel Month
+							</Label>
+							<Select onValueChange={setMonth} value={month}>
+								<SelectTrigger
+									id='month'
+									className='bg-white/80 text-gray-800 border-none'>
+									<SelectValue placeholder='Select a month' />
+								</SelectTrigger>
+								<SelectContent>
+									<SelectItem value='january'>January</SelectItem>
+									<SelectItem value='february'>February</SelectItem>
+									<SelectItem value='march'>March</SelectItem>
+									{/* ... add all other months ... */}
+									<SelectItem value='december'>December</SelectItem>
+								</SelectContent>
+							</Select>
+						</div>
+
+						<Button
+							type='submit'
+							size='lg'
+							className='w-full bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque font-bold text-base'>
+							Search
+						</Button>
+					</form>
 				</motion.div>
 			</div>
-		</section>
+		</>
 	)
 }
 
