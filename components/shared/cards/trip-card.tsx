@@ -13,13 +13,12 @@ export function TripCard({ trip }: TripCardProps) {
 	return (
 		<Link href={trip.href} className='group block'>
 			<Card className='overflow-hidden h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1'>
-				<div className='relative w-full overflow-hidden rounded-t-lg'>
+				<div className='relative w-full aspect-[3/2]'>
 					<Image
 						src={trip.imageUrl}
-						alt={`Poster for ${trip.title}`}						
-						width={600}
-						height={800} 						
-						className='object-cover w-full h-auto'
+						alt={`Poster for ${trip.title}`}
+						fill
+						className='object-cover'
 					/>
 				</div>
 				<div className='p-6 flex-1 flex flex-col'>
