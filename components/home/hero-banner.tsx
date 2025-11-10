@@ -14,7 +14,6 @@ import {
 } from '@/components/ui/select'
 import Link from 'next/link'
 
-// We'll keep your custom font class constant
 const VAMTAM_H1_CLASS = 'font-vamtam-h1'
 
 const BrandHero = () => {
@@ -68,7 +67,7 @@ const BrandHero = () => {
 							asChild
 							size='lg'
 							variant='outline'
-							className='bg-transparent text-white border-yellow-opaque hover:bg-yellow-opaque  hover:text-green-opaque font-bold text-base'>
+							className='bg-transparent text-yellow-opaque	 border-yellow-opaque hover:bg-yellow-opaque  hover:text-green-opaque font-bold text-base'>
 							<Link href='/contact'>Contact Us</Link>
 						</Button>
 					</motion.div>
