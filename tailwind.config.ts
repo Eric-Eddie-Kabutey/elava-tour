@@ -16,6 +16,10 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				'custom-gold': '#a98b2f',
 				'custom-brown-dark': '#b95c37',
+				'yellow-opaque': '#e69f23',
+				'yellow-opaque-hover': '#e69f28',
+				'green-opaque': '#11351c',
+				'gray-opaque': '#7113a25',
   			card: {
   				DEFAULT: 'hsl(var(--card) / 0.2)',
   				foreground: 'hsl(var(--card-foreground))'
