@@ -30,6 +30,7 @@ export const navigationData = [
             { title: "News & Stories", href: "/news" },
             { title: "Client Feedback", href: "/client-feedback" },
             { title: "Media", href: "/tour-media" },
+            { title: "FAQs", href: "/help" },
         ],
     },
     {

@@ -67,7 +67,7 @@ const Header = () => {
 						<Link
 							href='/'
 							className={clsx(
-								'flex-shrink-0 w-40 h-32 relative top-2 z-[40] rounded-md py-0 px-0 ',
+								'flex-shrink-0 w-40 h-32 relative top-0 md:top-2 z-[40] rounded-md py-0 px-0 ',
 								isScrolled ? '' : ''
 							)}>
 							{isScrolled ? <Image
