@@ -34,7 +34,7 @@ const nav_links = [
 
 function MainFooter() {
   return (
-    <div className='w-full flex flex-col bg-[#04174d]'>
+    <div className='w-full flex flex-col bg-green-opaque'>
         <section className='max-container 2xl:w-[95%] w-[95%] mx-auto py-8 md:py-16 flex flex-col gap-10'>
             <Typography 
                 typo="header-3-regular"
@@ -68,7 +68,7 @@ function MainFooter() {
                 typo="header-1-semibold"
                 className='text-white 2xl:!text-[14rem] xl:!text-[12rem] lg:!text-[10rem] md:!text-[7rem] sm:!text-[6rem] xs:!text-[4.5rem] !text-[3.5rem] font-bold uppercase !leading-normal'
             >
-                Elava tour
+                Eleva tour
             </Typography>
         </div>
         <div className='w-full py-10'>
