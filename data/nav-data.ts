@@ -76,6 +76,6 @@ export const megaMenuData = {
         author: "Obong Idiong",
         authorTitle: "Managing Director / CEO",
         link: { text: "Our Leaders", href: "/about/leaders" },
-        imageSrc: "/ceo-photo.png", // Replace with actual path
+        imageSrc: "/ceo-photo.png", 
     } as FeaturedContent,
 };
