@@ -49,7 +49,7 @@ function Hero() {
 	return (
 		<div className='w-full pb-12 flex flex-col gap-6 bg-white'>
 			<section className=' w-full'>
-				<div className='w-full md:h-screen h-[60vh]  overflow-hidden relative'>
+				<div className='w-full h-screen md:h-screen  overflow-hidden relative'>
 					<video
 						className='w-full h-full object-cover'
 						src='/assets/images/home/elava_hero_vid.mp4'
@@ -59,7 +59,7 @@ function Hero() {
 						playsInline
 					/>
 					<div className='absolute inset-0 bg-black/30' />
-                    <div className='xl:max-w-6xl 2xl:max-w-7xl mx-auto absolute inset-0 flex flex-col items-center justify-center mt-28'>                                                                                              
+                    <div className='xl:max-w-6xl 2xl:max-w-7xl mx-auto absolute inset-0 flex flex-col items-center justify-center mt-28 md:mt-28 pb-10 md:pb-0'>                                                                                              
                         <BrandHero />						
 					</div>
 				</div>
@@ -175,7 +175,7 @@ function Hero() {
 							{services.map((data, index) => (
 								<div
 									key={data.id}
-									className='p-6 flex flex-col justify-center items-center gap-2 bg-white hover:border-b-2 hover:border-blue-800'>
+									className='p-6 flex flex-col justify-center items-center gap-2 bg-white hover:border-b-2 hover:border-yellow-opaque'>
 									<Image
 										src={data.icon}
 										alt={`services ${index + 1}`}

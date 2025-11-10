@@ -31,15 +31,16 @@ const BrandHero = () => {
 
 	return (
 		<>
-			<div className='grid grid-cols-1 md:grid-cols-2 gap-16 items-center'>
+			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 items-center px-4'>
 				{/* ====== LEFT COLUMN: BRANDING AND CTAs ====== */}
-				<div className='flex flex-col items-center md:items-start text-center md:text-left'>
+				<div className='lg:col-span-2 flex flex-col items-center md:items-start text-center md:text-left'>
 					{/* Reduced size "ELAVA TOURS" */}
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
 						className='flex flex-col'>
+						<p className='text-white text-xl font-semibold mb-2'>Welcome to</p>
 						<h1
 							className={`${VAMTAM_H1_CLASS} text-white text-7xl sm:text-8xl lg:text-9xl font-black tracking-wider leading-none`}>
 							ELEVA
@@ -77,11 +78,13 @@ const BrandHero = () => {
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6, delay: 0.4 }}>
+					transition={{ duration: 0.6, delay: 0.4 }}
+					className="w-full flex justify-center md:justify-start"
+				>
 					<form
 						onSubmit={handleSearch}
 						// Glassmorphism effect for the form card
-						className='bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/20 space-y-6'>
+						className='bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/20 space-y-6 max-w-sm'>
 						<h2 className='text-2xl font-bold text-white text-center'>
 							Find Your Next Adventure
 						</h2>
