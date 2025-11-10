@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { User } from 'lucide-react'
 
-import elavaToursLogoWhite from '@/public/assets/logo/elava-tours-logo-white.png'
+import elavatourLogoColored from '@/public/assets/logo/elavatour-logo-colored.png'
 
 export function Header() {
 	return (
@@ -12,9 +12,9 @@ export function Header() {
 					{/* Left Side: Logo */}
 					<Link
 						href='/'
-						className='flex-shrink-0 w-20 h-fit relative top-5 z-[40] '>
+						className='flex-shrink-0 w-40 h-32 relative top-6 z-[40] '>
 						<Image
-							src={elavaToursLogoWhite}
+							src={elavatourLogoColored}
 							alt='Elava Logo'
 							width={180}
 							height={100}

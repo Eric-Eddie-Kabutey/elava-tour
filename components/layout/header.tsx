@@ -22,7 +22,8 @@ import {
 	AccordionTrigger,
 } from '@/components/ui/accordion'
 import clsx from 'clsx'
-import elavaTourLogoWhite from '@/public/assets/logo/elava-tours-logo-white.png'
+import elavatourLogoColored from '@/public/assets/logo/elavatour-logo-colored.png'
+import elavatourLogoWhite from '@/public/assets/logo/elavatour-logo-white.png'
 import { Button } from '../ui/button'
 
 // Helper type for our updated navigation data structure
@@ -67,15 +68,21 @@ const Header = () => {
 							href='/'
 							className={clsx(
 								'flex-shrink-0 w-40 h-32 relative top-2 z-[40] rounded-md py-0 px-0 ',
-								isScrolled ? 'bg-blue-700 mt-2' : ''
+								isScrolled ? '' : ''
 							)}>
-							<Image
-								src={elavaTourLogoWhite}
+							{isScrolled ? <Image
+								src={elavatourLogoColored}
 								alt='Elava Logo'
 								width={180}
 								height={100}
 								className='object-cover w-full h-fit'
-							/>
+							/> : <Image
+								src={elavatourLogoWhite}
+								alt='Elava Logo'
+								width={180}
+								height={100}
+								className='object-cover w-full h-fit'
+							/>}
 						</Link>
 						<div className='flex items-center justify-between gap-8'>
 							{/* ====== DESKTOP NAVIGATION  ====== */}
