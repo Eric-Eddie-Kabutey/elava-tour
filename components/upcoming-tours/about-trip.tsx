@@ -27,7 +27,7 @@ export function AboutTrip({
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6">
+        <h2 className="text-3xl font-bold text-green-opaque mb-6">
           About This Trip
         </h2>
         
@@ -40,7 +40,7 @@ export function AboutTrip({
         {isTruncatable && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="mt-4 font-semibold text-custom-gold hover:underline"
+            className="mt-4 font-semibold text-yellow-opaque hover:underline"
           >
             {isExpanded ? "Read less" : "Read more"}
           </button>
