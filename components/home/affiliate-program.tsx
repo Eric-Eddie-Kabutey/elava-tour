@@ -26,30 +26,29 @@ const AffiliateProgram: FC = () => {
       >
         <div className="space-y-8">
           {/* Main Heading */}
-          <h1 className="font-serif text-4xl md:text-5xl font-medium tracking-tight">
-            Earn While You Travel – Join Our Affiliate Program
+          <h1 className="font-serif text-3xl md:text-5xl font-medium tracking-tight">
+            Save for Your Next Adventure – Start Your Eleva Travel Savings Plan
           </h1>
 
           {/* Introductory Paragraph */}
           <p className="text-lg text-gray-200">
-            Are you passionate about travel, culture, and connecting people to Africa and its global influence?
-            Turn your passion into profit by joining the Maximum Impact Travel Affiliate Program.
+           Dreaming of your next getaway but not ready to pay all at once? With Eleva Tours, you can start saving bit by bit toward your dream vacation — and make your next trip stress-free, fully planned, and paid for before takeoff!
           </p>
 
           {/* How It Works Section */}
           <div>
             <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
-              How It Works:
+              Save for Your Next Adventure – Start Your Eleva Travel Savings Plan:
             </h2>
             <ul className="space-y-3 list-disc list-inside text-gray-300">
               <li>
-                <span className="font-bold text-white">Earn Commissions</span> – Get paid for referring friends, family, and your network to our unforgettable experiences.
+                <span className="font-bold text-white">Create Your Travel Savings Account</span> – Choose your preferred destination or package, set your travel goal, and start depositing toward it at your own pace.
               </li>
               <li>
-                <span className="font-bold text-white">Share the Vision</span> – Use your platform, whether social media, a blog, or word-of-mouth, to introduce others to Maximum Impact Travel.
+                <span className="font-bold text-white">Save Smart, Travel Easy</span> – Make flexible deposits weekly or monthly — and watch your balance grow while we keep you updated on exclusive deals, discounts, and bonus rewards for loyal savers.
               </li>
               <li>
-                <span className="font-bold text-white">Travel with Purpose</span> – Our affiliate program allows you to earn rewards, discounts, and even free trips as you help others discover the beauty of Africa and its worldwide connections.
+                <span className="font-bold text-white">Enjoy Added Perks</span> – The earlier you start saving, the more you gain! Access special offers, early-bird packages, and loyalty points that can go toward flight upgrades, accommodation, or guided experiences.
               </li>
             </ul>
           </div>
@@ -67,7 +66,7 @@ const AffiliateProgram: FC = () => {
             <p className="mt-2 text-gray-300">
               The world is waiting—let Maximum Impact Travel take you there.{' '}
               <Link href="/join-affiliate" className="font-bold text-white underline hover:text-gray-200 transition-colors">
-                Join the Journey & Affiliate Program Now
+                Contact a consultant
               </Link>
             </p>
           </div>
