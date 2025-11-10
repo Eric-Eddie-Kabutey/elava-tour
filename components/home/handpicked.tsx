@@ -28,7 +28,7 @@ function Handpicked() {
                 </div>
                 <Button
                     variant="outline"
-                    className='w-fit mx-auto px-8 py-3 flex items-center gap-4'
+                    className='w-fit mx-auto px-8 py-3 flex items-center gap-4 text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-bold text-base'
                 >
                     View All
                     <ArrowUpRight />

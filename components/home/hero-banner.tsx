@@ -67,7 +67,7 @@ const BrandHero = () => {
 							asChild
 							size='lg'
 							variant='outline'
-							className='bg-transparent text-yellow-opaque	 border-yellow-opaque hover:bg-yellow-opaque  hover:text-green-opaque font-bold text-base'>
+							className='bg-transparent text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-bold text-base'>
 							<Link href='/contact'>Contact Us</Link>
 						</Button>
 					</motion.div>
