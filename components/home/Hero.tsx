@@ -47,7 +47,7 @@ function Hero() {
 	const [returningType, setReturningType] = useState('text')
 
 	return (
-		<div className='w-full pb-12 flex flex-col gap-6 bg-[#e4e4e4]'>
+		<div className='w-full pb-12 flex flex-col gap-6 bg-white'>
 			<section className=' w-full'>
 				<div className='w-full md:h-screen h-[60vh]  overflow-hidden relative'>
 					<video
