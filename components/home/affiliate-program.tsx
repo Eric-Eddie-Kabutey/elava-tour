@@ -22,7 +22,7 @@ const AffiliateProgram: FC = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full max-w-4xl bg-gray-900/70 backdrop-blur-sm text-white p-8 md:p-12 lg:p-16"
+        className="w-full max-w-4xl bg-gray-900/70 backdrop-blur-sm text-yellow-opaque p-8 md:p-12 lg:p-16"
       >
         <div className="space-y-8">
           {/* Main Heading */}

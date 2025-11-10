@@ -67,14 +67,14 @@ const Destinations: FC = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
-      className='bg-[#e4e4e4] py-20 md:py-28'
+      className='bg-[#f3eadc] py-20 md:py-28'
     >
       <div className="max-container w-[95%] mx-auto px-4 lg:px-12">
         {/* --- Header --- */}
         <motion.div variants={itemVariants} className='text-center mb-16'>         
           <Typography
             typo="header-1-medium" 
-            className="!text-4xl md:!text-5xl !text-blue-700 !font-bold uppercase tracking-widest"
+            className="!text-4xl md:!text-5xl !text-green-opaque !font-semibold uppercase tracking-widest"
           >
             Your Next Destinations
           </Typography>
@@ -116,7 +116,7 @@ const Destinations: FC = () => {
                 <div className="mt-6">
                     <Button
                         asChild
-                        className='bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 font-semibold transition-transform group-hover:scale-105'
+                        className='bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque text-base px-8 py-2 font-semibold transition-transform group-hover:scale-105'
                     >
                         <Link href={data.href}>Learn More</Link>
                     </Button>
@@ -129,7 +129,7 @@ const Destinations: FC = () => {
         {/* --- Main CTA Button --- */}
         <motion.div variants={itemVariants} className='mt-16 text-center'>
           <Button
-            className='bg-transparent text-blue-700 border border-blue-700  px-10 py-4 font-bold hover:bg-blue-700 hover:text-white transition-colors'
+            className='bg-transparent text-green-opaque border border-green-opaque hover:bg-yellow-opaque  hover:green-opaque px-8 py-3 font-bold transition-colors'
           >
             View All
           </Button>
