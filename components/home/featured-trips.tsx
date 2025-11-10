@@ -18,7 +18,7 @@ export type FeaturedTrip = {
 export const featuredTripsData: FeaturedTrip[] = [
   {
     id: 1,
-    imageUrl: "/assets/images/home/featured-trips/east-african-love.png",
+    imageUrl: "/assets/images/home/featured-trips/8.png",
     title: "East African Love (Rwanda x Uganda)",
     subTitle: "(10 Days - 8.17.25 - 8.26.25)",
     description: "3 Regions (Accra x Aburi x Cape Coast) | One...",
@@ -28,7 +28,7 @@ export const featuredTripsData: FeaturedTrip[] = [
   },
   {
     id: 2,
-    imageUrl: "/assets/images/home/featured-trips/take-me-home-cover.png",
+    imageUrl: "/assets/images/home/featured-trips/9.png",
     title: "Take Me Home | 3 Region Ghana Tour | 7 Nights",
     subTitle: "", // This one doesn't have a date subtitle
     description: "Experience the vibrant rhythm and captivating culture of Ghana in...",
@@ -38,7 +38,7 @@ export const featuredTripsData: FeaturedTrip[] = [
   },
   {
     id: 3,
-    imageUrl: "/assets/images/home/featured-trips/slider2.jpg",
+    imageUrl: "/assets/images/home/featured-trips/10.png",
     title: "Take Me Home | 3 Region Ghana Tour | 7 Nights",
     subTitle: "",
     description: "Experience the vibrant rhythm and captivating culture of Ghana in...",
@@ -68,7 +68,7 @@ export function FeaturedTrips() {
 
         {/* View All Trips Button */}
         <div className="text-center mt-12">
-          <Button asChild variant="outline" size="lg" className="border-yellow-opaque text-green-opaque hover:bg-green-opaque font-semibold">
+          <Button asChild variant="outline" size="lg" className="border-yellow-opaque text-green-opaque hover:bg-green-opaque hover:text-yellow-opaque font-semibold">
             <Link href="/tours">VIEW ALL TRIPS</Link>
           </Button>
         </div>

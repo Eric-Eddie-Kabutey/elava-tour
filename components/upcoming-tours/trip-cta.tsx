@@ -5,7 +5,7 @@ import elavaToursLogoWhite from '@/public/assets/logo/elava-tours-logo-white.png
 
 export function TripCta() {
   return (
-    <section className="bg-custom-gold text-white">
+    <section className="bg-yellow-opaque text-white">
       <div className="container max-w-6xl mx-auto px-4 py-12">
             
         <div className="-mb-10">

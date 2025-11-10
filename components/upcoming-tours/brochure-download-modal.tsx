@@ -99,7 +99,7 @@ export function BrochureDownloadModal({
           {error && <p className="text-sm text-red-500">{error}</p>}
           <Button
             type="submit"
-            className="w-full bg-custom-gold hover:bg-custom-gold/90 text-white font-bold py-3 mt-4"
+            className="w-full bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque  font-bold py-3 mt-4"
           >
             Download
           </Button>

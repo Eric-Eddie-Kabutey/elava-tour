@@ -58,13 +58,13 @@ export function TourHero({
             <div className="flex flex-col gap-3">
               <Button
                 onClick={handleBookNowClick}
-                className="bg-custom-gold hover:bg-custom-gold/90 text-white font-bold py-3"
+                className="bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque  font-bold py-3"
               >
                 Book Now
               </Button>
               <Button
                 onClick={() => setIsBrochureModalOpen(true)}
-                className="bg-custom-gold hover:bg-custom-gold/90 text-white font-bold py-3"
+                className="bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque  font-bold py-3"
               >
                   Download Brochure
               </Button>
