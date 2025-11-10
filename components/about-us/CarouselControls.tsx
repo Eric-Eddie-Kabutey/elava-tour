@@ -29,7 +29,7 @@ export const CarouselControls = ({ api, current, count }: CarouselControlsProps)
         <div className="absolute top-1/2 left-0 w-full h-px bg-gray-300" />
         {/* Dark progress line */}
         <div
-          className="absolute top-1/2 left-0 h-px bg-black transition-all duration-300"
+          className="absolute top-1/2 left-0 h-px bg-green-opaque transition-all duration-300"
           style={{ width: `${progress}%` }}
         />
         {/* Dots container */}
@@ -40,7 +40,7 @@ export const CarouselControls = ({ api, current, count }: CarouselControlsProps)
               onClick={() => api?.scrollTo(index)}
               className={cn(
                 "h-3 w-3 rounded-full transition-colors duration-300",
-                index <= current ? "bg-black" : "bg-gray-300"
+                index <= current ? "bg-yellow-opaque" : "bg-gray-300"
               )}
               aria-label={`Go to slide ${index + 1}`}
             >
@@ -70,7 +70,7 @@ export const CarouselControls = ({ api, current, count }: CarouselControlsProps)
           variant="outline"
           size="icon"
           onClick={scrollNext}
-          className={cn("bg-black text-white hover:bg-gray-800 rounded-lg h-12 w-12", current === count - 1 && "opacity-50 cursor-not-allowed")}
+          className={cn("bg-yellow-opaque text-white hover:bg-gray-800 rounded-lg h-12 w-12", current === count - 1 && "opacity-50 cursor-not-allowed")}
           disabled={current === count - 1}
         >
           <ArrowRight className="h-5 w-5" />

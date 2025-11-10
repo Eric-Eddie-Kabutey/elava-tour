@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-r bg-[#e4e4e4] py-20">
+    <section className="bg-gradient-to-r bg-[#e4e4e4] pt-40 pb-20">
       <div className="max-w-container mx-auto px-4 text-justify-center text-center mb-4 md:mb-20">
         <h3 className="text-xl md:text-2xl font-thin mb-2 text-green-opaque">About Eleva Tours</h3>
         <h1 className="xs:text-4xl text-3xl text-black md:text-5xl font-semibold mb-6">Giving A Better Travel Experience</h1>
@@ -15,19 +15,19 @@ const HeroSection = () => {
       {/* tabs */}
 
        <div className="flex flex-wrap justify-center gap-4 my-6">
-      <Button asChild variant="outline" className="border-2 text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-semibold text-base transition-colors duration-300">
+      <Button asChild variant="outline" className="border text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-medium text-base transition-colors duration-300">
         <a href="#mission-and-vision">Mission & Vision</a>
       </Button>
 
-      <Button asChild variant="outline" className="border-2 text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-semibold text-base transition-colors duration-300">
+      <Button asChild variant="outline" className="border text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-medium text-base transition-colors duration-300">
         <a href="#our-story">Our Story</a>
       </Button>
 
-      <Button asChild variant="outline" className="border-2 text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-semibold text-base transition-colors duration-300">
+      <Button asChild variant="outline" className="border text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-medium text-base transition-colors duration-300">
         <a href="#processes">Processes</a>
       </Button>
 
-      <Button asChild variant="outline" className="border-2 text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-semibold text-base transition-colors duration-300">
+      <Button asChild variant="outline" className="border text-yellow-opaque border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-medium text-base transition-colors duration-300">
         <a href="#why-us-section">Why Us</a>
       </Button>
     </div>
