@@ -99,13 +99,13 @@ function MainFooter() {
                             href="/"
                             className='text-gray-400 hover:text-gray-100'
                         >
-                            <Facebook size={20} />
+                            <Facebook size={20} className='text-yellow-opaque hover:text-yellow-opaque-hover' />
                         </Link>                        
                         <Link
                             href="/"
                             className='text-gray-400 hover:text-gray-100'
                         >
-                            <Instagram size={20} />
+                            <Instagram size={20} className='text-yellow-opaque hover:text-yellow-opaque-hover' />
                         </Link>                      
                     </div>
                     <div className="flex justify-end items-center gap-4">
