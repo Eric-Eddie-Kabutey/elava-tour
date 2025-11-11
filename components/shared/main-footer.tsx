@@ -49,7 +49,7 @@ function MainFooter() {
                     <Typography
                         typo="header-5-regular"
                     >
-                        Info@elavatour.com
+                        Info@elevatour.com
                     </Typography>
                 </div>
                 <div className='flex justify-end items-center gap-2.5 md:gap-6'>
@@ -68,7 +68,7 @@ function MainFooter() {
                 typo="header-1-semibold"
                 className='text-white 2xl:!text-[14rem] xl:!text-[12rem] lg:!text-[10rem] md:!text-[7rem] sm:!text-[6rem] xs:!text-[4.5rem] !text-[3.5rem] font-bold uppercase !leading-normal'
             >
-                Eleva tour
+                Eleva tours
             </Typography>
         </div>
         <div className='w-full py-10'>

@@ -21,7 +21,7 @@ export function DestinationPageHero({ title, imageUrl, altText }: DestinationPag
 
       {/* Dark Overlay and Centered Title */}
       <div className="absolute inset-0 flex items-center justify-center bg-black/60">
-        <h1 className="text-5xl font-bold tracking-widest text-white uppercase md:text-7xl">
+        <h1 className="text-5xl font-bold tracking-widest text-yellow-opaque uppercase md:text-7xl">
           {title}
         </h1>
       </div>

@@ -2,20 +2,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { User } from 'lucide-react'
 
-import elavatourLogoColored from '@/public/assets/logo/elavatour-logo-colored.png'
+import elevatourLogoColored from '@/public/assets/logo/elavatour-logo-colored.png'
 
 export function Header() {
 	return (
-		<header className='w-full bg-subtle-noise border-b border-gray-200'>
-			<div className='container mx-auto px-4'>
+		<header className='w-full bg-white border-b border-gray-200'>
+			<div className='max-container mx-auto px-4'>
 				<div className='flex h-20 items-center justify-between'>
 					{/* Left Side: Logo */}
 					<Link
 						href='/'
-						className='flex-shrink-0 w-40 h-32 relative top-6 z-[40] '>
+						className='flex-shrink-0 w-28 md:w-40 h-32 relative top-3 md:top-4 z-[40] overflow-hidden'>
 						<Image
-							src={elavatourLogoColored}
-							alt='Elava Logo'
+							src={elevatourLogoColored}
+							alt='Eleva Logo'
 							width={180}
 							height={100}
 							className='object-cover w-full h-full'

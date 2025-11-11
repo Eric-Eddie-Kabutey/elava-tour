@@ -54,13 +54,13 @@ const PackageSelectionStep = ({
     return (
 		<div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 			<div className='lg:col-span-2 space-y-6'>
-				<h3 className='text-2xl font-semibold'>Select Packages</h3>
+				<h3 className='text-2xl font-semibold text-green-opaque'>Select Packages</h3>
 				{tourDetails.pricing.map((pkg) => (
 					<div key={pkg.id} className='border-b pb-6'>
 						<div className='flex justify-between items-start'>
 							<div>
 								<h4 className='text-lg font-semibold'>{pkg.title}</h4>
-								{pkg.originalPrice && <span className='text-sm text-red-500'>{(((pkg.originalPrice - pkg.price) / pkg.originalPrice) * 100).toFixed(0)}% off</span>}
+								{pkg.originalPrice && <span className='text-sm text-yellow-opaque-hover'>{(((pkg.originalPrice - pkg.price) / pkg.originalPrice) * 100).toFixed(0)}% off</span>}
 							</div>
 							<div className='text-right'>
 								<p className='text-lg font-bold'>{formatCurrency(pkg.price)}</p>
@@ -75,11 +75,11 @@ const PackageSelectionStep = ({
 								<SelectTrigger className='w-[80px]'><SelectValue placeholder='0' /></SelectTrigger>
 								<SelectContent>{[...Array(10).keys()].map(i => <SelectItem key={i} value={i.toString()}>{i}</SelectItem>)}</SelectContent>
 							</Select>
-							<p className='text-sm text-gray-600'>{pkg.description}</p>
+							<p className='text-sm text-green-opaque'>{pkg.description}</p>
 						</div>
 					</div>
 				))}
-				<div className='bg-custom-gold text-white p-6 rounded-lg mt-8'>
+				<div className='bg-yellow-opaque text-white p-6 rounded-lg mt-8'>
 					<h4 className='font-bold mb-2'>Payment Option</h4>
 					<RadioGroup value={paymentOption} onValueChange={(value: string) => setPaymentOption(value as PaymentOption)} className='flex items-center gap-4'>
 						<div className='flex items-center space-x-2'>
@@ -91,7 +91,7 @@ const PackageSelectionStep = ({
 							<Label htmlFor='pay-deposit'>Pay deposit</Label>
 						</div>
 					</RadioGroup>
-					<Button onClick={onContinue} className='bg-white text-custom-gold hover:bg-gray-200 mt-4'>Continue</Button>
+					<Button onClick={onContinue} className='bg-white text-yellow-opaque hover:bg-green-opaque hover:text-yellow-opaque mt-4'>Continue</Button>
 				</div>
 			</div>
 			<BookingSummary tourDetails={tourDetails} selectedPackages={selectedPackages} paymentOption={paymentOption} />
@@ -144,17 +144,17 @@ const ParticipantInfoStep = ({
 				<h3 className='text-2xl font-semibold mb-4'>Buyer Information</h3>
 				<div className='space-y-4 border p-4 rounded-lg'>
                     <div>
-					    <Input placeholder='First Name *' value={buyer.firstName} onChange={e => setBuyer({...buyer, firstName: e.target.value})} className={cn(errors.firstName && 'border-red-500')} />
-                        {errors.firstName && <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>}
+					    <Input placeholder='First Name *' value={buyer.firstName} onChange={e => setBuyer({...buyer, firstName: e.target.value})} className={cn(errors.firstName && 'border-yellow-opaque')} />
+                        {errors.firstName && <p className="text-yellow-opaque text-sm mt-1">{errors.firstName}</p>}
                     </div>
                     <div>
-					    <Input placeholder='Last Name *' value={buyer.lastName} onChange={e => setBuyer({...buyer, lastName: e.target.value})} className={cn(errors.lastName && 'border-red-500')} />
-                        {errors.lastName && <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>}
+					    <Input placeholder='Last Name *' value={buyer.lastName} onChange={e => setBuyer({...buyer, lastName: e.target.value})} className={cn(errors.lastName && 'border-yellow-opaque')} />
+                        {errors.lastName && <p className="text-yellow-opaque text-sm mt-1">{errors.lastName}</p>}
                     </div>
 					<Input placeholder='Phone Number' value={buyer.phone} onChange={e => setBuyer({...buyer, phone: e.target.value})} />
                     <div>
-					    <Input placeholder='Email *' value={buyer.email} onChange={e => setBuyer({...buyer, email: e.target.value})} className={cn(errors.email && 'border-red-500')} />
-                        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+					    <Input placeholder='Email *' value={buyer.email} onChange={e => setBuyer({...buyer, email: e.target.value})} className={cn(errors.email && 'border-yellow-opaque')} />
+                        {errors.email && <p className="text-yellow-opaque text-sm mt-1">{errors.email}</p>}
                     </div>
 				</div>
 				<h3 className='text-2xl font-semibold mt-8 mb-4'>
@@ -164,16 +164,16 @@ const ParticipantInfoStep = ({
 					<div key={i} className='space-y-4 border p-4 rounded-lg mt-4'>
 						<p className='font-semibold'>Participant {i + 1}</p>
 						<div>
-                            <Input placeholder='First Name *' value={participants[i].firstName} onChange={e => handleParticipantChange(i, 'firstName', e.target.value)} className={cn(errors[`p${i}_firstName`] && 'border-red-500')} />
-                            {errors[`p${i}_firstName`] && <p className="text-red-500 text-sm mt-1">{errors[`p${i}_firstName`]}</p>}
+                            <Input placeholder='First Name *' value={participants[i].firstName} onChange={e => handleParticipantChange(i, 'firstName', e.target.value)} className={cn(errors[`p${i}_firstName`] && 'border-yellow-opaque')} />
+                            {errors[`p${i}_firstName`] && <p className="text-yellow-opaque text-sm mt-1">{errors[`p${i}_firstName`]}</p>}
                         </div>
                         <div>
-						    <Input placeholder='Last Name *' value={participants[i].lastName} onChange={e => handleParticipantChange(i, 'lastName', e.target.value)} className={cn(errors[`p${i}_lastName`] && 'border-red-500')} />
-                            {errors[`p${i}_lastName`] && <p className="text-red-500 text-sm mt-1">{errors[`p${i}_lastName`]}</p>}
+						    <Input placeholder='Last Name *' value={participants[i].lastName} onChange={e => handleParticipantChange(i, 'lastName', e.target.value)} className={cn(errors[`p${i}_lastName`] && 'border-yellow-opaque')} />
+                            {errors[`p${i}_lastName`] && <p className="text-yellow-opaque text-sm mt-1">{errors[`p${i}_lastName`]}</p>}
                         </div>
 					</div>
 				))}
-				<Button onClick={handleValidation} className='bg-custom-gold hover:bg-custom-gold/90 text-white mt-6'>
+				<Button onClick={handleValidation} className='bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque mt-6'>
 					Next
 				</Button>
 			</div>			
@@ -201,7 +201,7 @@ const TermsAndConditionsStep = ({
 
     return (
 		<div className="max-w-3xl mx-auto">
-			<h3 className="text-2xl font-semibold mb-4">Terms & Conditions</h3>
+			<h3 className="text-2xl font-semibold text-green-opaque mb-4">Terms & Conditions</h3>
 			<div className="space-y-4 text-gray-700">
 				<p>It is your sole responsibility to obtain any necessary documentation for travel within the appropriate timeframe prior to departure. If your trip is cancelled and/or you are unable to travel because you have failed to secure the necessary travel documentation, your payments will not be reimbursed.</p>
 				<h4 className="font-semibold pt-2">Visas</h4>
@@ -216,17 +216,17 @@ const TermsAndConditionsStep = ({
 			</div>
 
 			<div className="mt-10 space-y-6">
-                <div className="border-b-2 border-custom-gold pb-1">
+                <div className="border-b-2 border-yellow-opaque pb-1">
                     <p className="font-serif text-lg text-gray-800 italic">{isChecked ? buyerName : ''}</p>
                     <p className="text-sm text-gray-500">Signed</p>
                 </div>
-                <div className="border-b-2 border-custom-gold pb-1">
+                <div className="border-b-2 border-yellow-opaque pb-1">
                     <p className="font-mono text-lg text-gray-800">{isChecked ? today : ''}</p>
                     <p className="text-sm text-gray-500">Date</p>
                 </div>
 			</div>
 
-			<Button onClick={onConfirm} disabled={!isChecked} className="bg-custom-gold hover:bg-custom-gold/90 text-white mt-10">
+			<Button onClick={onConfirm} disabled={!isChecked} className="bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque mt-10">
                 Ok
             </Button>
 		</div>
@@ -283,9 +283,9 @@ const BookingSummary = ({
 				<div className='flex flex-col gap-2 mb-4'>
                     <div className="flex gap-2">
 					    <Input placeholder='Promo Code' value={promoCode} onChange={e => setPromoCode(e.target.value)} />
-					    <Button onClick={handleApplyPromoCode} className='bg-custom-gold hover:bg-custom-gold/90 text-white'>Apply</Button>
+					    <Button onClick={handleApplyPromoCode} className='bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque'>Apply</Button>
                     </div>
-                    {promoError && <p className="text-red-500 text-sm">{promoError}</p>}
+                    {promoError && <p className="text-yellow-opaque text-sm">{promoError}</p>}
                     {discount && discount > 0 && <p className="text-green-600 text-sm">Promo code applied!</p>}
 				</div>
 			)}
@@ -297,7 +297,7 @@ const BookingSummary = ({
                         <div key={key} className='flex justify-between items-center text-sm mb-2'>
                             <div>
                                 <p className="font-semibold">{pkg.title}</p>
-                                <p className="text-custom-gold">{value}x participant</p>
+                                <p className="text-yellow-opaque">{value}x participant</p>
                             </div>
                             <p>{formatCurrency(pkg.price * value)}</p>
                         </div>
@@ -411,7 +411,7 @@ export function BookingModal({
                 )}
             >
 				{/* --- HEADER --- */}                
-				<div className='bg-custom-gold text-white py-6 px-4 md:px-10 relative'>
+				<div className='bg-yellow-opaque text-white py-6 px-4 md:px-10 relative'>
 					<div className='flex flex-col md:flex-row md:items-center gap-2 md:gap-4'>
 						<div className='self-start md:self-center mb-2 md:mb-0'>
 							<Image

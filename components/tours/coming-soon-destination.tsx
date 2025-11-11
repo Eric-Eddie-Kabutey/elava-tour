@@ -7,7 +7,7 @@ export function ComingSoonSection() {
       <div className="container max-w-6xl mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 tracking-wider">
+          <h2 className="text-3xl md:text-4xl font-semibold text-green-opaque tracking-wider">
             COMING SOON
           </h2>
         </div>

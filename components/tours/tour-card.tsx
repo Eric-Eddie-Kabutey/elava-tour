@@ -28,7 +28,7 @@ export function TourCard({ tour, country }: TourCardProps) {
 			</div>
 			<div className='flex flex-1 flex-col p-6'>
 				<CardHeader className='p-0'>
-					<CardTitle className='text-xl font-semibold text-gray-800'>
+					<CardTitle className='text-xl font-semibold text-green-opaque'>
 						{tour.name}
 					</CardTitle>
 				</CardHeader>
@@ -36,7 +36,7 @@ export function TourCard({ tour, country }: TourCardProps) {
 					<p className='text-gray-600'>{tour.description}</p>
 				</CardContent>
 				<CardFooter className='p-0 pt-6'>
-					<Button asChild className='w-full bg-blue-600 hover:bg-blue-700'>
+					<Button asChild className='w-full bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque'>
 						<Link href={`/destination/${country}`}>VIEW DETAILS</Link>
 					</Button>
 				</CardFooter>

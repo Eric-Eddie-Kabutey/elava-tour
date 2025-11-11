@@ -41,7 +41,7 @@ export function TripItinerary({ itinerary }: TripItineraryProps) {
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-3xl font-semibold text-gray-800 mb-8">
+        <h2 className="text-center text-3xl font-semibold text-green-opaque mb-8">
           Trip Itinerary
         </h2>
 
@@ -54,7 +54,7 @@ export function TripItinerary({ itinerary }: TripItineraryProps) {
             disabled={activeDay === 1}
             aria-label="Previous day"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-6 w-6 text-green-opaque" />
           </Button>
           <div className="flex items-center gap-6 overflow-x-auto pb-2">
             {itinerary.map((item) => (
@@ -63,7 +63,7 @@ export function TripItinerary({ itinerary }: TripItineraryProps) {
                 onClick={() => setActiveDay(item.day)}
                 className={cn(
                   "py-2 text-gray-500 whitespace-nowrap",
-                  activeDay === item.day && "border-b-2 border-custom-gold text-gray-900 font-semibold"
+                  activeDay === item.day && "border-b-2 border-yellow-opaque text-green-opaque font-semibold"
                 )}
               >
                 Day {item.day}
@@ -101,7 +101,7 @@ export function TripItinerary({ itinerary }: TripItineraryProps) {
               </p>
               <Button
                 variant="outline"
-                className="border-custom-gold text-custom-gold hover:bg-custom-gold hover:text-white"
+                className="border-yellow-opaque text-yellow-opaque hover:bg-green-opaque hover:text-yellow-opaque"
                 onClick={() => handleReadMore(currentDayData)}
               >
                 Read More

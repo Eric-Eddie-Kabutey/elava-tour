@@ -47,7 +47,7 @@ export function PackageCard({ packageData, onBookNow }: PackageCardProps) {
               <span className="text-gray-500 line-through">
                 {formatCurrency(packageData.originalPrice!)}
               </span>
-              <span className="text-blue-600 font-semibold">
+              <span className="text-green-opaque font-semibold">
                 ({discountPercent.toFixed(2)}% off)
               </span>
             </div>
@@ -56,7 +56,7 @@ export function PackageCard({ packageData, onBookNow }: PackageCardProps) {
           {isTruncatable && (
              <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="mt-2 text-custom-gold font-semibold hover:underline text-sm"
+                className="mt-2 text-yellow-opaque hover:text-yellow-opaque-hover font-semibold hover:underline text-sm"
               >
                 {isExpanded ? "Read Less" : "Read More"}
              </button>
@@ -64,7 +64,7 @@ export function PackageCard({ packageData, onBookNow }: PackageCardProps) {
         </div>
         {/* Right side: Button */}
         <div className="w-full sm:w-auto flex-shrink-0">
-          <Button onClick={onBookNow} className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
+          <Button onClick={onBookNow} className="bg-yellow-opaque text-green-opaque hover:bg-green-opaque hover:text-yellow-opaque w-full sm:w-auto">
             {packageData.buttonText}
           </Button>
         </div>

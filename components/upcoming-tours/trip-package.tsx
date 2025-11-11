@@ -15,7 +15,7 @@ export function TripPackage({ id, inclusions, exclusions, pricing, tourDetails }
     <div id={id}>
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Trip Package Details</h2>
+          <h2 className="text-3xl text-green-opaque font-bold mb-4">Trip Package Details</h2>
           <p className="text-lg">
             Pricing, inclusions, exclusions, and the booking form will be displayed here.
           </p>

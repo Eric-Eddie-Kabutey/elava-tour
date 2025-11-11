@@ -15,7 +15,7 @@ export function TripPricingPackages({ packages, tourDetails }: TripPackagesProps
   return (
     <div className="py-16">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h2 className="text-center text-3xl font-semibold text-gray-800 mb-8">
+        <h2 className="text-center text-3xl font-semibold text-green-opaque mb-8">
           Trip Packages
         </h2>
         <div className="space-y-6">

@@ -17,21 +17,21 @@ export function UpcomingTours({ upcomingTourData, countrySlug }: UpcomingToursPr
   // Handle case where no dates are found
   if (!destination) {
     return (
-      <section className="bg-[#aa8924] text-white py-16 sm:py-24">
+      <section className="bg-yellow-opaque text-white py-16 sm:py-24">
         <div className="container mx-auto px-4 text-center">
-            <p className="text-red-500 text-xl md:text-2xl">No upcoming tour dates available for this destination.</p>
+            <p className="text-yellow-opaque text-xl md:text-2xl">No upcoming tour dates available for this destination.</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section className="bg-[#aa8924] text-white py-16 sm:py-24">
+    <section className="bg-yellow-opaque text-white py-16 sm:py-24">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-4">
+        <h2 className="text-3xl md:text-4xl font-semibold text-green-opaque uppercase tracking-wider mb-4">
           UPCOMING TOUR DATES
         </h2>
-        <p className="text-gray-200 mb-12">
+        <p className="text-white mb-12">
           Select a date below and book a trip to this destination.
         </p>
 
@@ -48,7 +48,7 @@ export function UpcomingTours({ upcomingTourData, countrySlug }: UpcomingToursPr
                     asChild
                     key={date.id}
                     variant="outline"
-                    className="bg-white text-[#aa8924] font-semibold text-base px-5 py-4 hover:bg-gray-100 hover:text-[#aa8928] min-w-[200px]"
+                    className="bg-green-opaque text-yellow-opaque font-semibold text-base px-5 py-4 hover:bg-gray-100 hover:text-green-opaque min-w-[200px]"
                   >
                     <Link href={`/upcoming-tours/${date.slug}`}>
                       {date.displayDate}

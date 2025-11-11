@@ -47,7 +47,7 @@ export default async function ToursPage({ params }: ToursPageProps) {
   return (
     <main className="container mx-auto px-4 py-16 mt-28">
       <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-6xl font-bold text-blue-700 tracking-wider">
+        <h1 className="text-3xl md:text-6xl font-bold text-green-opaque tracking-wider">
           Tours in {destination.name}
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">

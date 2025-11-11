@@ -28,7 +28,7 @@ export function ComingSoonCard({ destination }: ComingSoonCardProps) {
       </div>
       <div className="flex flex-1 flex-col p-6">
         <CardHeader className="p-0">
-          <CardTitle className="text-2xl font-semibold text-gray-800">
+          <CardTitle className="text-2xl font-semibold text-green-opaque">
             {destination.name}
           </CardTitle>
         </CardHeader>

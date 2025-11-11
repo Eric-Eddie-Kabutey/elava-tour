@@ -33,9 +33,9 @@ export function AboutDestination({
         </button>
 
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-bold uppercase text-blue-800 mb-8">
+        <h3 className="text-3xl md:text-4xl font-semibold uppercase text-green-opaque mb-8">
           {title}
-        </h2>
+        </h3>
 
         {/* Description Paragraphs */}
         <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
@@ -46,10 +46,10 @@ export function AboutDestination({
 
         {/* Action Buttons */}
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <Button asChild className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-2.5">
+          <Button asChild className="bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque px-8 py-2.5">
             <Link href={bookNowLink}>BOOK NOW</Link>
           </Button>
-          <Button asChild className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-2.5">
+          <Button asChild className="border border-yellow-opaque bg-transparent text-green-opaque hover:bg-yellow-opaque hover:text-green-opaque px-8 py-2.5">
             <Link href={funFactsLink}>FUN FACTS</Link>
           </Button>
         </div>

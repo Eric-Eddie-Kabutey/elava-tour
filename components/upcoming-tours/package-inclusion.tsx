@@ -12,7 +12,7 @@ export function PackageInclusions({ inclusions, exclusions }: PackageInclusionsP
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Trip Includes Section */}
         <div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Trip Includes</h2>
+          <h2 className="text-2xl font-bold text-green-opaque mb-6">Trip Includes</h2>
           <div className="flex flex-col">
             {inclusions.map((item) => (
               <InclusionItem

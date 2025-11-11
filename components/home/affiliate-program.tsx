@@ -65,7 +65,7 @@ const AffiliateProgram: FC = () => {
             </h2>
             <p className="mt-2 text-gray-300">
               The world is waiting—let Maximum Impact Travel take you there.{' '}
-              <Link href="/join-affiliate" className="font-bold text-white underline hover:text-gray-200 transition-colors">
+              <Link href="/consultation" className="font-bold text-white underline hover:text-gray-200 transition-colors">
                 Contact a consultant
               </Link>
             </p>

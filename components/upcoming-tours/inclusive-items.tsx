@@ -14,7 +14,7 @@ export function InclusionItem({ type, label, description }: InclusionItemProps) 
       {/* Left Column: Icon and Label */}
       <div className="md:col-span-1 flex items-center gap-3">
         {isIncluded ? (
-          <CheckCircle2 className="h-6 w-6 text-custom-gold flex-shrink-0" />
+          <CheckCircle2 className="h-6 w-6 text-yellow-opaque flex-shrink-0" />
         ) : (
           <XCircle className="h-6 w-6 text-gray-400 flex-shrink-0" />
         )}

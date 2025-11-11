@@ -7,7 +7,7 @@ export function UnitingPeople() {
 			<div className='container max-w-6xl mx-auto px-4'>
 				{/* Section Title */}
 				<div className='text-center mb-16'>
-					<h2 className='text-3xl md:text-5xl font-bold text-blue-800 tracking-wider'>
+					<h2 className='text-3xl md:text-5xl font-semibold text-green-opaque tracking-wider'>
 						UNITING PEOPLE
 					</h2>
 				</div>
@@ -31,7 +31,7 @@ export function UnitingPeople() {
 					<div className='w-full md:w-7/12'>
 						<div className='space-y-6 text-gray-700 leading-relaxed'>
 							<p>
-								<strong className='font-semibold text-blue-800'>
+								<strong className='font-semibold text-green-opaque'>
 									Maximum Impact Travel
 								</strong>{' '}
 								connects people to the magnificent continent of Africa, and
@@ -59,8 +59,8 @@ export function UnitingPeople() {
                             </p>
                             
                             <div className='flex items-center gap-4 mt-6'>
-                                <Button className='bg-blue-700'>Book Your Next Trip</Button>
-                                <Button>Contact Us</Button>
+                                <Button className='bg-yellow-opaque text-green-opaque hover:bg-green-opaque hover:text-yellow-opaque'>Book Your Next Trip</Button>
+                                <Button className='border border-yellow-opaque bg-transparent text-yellow hover:bg-yellow-opaque hover:text-green-opaque'>Contact Us</Button>
                             </div>
 						</div>
 					</div>
