@@ -34,8 +34,8 @@ export const navigationData = [
         ],
     },
     {
-        title: "FAQs",
-        href: "/help",
+        title: "Consultation",
+        href: "/consultation",
     },
 ];
 
