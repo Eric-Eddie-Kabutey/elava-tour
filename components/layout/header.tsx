@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -33,7 +34,11 @@ type NavItem = (typeof navigationData)[0] & {
 
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false)
-	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const [ isMenuOpen, setIsMenuOpen ] = useState(false)
+	const pathname = usePathname()
+
+	 // 1. Determine if we are on the homepage.
+    const isHomePage = pathname === '/' ? true : false;
 
 	useEffect(() => {
 		const handleScroll = () => setIsScrolled(window.scrollY > 10)
@@ -52,7 +57,7 @@ const Header = () => {
 	) as NavItem | undefined
 	const dealsItem = navigationData.find((item) => item.title === 'Deals')
 	const insightsItem = navigationData.find((item) => item.title === 'Insights')
-	const faqsItem = navigationData.find((item) => item.title === 'FAQs')
+	const Consultation = navigationData.find((item) => item.title === 'Consultation')
 
 	return (
 		<>
@@ -76,7 +81,13 @@ const Header = () => {
 								width={180}
 								height={100}
 								className='object-cover w-full h-fit'
-							/> : <Image
+							/> : !isHomePage && !isScrolled ? <Image
+								src={elavatourLogoColored}
+								alt='Elava Logo'
+								width={180}
+								height={100}
+								className='object-cover w-full h-fit'
+							/>  : <Image
 								src={elavatourLogoWhite}
 								alt='Elava Logo'
 								width={180}
@@ -92,7 +103,7 @@ const Header = () => {
 										<a
 											className={clsx(
 												navigationMenuTriggerStyle(),
-												isScrolled ? 'text-gray-900' : 'text-white',
+												isScrolled ? 'text-green-opaque' : !isHomePage && !isScrolled ? 'text-green-opaque' : 'text-white',
 												'bg-transparent text-lg font-medium'
 											)}>
 											{aboutUsItem.title}
@@ -109,7 +120,7 @@ const Header = () => {
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
-														isScrolled ? 'text-gray-900' : 'text-white',
+														isScrolled ? 'text-gray-900' : !isHomePage && !isScrolled ? 'text-green-opaque' : 'text-white',
 														'bg-transparent hover:bg-accent/50'
 													)}>
 													{destinationsItem.title}
@@ -155,7 +166,7 @@ const Header = () => {
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
-														isScrolled ? 'text-gray-900' : 'text-white',
+														isScrolled ? 'text-gray-900' : !isHomePage && !isScrolled ? 'text-green-opaque' : 'text-white',
 														'bg-transparent hover:bg-accent/50'
 													)}>
 													{dealsItem.title}
@@ -180,7 +191,7 @@ const Header = () => {
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
-														isScrolled ? 'text-gray-900' : 'text-white',
+														isScrolled ? 'text-gray-900' : !isHomePage && !isScrolled ? 'text-green-opaque' : 'text-white',
 														'bg-transparent hover:bg-accent/50'
 													)}>
 													{insightsItem.title}
@@ -201,17 +212,17 @@ const Header = () => {
 									</NavigationMenuList>
 								</NavigationMenu>
 
-								{faqsItem && (
+								{Consultation && (
 									<Button
 										variant='outline'
 										asChild
 										className={clsx(											
 											'text-sm font-medium bg-transparent',											
 											isScrolled
-												? 'border-gray-800 text-gray-800 hover:bg-gray-100 hover:text-black' 
+												? 'border-yellow-opaque text-green-opaque hover:bg-gray-100 hover:text-green-opaque hover:border-green-opaque' : !isHomePage && !isScrolled ? 'text-green-opaque border border-green-opaque'
 												: 'border-white text-white hover:bg-white/20' 
 										)}>
-										<Link href={faqsItem.href || '#'}>{faqsItem.title}</Link>
+										<Link href={Consultation.href || '#'}>{Consultation.title}</Link>
 									</Button>
 								)}
 							</nav>
