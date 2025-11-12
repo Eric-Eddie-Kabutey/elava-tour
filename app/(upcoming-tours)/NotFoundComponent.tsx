@@ -1,11 +1,9 @@
-// app/not-found.tsx
 import Link from 'next/link';
-import { FC } from 'react';
 import { Button } from '@/components/ui/button';
 
-const NotFound: FC = () => {
-    return (
-       <main className="flex min-h-screen flex-col items-center justify-center bg-yellow-opaque p-8">
+export default function UpcomingToursNotFound() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center bg-yellow-opaque p-8">
       <div className="text-center space-y-6 max-w-lg mx-auto">
                 
         <h1 className="text-9xl font-extrabold text-green-opaque tracking-wider">
@@ -28,11 +26,9 @@ const NotFound: FC = () => {
           size="lg"
           className="bg-transparent text-green-opaque border border-green-opaque hover:bg-green-opaque hover:text-yellow-opaque font-bold px-8 py-3 text-base"
         >
-           <Link href="/upcoming-tours">View All Available Upcoming Tours</Link>
+           <Link href="/upcoming-tours">View All Available Tours</Link>
         </Button>
       </div>
     </main>
-    );
-};
-
-export default NotFound;
+  );
+}
