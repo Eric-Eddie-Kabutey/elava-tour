@@ -14,7 +14,7 @@ import {
 	NavigationMenuLink,
 	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
-import { Menu } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { navigationData } from '@/data/nav-data'
 import {
 	Accordion,
@@ -34,11 +34,11 @@ type NavItem = (typeof navigationData)[0] & {
 
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false)
-	const [ isMenuOpen, setIsMenuOpen ] = useState(false)
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const pathname = usePathname()
 
-	 // 1. Determine if we are on the homepage.
-    const isHomePage = pathname === '/' ? true : false;
+	// 1. Determine if we are on the homepage.
+	const isHomePage = pathname === '/' ? true : false
 
 	useEffect(() => {
 		const handleScroll = () => setIsScrolled(window.scrollY > 10)
@@ -57,7 +57,9 @@ const Header = () => {
 	) as NavItem | undefined
 	const dealsItem = navigationData.find((item) => item.title === 'Deals')
 	const insightsItem = navigationData.find((item) => item.title === 'Insights')
-	const Consultation = navigationData.find((item) => item.title === 'Consultation')
+	const Consultation = navigationData.find(
+		(item) => item.title === 'Consultation'
+	)
 
 	return (
 		<>
@@ -75,25 +77,31 @@ const Header = () => {
 								'flex-shrink-0 w-40 h-32 relative top-0 md:top-2 z-[40] rounded-md py-0 px-0 ',
 								isScrolled ? '' : ''
 							)}>
-							{isScrolled ? <Image
-								src={elavatourLogoColored}
-								alt='Elava Logo'
-								width={180}
-								height={100}
-								className='object-cover w-full h-fit'
-							/> : !isHomePage && !isScrolled ? <Image
-								src={elavatourLogoColored}
-								alt='Elava Logo'
-								width={180}
-								height={100}
-								className='object-cover w-full h-fit'
-							/>  : <Image
-								src={elavatourLogoWhite}
-								alt='Elava Logo'
-								width={180}
-								height={100}
-								className='object-cover w-full h-fit'
-							/>}
+							{isScrolled ? (
+								<Image
+									src={elavatourLogoColored}
+									alt='Elava Logo'
+									width={180}
+									height={100}
+									className='object-cover w-full h-fit'
+								/>
+							) : !isHomePage && !isScrolled ? (
+								<Image
+									src={elavatourLogoColored}
+									alt='Elava Logo'
+									width={180}
+									height={100}
+									className='object-cover w-full h-fit'
+								/>
+							) : (
+								<Image
+									src={elavatourLogoWhite}
+									alt='Elava Logo'
+									width={180}
+									height={100}
+									className='object-cover w-full h-fit'
+								/>
+							)}
 						</Link>
 						<div className='flex items-center justify-between gap-8'>
 							{/* ====== DESKTOP NAVIGATION  ====== */}
@@ -103,8 +111,12 @@ const Header = () => {
 										<a
 											className={clsx(
 												navigationMenuTriggerStyle(),
-												isScrolled ? 'text-green-opaque' : !isHomePage && !isScrolled ? 'text-green-opaque' : 'text-white',
-												'bg-transparent text-lg font-medium'
+												isScrolled
+													? 'text-green-opaque'
+													: !isHomePage && !isScrolled
+													? 'text-green-opaque'
+													: 'text-white',
+												'bg-transparent text-lg font-medium hover:bg-yellow-opaque hover:text-green-opaque'
 											)}>
 											{aboutUsItem.title}
 										</a>
@@ -120,8 +132,12 @@ const Header = () => {
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
-														isScrolled ? 'text-gray-900' : !isHomePage && !isScrolled ? 'text-green-opaque' : 'text-white',
-														'bg-transparent hover:bg-accent/50'
+														isScrolled
+															? 'text-gray-900'
+															: !isHomePage && !isScrolled
+															? 'text-green-opaque'
+															: 'text-white',
+														'bg-transparent '
 													)}>
 													{destinationsItem.title}
 												</NavigationMenuTrigger>
@@ -166,7 +182,11 @@ const Header = () => {
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
-														isScrolled ? 'text-gray-900' : !isHomePage && !isScrolled ? 'text-green-opaque' : 'text-white',
+														isScrolled
+															? 'text-gray-900'
+															: !isHomePage && !isScrolled
+															? 'text-green-opaque'
+															: 'text-white',
 														'bg-transparent hover:bg-accent/50'
 													)}>
 													{dealsItem.title}
@@ -191,7 +211,11 @@ const Header = () => {
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
-														isScrolled ? 'text-gray-900' : !isHomePage && !isScrolled ? 'text-green-opaque' : 'text-white',
+														isScrolled
+															? 'text-gray-900'
+															: !isHomePage && !isScrolled
+															? 'text-green-opaque'
+															: 'text-white',
 														'bg-transparent hover:bg-accent/50'
 													)}>
 													{insightsItem.title}
@@ -216,13 +240,17 @@ const Header = () => {
 									<Button
 										variant='outline'
 										asChild
-										className={clsx(											
-											'text-sm font-medium bg-transparent',											
+										className={clsx(
+											'text-sm font-medium bg-transparent',
 											isScrolled
-												? 'border-yellow-opaque text-green-opaque hover:bg-gray-100 hover:text-green-opaque hover:border-green-opaque' : !isHomePage && !isScrolled ? 'text-green-opaque border border-green-opaque'
-												: 'border-white text-white hover:bg-white/20' 
+												? 'border-yellow-opaque text-green-opaque hover:bg-gray-100 hover:text-green-opaque hover:border-green-opaque'
+												: !isHomePage && !isScrolled
+												? 'text-green-opaque border border-green-opaque'
+												: 'border-white text-white hover:bg-white/20'
 										)}>
-										<Link href={Consultation.href || '#'}>{Consultation.title}</Link>
+										<Link href={Consultation.href || '#'}>
+											{Consultation.title}
+										</Link>
 									</Button>
 								)}
 							</nav>
@@ -233,7 +261,15 @@ const Header = () => {
 							onClick={() => setIsMenuOpen(true)}
 							className='lg:hidden text-2xl'
 							aria-label='Open menu'>
-							<Menu className={isScrolled ? 'text-gray-900' : 'text-white'} />
+							<Menu
+								className={
+									isScrolled
+										? 'text-green-opaque'
+										: !isHomePage && !isScrolled
+										? 'text-green-opaque'
+										: 'text-white'
+								}
+							/>
 						</button>
 					</div>
 				</div>
@@ -248,12 +284,35 @@ const Header = () => {
 						exit={{ x: '100%' }}
 						transition={{ type: 'tween', ease: 'easeInOut', duration: 0.4 }}
 						className='fixed top-0 right-0 h-full w-full max-w-sm bg-white z-[60] shadow-2xl'>
-						<div className='p-4 h-[calc(100vh-70px)] overflow-y-auto'>
+						<div className='p-4 pt-4.5 h-[calc(100vh-70px)] overflow-y-auto'>
+							<div className='flex items-center justify-between mb-4 pr-4'>
+								{/* Logo */}
+								<Link
+									href='/'
+									className={clsx(
+										' w-32 h-14 py-0 px-0'
+									)}>
+									<Image
+										src={elavatourLogoColored}
+										alt='Elava Logo'
+										width={100}
+										height={60}
+										className='object-cover w-full h-16'
+									/>
+								</Link>
+
+								<button
+									className='flex items-end px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0'
+									onClick={() => setIsMenuOpen(false)}>
+									<X className='h-6 w-6' />
+									<span className='sr-only'>Toggle Menu</span>
+								</button>
+							</div>
 							<Accordion type='multiple' className='w-full'>
 								{(navigationData as NavItem[]).map((item) =>
 									item.links ? (
 										<AccordionItem value={item.title} key={item.title}>
-											<AccordionTrigger className='font-semibold text-lg'>
+											<AccordionTrigger className='font-semibold text-lg text-green-opaque'>
 												{item.title}
 											</AccordionTrigger>
 											<AccordionContent>
@@ -328,7 +387,7 @@ const ListItem = ({ href, title }: { href: string; title: string }) => (
 		<NavigationMenuLink asChild>
 			<a
 				href={href}
-				className='block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground'>
+				className='block select-none space-y-1 p-3 leading-none no-underline outline-none transition-colors hover:bg-[#e69f23] hover:text-[#11351c] focus:bg-[#e69f23] focus:text-[#11351c]'>
 				<div className='text-sm font-medium leading-none'>{title}</div>
 			</a>
 		</NavigationMenuLink>
@@ -349,7 +408,7 @@ const MobileListItem = ({
 		<Link
 			href={href}
 			onClick={closeMenu}
-			className='block py-2 text-gray-600 hover:text-blue-600'>
+			className='block py-2 text-green-opaque hover:text-yellow-opaque'>
 			{title}
 		</Link>
 	</li>
