@@ -38,17 +38,20 @@ const AffiliateProgram: FC = () => {
           {/* How It Works Section */}
           <div>
             <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
-              Save for Your Next Adventure – Start Your Eleva Travel Savings Plan:
+              Why Choose Eleva Travel Savings?
             </h2>
             <ul className="space-y-3 list-disc list-inside text-gray-300">
               <li>
-                <span className="font-bold text-white">Create Your Travel Savings Account</span> – Choose your preferred destination or package, set your travel goal, and start depositing toward it at your own pace.
+                <span className="font-bold text-white">Flexible Deposits:</span> – Save what you can, when you can.
               </li>
               <li>
-                <span className="font-bold text-white">Save Smart, Travel Easy</span> – Make flexible deposits weekly or monthly — and watch your balance grow while we keep you updated on exclusive deals, discounts, and bonus rewards for loyal savers.
+                <span className="font-bold text-white">No Hidden Fees:</span> 100% of your deposits go toward your next trip.
               </li>
               <li>
-                <span className="font-bold text-white">Enjoy Added Perks</span> – The earlier you start saving, the more you gain! Access special offers, early-bird packages, and loyalty points that can go toward flight upgrades, accommodation, or guided experiences.
+                <span className="font-bold text-white">Exclusive Rewards:</span> Get early access to new destinations and seasonal offers.
+              </li>
+              <li>
+                <span className="font-bold text-white">Peace of Mind:</span> Secure your dream trip ahead of time with an easy, personalized savings plan.
               </li>
             </ul>
           </div>
