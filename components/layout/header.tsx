@@ -12,7 +12,7 @@ import {
 	NavigationMenuList,
 	NavigationMenuTrigger,
 	NavigationMenuLink,
-	navigationMenuTriggerStyle,
+	navigationMenuTriggerStyle,	
 } from '@/components/ui/navigation-menu'
 import { Menu, X } from 'lucide-react'
 import { navigationData } from '@/data/nav-data'
@@ -247,7 +247,7 @@ const Header = () => {
 
 										{/* "Deals" Simple Dropdown */}
 										{dealsItem?.links && (
-											<NavigationMenuItem>
+											<NavigationMenuItem>												
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
@@ -260,7 +260,7 @@ const Header = () => {
 													)}>
 													{dealsItem.title}
 												</NavigationMenuTrigger>
-												<NavigationMenuContent>
+												<NavigationMenuContent>												 
 													<ul className='grid w-[250px] gap-3 p-4'>
 														{dealsItem.links.map((link) => (
 															<ListItem
@@ -269,7 +269,7 @@ const Header = () => {
 																title={link.title}
 															/>
 														))}
-													</ul>
+													</ul>												
 												</NavigationMenuContent>
 											</NavigationMenuItem>
 										)}
