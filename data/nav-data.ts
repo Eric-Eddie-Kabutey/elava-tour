@@ -4,18 +4,21 @@ export const navigationData = [
         href: "/about-us",
     },
     {
-        title: "All Destinations",        
+        title: "Destinations",        
         links: [
             { title: "South Africa", href: "/tours/south-africa-tour" },
             { title: "Ghana Tour", href: "/tours/ghana-tour" },
             { title: "Kenya Tour", href: "/tours/kenya-tour" },
-        ],        
-        tripTypes: [
+        ]
+    },  
+    {
+        title: "Trip Types",
+        links: [
             { title: "Solo Trips", href: "/trip-types/solo-trips" },
             { title: "Group Tours", href: "/trip-types/group-tours" },
             { title: "Family Holidays", href: "/trip-types/family-holidays" },
-        ],
-    },    
+        ], 
+    },
     {
         title: "Deals",
         links: [
@@ -28,10 +31,13 @@ export const navigationData = [
         title: "Insights",
         links: [
             { title: "News & Stories", href: "/news" },
-            { title: "Client Feedback", href: "/client-feedback" },
-            { title: "Media", href: "/tour-media" },
-            { title: "FAQs", href: "/help" },
+            { title: "Client Feedback", href: "/clients-feedback" },
+            { title: "Media", href: "/tour-media" },            
         ],
+    },
+    {
+        title: "FAQs",
+        href: "/help",
     },
     {
         title: "Consultation",

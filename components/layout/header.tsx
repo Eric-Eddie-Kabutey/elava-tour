@@ -53,9 +53,11 @@ const Header = () => {
 	// Find specific navigation items to handle them differently
 	const aboutUsItem = navigationData.find((item) => item.title === 'About Us')
 	const destinationsItem = navigationData.find(
-		(item) => item.title === 'All Destinations'
+		(item) => item.title === 'Destinations'
 	) as NavItem | undefined
+	const tripTypesItem = navigationData.find((item) => item.title === 'Trip Types')
 	const dealsItem = navigationData.find((item) => item.title === 'Deals')
+	const faqsItem = navigationData.find((item) => item.title === 'FAQs')
 	const insightsItem = navigationData.find((item) => item.title === 'Insights')
 	const Consultation = navigationData.find(
 		(item) => item.title === 'Consultation'
@@ -127,7 +129,7 @@ const Header = () => {
 								<NavigationMenu>
 									<NavigationMenuList>
 										{/* "All Destinations" Mega-Menu */}
-										{destinationsItem?.links && (
+										{/* {destinationsItem?.links && (
 											<NavigationMenuItem>
 												<NavigationMenuTrigger
 													className={clsx(
@@ -172,6 +174,64 @@ const Header = () => {
 															</ul>
 														</div>
 													</div>
+												</NavigationMenuContent>
+											</NavigationMenuItem>
+										)} */}
+
+										{/* "Trip Types" Simple Dropdown */}
+										{destinationsItem?.links && (
+											<NavigationMenuItem>
+												<NavigationMenuTrigger
+													className={clsx(
+														'text-sm font-medium',
+														isScrolled
+															? 'text-gray-900'
+															: !isHomePage && !isScrolled
+															? 'text-green-opaque'
+															: 'text-white',
+														'bg-transparent hover:bg-accent/50'
+													)}>
+													{destinationsItem.title}
+												</NavigationMenuTrigger>
+												<NavigationMenuContent>
+													<ul className='grid w-[250px] gap-3 p-4'>
+														{destinationsItem.links.map((link) => (
+															<ListItem
+																key={link.title}
+																href={link.href}
+																title={link.title}
+															/>
+														))}
+													</ul>
+												</NavigationMenuContent>
+											</NavigationMenuItem>
+										)}
+
+										{/* "Trip Types" Simple Dropdown */}
+										{tripTypesItem?.links && (
+											<NavigationMenuItem>
+												<NavigationMenuTrigger
+													className={clsx(
+														'text-sm font-medium',
+														isScrolled
+															? 'text-gray-900'
+															: !isHomePage && !isScrolled
+															? 'text-green-opaque'
+															: 'text-white',
+														'bg-transparent hover:bg-accent/50'
+													)}>
+													{tripTypesItem.title}
+												</NavigationMenuTrigger>
+												<NavigationMenuContent>
+													<ul className='grid w-[250px] gap-3 p-4'>
+														{tripTypesItem.links.map((link) => (
+															<ListItem
+																key={link.title}
+																href={link.href}
+																title={link.title}
+															/>
+														))}
+													</ul>
 												</NavigationMenuContent>
 											</NavigationMenuItem>
 										)}
@@ -235,6 +295,23 @@ const Header = () => {
 										)}
 									</NavigationMenuList>
 								</NavigationMenu>
+
+								{faqsItem && (
+									<Link href={faqsItem.href || '#'} legacyBehavior passHref>
+										<a
+											className={clsx(
+												navigationMenuTriggerStyle(),
+												isScrolled
+													? 'text-green-opaque'
+													: !isHomePage && !isScrolled
+													? 'text-green-opaque'
+													: 'text-white',
+												'bg-transparent text-lg font-medium hover:bg-yellow-opaque hover:text-green-opaque'
+											)}>
+											{faqsItem.title}
+										</a>
+									</Link>
+								)}
 
 								{Consultation && (
 									<Button
