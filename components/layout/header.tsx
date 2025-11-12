@@ -32,13 +32,22 @@ type NavItem = (typeof navigationData)[0] & {
 	tripTypes?: { title: string; href: string }[]
 }
 
+// Routes with a hero section with a bg-image - header with a transparent bg
+const PAGES_WITH_TRANSPARENT_HEADER = [
+    '/',
+    '/deals/trip-saving',
+    '/deals/loyalty-discount',
+	'/deals/student-discounts',
+	// add other routers (full path) here
+];
+
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false)
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const pathname = usePathname()
-
-	// 1. Determine if we are on the homepage.
-	const isHomePage = pathname === '/' ? true : false
+	
+	// This boolean is true if the current page should have a transparent header.
+    const hasTransparentHeader  = PAGES_WITH_TRANSPARENT_HEADER.includes(pathname);
 
 	useEffect(() => {
 		const handleScroll = () => setIsScrolled(window.scrollY > 10)
@@ -87,7 +96,7 @@ const Header = () => {
 									height={100}
 									className='object-cover w-full h-fit'
 								/>
-							) : !isHomePage && !isScrolled ? (
+							) : !hasTransparentHeader  && !isScrolled ? (
 								<Image
 									src={elavatourLogoColored}
 									alt='Elava Logo'
@@ -115,7 +124,7 @@ const Header = () => {
 												navigationMenuTriggerStyle(),
 												isScrolled
 													? 'text-green-opaque'
-													: !isHomePage && !isScrolled
+													: !hasTransparentHeader  && !isScrolled
 													? 'text-green-opaque'
 													: 'text-white',
 												'bg-transparent text-lg font-medium hover:bg-yellow-opaque hover:text-green-opaque'
@@ -136,7 +145,7 @@ const Header = () => {
 														'text-sm font-medium',
 														isScrolled
 															? 'text-gray-900'
-															: !isHomePage && !isScrolled
+															: !hasTransparentHeader  && !isScrolled
 															? 'text-green-opaque'
 															: 'text-white',
 														'bg-transparent '
@@ -186,7 +195,7 @@ const Header = () => {
 														'text-sm font-medium',
 														isScrolled
 															? 'text-gray-900'
-															: !isHomePage && !isScrolled
+															: !hasTransparentHeader  && !isScrolled
 															? 'text-green-opaque'
 															: 'text-white',
 														'bg-transparent hover:bg-accent/50'
@@ -215,7 +224,7 @@ const Header = () => {
 														'text-sm font-medium',
 														isScrolled
 															? 'text-gray-900'
-															: !isHomePage && !isScrolled
+															: !hasTransparentHeader  && !isScrolled
 															? 'text-green-opaque'
 															: 'text-white',
 														'bg-transparent hover:bg-accent/50'
@@ -244,7 +253,7 @@ const Header = () => {
 														'text-sm font-medium',
 														isScrolled
 															? 'text-gray-900'
-															: !isHomePage && !isScrolled
+															: !hasTransparentHeader  && !isScrolled
 															? 'text-green-opaque'
 															: 'text-white',
 														'bg-transparent hover:bg-accent/50'
@@ -273,7 +282,7 @@ const Header = () => {
 														'text-sm font-medium',
 														isScrolled
 															? 'text-gray-900'
-															: !isHomePage && !isScrolled
+															: !hasTransparentHeader  && !isScrolled
 															? 'text-green-opaque'
 															: 'text-white',
 														'bg-transparent hover:bg-accent/50'
@@ -303,7 +312,7 @@ const Header = () => {
 												navigationMenuTriggerStyle(),
 												isScrolled
 													? 'text-green-opaque'
-													: !isHomePage && !isScrolled
+													: !hasTransparentHeader  && !isScrolled
 													? 'text-green-opaque'
 													: 'text-white',
 												'bg-transparent text-lg font-medium hover:bg-yellow-opaque hover:text-green-opaque'
@@ -321,7 +330,7 @@ const Header = () => {
 											'text-sm font-medium bg-transparent',
 											isScrolled
 												? 'border-yellow-opaque text-green-opaque hover:bg-gray-100 hover:text-green-opaque hover:border-green-opaque'
-												: !isHomePage && !isScrolled
+												: !hasTransparentHeader  && !isScrolled
 												? 'text-green-opaque border border-green-opaque'
 												: 'border-white text-white hover:bg-white/20'
 										)}>
@@ -342,7 +351,7 @@ const Header = () => {
 								className={
 									isScrolled
 										? 'text-green-opaque'
-										: !isHomePage && !isScrolled
+										: !hasTransparentHeader  && !isScrolled
 										? 'text-green-opaque'
 										: 'text-white'
 								}
