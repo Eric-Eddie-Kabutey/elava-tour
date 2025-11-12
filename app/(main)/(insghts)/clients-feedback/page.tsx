@@ -3,9 +3,9 @@ import React from 'react'
 
 function ClientsFeedBackPage() {
   return (
-    <div>
+    <>
         <ClientsFeedback />
-    </div>
+    </>
   )
 }
 

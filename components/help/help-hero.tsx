@@ -30,12 +30,12 @@ import Typography from '../shared/typography'
 
 function HelpHero() {
   return (
-    <div className='w-full py-20 bg-gradient-to-br from-gray-50 to-gray-100'>
+    <div className='w-full py-20 pt-28 bg-gradient-to-br from-gray-50 to-gray-100'>
         <section className='max-container w-[85%] mx-auto flex flex-col gap-16'>
             <div className='flex flex-col text-center space-y-4'>
                 <Typography
                     typo="header-2-semibold"
-                    className='text-gray-900'
+                    className='text-green-opaque'
                 >
                     Need Help?
                 </Typography>

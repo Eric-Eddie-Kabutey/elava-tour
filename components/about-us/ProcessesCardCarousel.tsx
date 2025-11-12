@@ -75,10 +75,10 @@ export const ProcessesCarousel = () => {
                   <div className="flex flex-col xl:p-10 md:p-5 p-3 pt-6">
                     <div className="w-fit px-3 py-1 flex items-center gap-3 mb-4 group-hover:bg-white rounded-lg">
                       <div className="flex items-center justify-center  rounded-full transition-colors duration-300 group-hover:text-green-opaque w-8 h-8 bg-blue-100 group-hover:bg-yellow-opaque">
-                        Process
+                        Process {" "}
                       </div>
-                      <span className="font-medium text-gray-800 transition-colors duration-300 group-hover:text-blue-700">
-                        {feature.tag}
+                      <span className="font-medium text-green-opaque transition-colors duration-300 group-hover:text-blue-700">
+                         {feature.tag}
                       </span>
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-green-opaque">{feature.title}</h3>

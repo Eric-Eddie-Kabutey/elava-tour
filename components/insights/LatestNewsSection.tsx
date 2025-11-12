@@ -51,7 +51,7 @@ export const LatestNewsSection = () => {
       <div className="max-container w-[95%] mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4 md:mb-0">Latest News</h2>
+          <h2 className="text-3xl font-bold text-green-opaque mb-4 md:mb-0">Latest News</h2>
           
           {/* Filter Buttons */}
           <div className="flex flex-wrap gap-2">
@@ -60,6 +60,7 @@ export const LatestNewsSection = () => {
                 key={category}
                 variant={activeCategory === category ? "default" : "outline"}
                 onClick={() => handleCategoryClick(category)}
+                className={cn(activeCategory === category ? 'bg-yellow-opaque text-green-opaque hover:bg-green-opaque hover:text-yellow-opaque' : 'text-green-opaque hover:bg-yellow-opaque hover:text-green-opaque')}
               >
                 {category}
               </Button>
@@ -96,7 +97,7 @@ export const LatestNewsSection = () => {
                 </h3>
                 <Link
                   href={post.slug}
-                  className="text-sm font-semibold text-red-600 hover:underline"
+                  className="text-sm font-semibold text-green-opaque hover:underline"
                 >
                   READ MORE »
                 </Link>
@@ -125,7 +126,7 @@ export const LatestNewsSection = () => {
                 </PaginationItem>
                 {/* For simplicity, we'll use a text indicator. You can add page numbers here if needed. */}
                 <PaginationItem>
-                  <span className="px-4 py-2 text-base text-blue-700">
+                  <span className="px-4 py-2 text-base text-green-opaque">
                     Page {currentPage} of {totalPages}
                   </span>
                 </PaginationItem>

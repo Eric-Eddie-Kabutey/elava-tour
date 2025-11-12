@@ -51,8 +51,8 @@ export const FeaturedNewsCarousel = () => {
   }
 
   return (
-    <section className="py-12 bg-[#e4e4e4]">
-      <div className="max-container xl:w-[75%] w-[95%] mx-auto">
+    <section className="py-12 pt-28 md:pt-12 bg-[#e4e4e4]">
+      <div className="max-container xl:w-[75%] w-[95%] mx-auto mt-12 md:mt-14 lg:mt-16 2xl:mt-28">
         <div className="relative">
           {/* Embla Viewport */}
           <div className="overflow-hidden" ref={emblaRef}>

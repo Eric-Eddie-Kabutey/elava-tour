@@ -22,14 +22,14 @@ export const FeaturedNewsCard = ({ post }: FeaturedNewsCardProps) => {
 
       {/* Content Container */}
       <div className="flex flex-col gap-4">
-        <span className="border border-gray-400 text-gray-600 text-sm font-medium px-3 py-1 self-start">
+        <span className="border border-green-opaque text-green-opaque text-sm font-medium px-3 py-1 self-start">
           {post.category}
         </span>
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
           {post.title}
         </h2>
         <p className="text-gray-600">{post.description}</p>
-        <Link href={post.slug} className="flex items-center gap-2 font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+        <Link href={post.slug} className="flex items-center gap-2 font-semibold text-green-opaque transition-colors">
           Read Article
           <ArrowRight className="h-4 w-4" />
         </Link>

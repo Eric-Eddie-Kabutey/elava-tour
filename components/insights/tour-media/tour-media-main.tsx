@@ -68,9 +68,9 @@ export default function TourMediaMain() {
   });
 
   return (
-    <div className="py-12 px-4 md:px-12 bg-gray-50 min-h-screen">
+    <div className="py-20 pt-28 px-4 md:px-12 bg-gray-50 min-h-screen">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">
+        <h1 className="text-3xl md:text-4xl font-bold text-green-opaque mb-2">
           Discover Our Destinations
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -89,10 +89,10 @@ export default function TourMediaMain() {
               setSelectedTour("All");
               setIsDropdownOpen(false); // Close dropdown when switching countries
             }}
-            className={`px-6 py-2 rounded-full text-sm font-medium border transition-all ${
+            className={`px-4 py-2 text-sm font-medium border transition-all ${
               selectedCountry === country
-                ? "bg-blue-600 text-white border-blue-600"
-                : "bg-white text-gray-800 border-gray-300 hover:bg-blue-50"
+                ? "bg-yellow-opaque text-green-opaque border-green-opaque hover:text-yellow-opaque hover:bg-green-opaque"
+                : "bg-transparent text-green-opaque border-yellow-opaque hover:text-green-opaque hover:bg-yellow-opaque"
             }`}
           >
             {country}
@@ -108,12 +108,12 @@ export default function TourMediaMain() {
               onClick={() => setIsDropdownOpen((prev) => !prev)}
               className="flex items-center justify-between w-64 px-5 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:shadow-md transition-all"
             >
-              <span className="text-gray-800">
+              <span className="text-green-opaque">
                 {selectedTour === "All"
                   ? `Select a tour in ${selectedCountry}`
                   : selectedTour}
               </span>
-              <ChevronDown className="w-4 h-4 text-gray-600" />
+              <ChevronDown className="w-4 h-4 text-green-opaque" />
             </button>
 
             {isDropdownOpen && (
@@ -126,7 +126,7 @@ export default function TourMediaMain() {
                         setSelectedTour(tourName);
                         setIsDropdownOpen(false);
                       }}
-                      className="px-5 py-2 hover:bg-blue-50 cursor-pointer text-gray-700"
+                      className="px-5 py-2 hover:bg-blue-50 cursor-pointer text-green-opaque"
                     >
                       {tourName}
                     </div>

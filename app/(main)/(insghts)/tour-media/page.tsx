@@ -3,9 +3,9 @@ import React from 'react'
 
 function TourMediaPage() {
   return (
-    <div>
+    <>
         <TourMediaMain />
-    </div>
+    </>
   )
 }
 

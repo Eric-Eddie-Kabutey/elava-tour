@@ -27,10 +27,10 @@ function ClientsFeedback() {
         );
 
   return (
-    <div className="w-full py-20 bg-gray-50 min-h-screen">
+    <div className="w-full py-20 pt-28  bg-gray-50 min-h-screen">
       <section className="max-container xl:w-[75%] w-[95%] mx-auto flex flex-col gap-8">
         <div className="w-full flex flex-col items-center text-center gap-4">
-          <Typography typo="header-2-semibold" className="text-gray-800">
+          <Typography typo="header-2-semibold" className="text-green-opaque">
             What Our Travelers Say
           </Typography>
           <Typography
@@ -48,10 +48,10 @@ function ClientsFeedback() {
               key={type.value}
               onClick={() => setSelectedType(type.value)}
               className={cn(
-                'px-5 py-2.5 rounded-full border transition-all duration-300',
+                'px-4 py-2 border transition-all duration-300',
                 selectedType === type.value
-                  ? 'bg-[#165AA1] text-white border-[#165AA1]'
-                  : 'bg-white text-gray-600 border-gray-300 hover:border-[#165AA1]'
+                  ? 'bg-yellow-opaque text-green-opaque border-green-opaque hover:text-yellow-opaque hover:bg-green-opaque'
+                  : 'bg-transparent text-green-opaque border-yellow-opaque hover:text-green-opaque hover:bg-yellow-opaque'
               )}
             >
               {type.label}
