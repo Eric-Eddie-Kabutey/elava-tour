@@ -7,8 +7,7 @@ export const navigationData = [
         title: "Destinations",        
         links: [
             { title: "South Africa", href: "/tours/south-africa-tour" },
-            { title: "Ghana Tour", href: "/tours/ghana-tour" },
-            { title: "Kenya Tour", href: "/tours/kenya-tour" },
+            { title: "Ghana Tour", href: "/tours/ghana-tour" },            
         ]
     },  
     {
