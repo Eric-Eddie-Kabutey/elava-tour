@@ -59,7 +59,7 @@ function Hero() {
 						playsInline
 					/>
 					<div className='absolute inset-0 bg-black/30' />
-                    <div className='xl:max-w-6xl 2xl:max-w-7xl mx-auto absolute inset-0 flex flex-col items-center justify-center mt-28 md:mt-28 pb-10 md:pb-0'>                                                                                              
+                    <div className='xl:max-w-6xl 2xl:max-w-[95rem] mx-auto absolute inset-0 flex flex-col items-center justify-center mt-28 md:mt-28 pb-10 md:pb-0 '>                                                                                              
                         <BrandHero />						
 					</div>
 				</div>

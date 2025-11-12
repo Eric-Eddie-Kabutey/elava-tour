@@ -31,7 +31,7 @@ const BrandHero = () => {
 
 	return (
 		<>
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 items-center px-4'>
+			<div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 items-center px-4 md:px-0 2xl:pl-2.5'>
 				{/* ====== LEFT COLUMN: BRANDING AND CTAs ====== */}
 				<div className='lg:col-span-2 flex flex-col items-center md:items-start text-center md:text-left'>
 					{/* Reduced size "ELAVA TOURS" */}
@@ -40,16 +40,17 @@ const BrandHero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
 						className='flex flex-col'>
-						<p className='text-white text-xl font-semibold mb-2'>Welcome to</p>
+						<p className='text-white text-xl lg:text-3xl 2xl:text-5xl font-semibold mb-1'>Welcome to</p>
 						<h1
-							className={`${VAMTAM_H1_CLASS} text-white text-7xl sm:text-8xl lg:text-9xl font-black tracking-wider leading-none`}>
+							className={`${VAMTAM_H1_CLASS} text-white text-[140px] sm:text-[170px] lg:text-[140px] 2xl:text-[220px] font-black tracking-wider leading-none`}>
 							ELEVA
 						</h1>
 						<h1
-							className={`${VAMTAM_H1_CLASS} text-white text-7xl sm:text-8xl lg:text-9xl font-black tracking-wider leading-none -mt-4 sm:-mt-6`}>
+							className={`${VAMTAM_H1_CLASS} text-white text-9xl sm:text-9xl lg:text-[140px] 2xl:text-[220px] font-black tracking-wider leading-none -mt-4 sm:-mt-6`}>
 							TOURS
 						</h1>
-						<p className='text-white text-lg mt-4'>Discover unforgettable journeys with ELEVA TOURS</p>
+						<p className='text-white text-base lg:text-xl mt-4'>Discover unforgettable journeys with ELEVA TOURS</p>
+						<p className='text-white text-base lg:text-xl mt-4'>Discover unforgettable journeys with ELEVA TOURS</p>
 					</motion.div>
 
 					{/* Call-to-Action Buttons */}
@@ -85,7 +86,7 @@ const BrandHero = () => {
 						onSubmit={handleSearch}
 						// Glassmorphism effect for the form card
 						className='bg-white/10 backdrop-blur-md p-8 rounded-xl shadow-2xl border border-white/20 space-y-6 max-w-sm'>
-						<h2 className='text-2xl font-bold text-white text-center'>
+						<h2 className='text-xl 2xl:text-2xl font-bold text-white text-center'>
 							Find Your Next Adventure
 						</h2>
 
@@ -100,7 +101,7 @@ const BrandHero = () => {
 								placeholder='e.g., Ghana, South Africa'
 								value={destination}
 								onChange={(e) => setDestination(e.target.value)}
-								className='bg-white/80 text-gray-800 placeholder:text-gray-500 border-none'
+								className='bg-white/80 text-gray-800 placeholder:text-green-opaque py-4 border-none'
 							/>
 						</div>
 
@@ -112,10 +113,10 @@ const BrandHero = () => {
 							<Select onValueChange={setMonth} value={month}>
 								<SelectTrigger
 									id='month'
-									className='bg-white/80 text-gray-800 border-none'>
-									<SelectValue placeholder='Select a month' />
+									className='bg-white/80 text-green-opaque border-none'>
+									<SelectValue placeholder='Select a month' className='text-green-opaque' />
 								</SelectTrigger>
-								<SelectContent>
+								<SelectContent className='text-green-opaque'>
 									<SelectItem value='january'>January</SelectItem>
 									<SelectItem value='february'>February</SelectItem>
 									<SelectItem value='march'>March</SelectItem>
@@ -130,6 +131,13 @@ const BrandHero = () => {
 							size='lg'
 							className='w-full bg-yellow-opaque hover:bg-green-opaque text-green-opaque hover:text-yellow-opaque font-bold text-base'>
 							Search
+						</Button>
+
+						<Button
+							type='submit'
+							size='lg'
+							className='w-full bg-transparent text-yellow-opaque border border-yellow-opaque hover:bg-yellow-opaque hover:text-green-opaque font-bold text-base'>
+							Customize Trips
 						</Button>
 					</form>
 				</motion.div>
