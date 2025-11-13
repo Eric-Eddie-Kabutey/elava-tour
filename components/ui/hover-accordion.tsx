@@ -76,7 +76,7 @@ export function HoverAccordion({
           onMouseLeave={() => setOpenItem(undefined)}
           className="border-b border-gray-300"
         >
-          <AccordionTrigger>{trigger}</AccordionTrigger>
+          <AccordionTrigger className="text-green-opaque">{trigger}</AccordionTrigger>
           <AccordionContent>{content}</AccordionContent>
         </AccordionItem>
       ))}

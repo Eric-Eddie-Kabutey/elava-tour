@@ -68,15 +68,15 @@ function HelpFaqs() {
   const moreFaqs = isMore ?  faqs : faqs.slice(0, 5)
   return (
     <div className="w-full py-32 bg-gradient-to-br from-gray-50 to-gray-100">
-      <section className="max-container w-[95%] mx-auto flex flex-col gap-8 text-black">
+      <section className="max-container w-[95%] mx-auto flex flex-col gap-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col space-y-8">
-              <h1 className="text-4xl text-black">FAQ</h1>
+              <h1 className="text-4xl text-green-opaque">FAQ</h1>
                 <p className="text-lg text-gray-900 md:max-w-sm">
                   Here are some of the most common questions we get about working
                   together.
                 </p>           
-                <Button variant="secondary" className="w-fit py-4 text-white bg-black hover:bg-gray-800">
+                <Button variant="secondary" className="w-fit py-4 text-green-opaque bg-yellow-opaque hover:bg-green-opaque hover:text-yellow-opaque">
                   <Link href="#">Partner With Elava Tour</Link>
                 </Button>
             </div>
@@ -98,7 +98,7 @@ function HelpFaqs() {
                 />
                 <Button
                   onClick={() => setIsMore(!isMore)}
-                    className='w-fit !px-4 !py-3 text-white hover:text-gray-100 bg-black hover:bg-gray-700'
+                    className='w-fit !px-4 !py-3 text-green-opaque bg-yellow-opaque hover:bg-green-opaque hover:text-yellow-opaque'
                 >{isMore ? "See More" : "See Less"}</Button>
             </div>
           </div>
