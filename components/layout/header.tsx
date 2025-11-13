@@ -62,15 +62,15 @@ const Header = () => {
 	// Find specific navigation items to handle them differently
 	const aboutUsItem = navigationData.find((item) => item.title === 'About Us')
 	const destinationsItem = navigationData.find(
-		(item) => item.title === 'Destinations'
-	) as NavItem | undefined
-	const tripTypesItem = navigationData.find((item) => item.title === 'Trip Types')
+		(item) => item.title === 'Destinations & Trip Types'
+	) as NavItem | undefined	
 	const dealsItem = navigationData.find((item) => item.title === 'Deals')
 	const faqsItem = navigationData.find((item) => item.title === 'FAQs')
 	const insightsItem = navigationData.find((item) => item.title === 'Insights')
 	const Consultation = navigationData.find(
 		(item) => item.title === 'Consultation'
-	)
+	)	
+
 
 	return (
 		<>
@@ -138,7 +138,7 @@ const Header = () => {
 								<NavigationMenu>
 									<NavigationMenuList>
 										{/* "All Destinations" Mega-Menu */}
-										{/* {destinationsItem?.links && (
+										{destinationsItem?.links && (
 											<NavigationMenuItem>
 												<NavigationMenuTrigger
 													className={clsx(
@@ -185,11 +185,12 @@ const Header = () => {
 													</div>
 												</NavigationMenuContent>
 											</NavigationMenuItem>
-										)} */}
+										)}
 
 										{/* "Trip Types" Simple Dropdown */}
-										{destinationsItem?.links && (
+										{/* {destinationsItem?.links && (
 											<NavigationMenuItem>
+												
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
@@ -202,6 +203,7 @@ const Header = () => {
 													)}>
 													{destinationsItem.title}
 												</NavigationMenuTrigger>
+												<NavigationMenuViewport style={leftDropdownMenu} />
 												<NavigationMenuContent>
 													<ul className='grid w-[250px] gap-3 p-4'>
 														{destinationsItem.links.map((link) => (
@@ -214,11 +216,12 @@ const Header = () => {
 													</ul>
 												</NavigationMenuContent>
 											</NavigationMenuItem>
-										)}
+										)} */}
 
 										{/* "Trip Types" Simple Dropdown */}
-										{tripTypesItem?.links && (
+										{/* {tripTypesItem?.links && (
 											<NavigationMenuItem>
+												
 												<NavigationMenuTrigger
 													className={clsx(
 														'text-sm font-medium',
@@ -231,6 +234,7 @@ const Header = () => {
 													)}>
 													{tripTypesItem.title}
 												</NavigationMenuTrigger>
+												<NavigationMenuViewport style={leftDropdownMenu} />
 												<NavigationMenuContent>
 													<ul className='grid w-[250px] gap-3 p-4'>
 														{tripTypesItem.links.map((link) => (
@@ -243,7 +247,7 @@ const Header = () => {
 													</ul>
 												</NavigationMenuContent>
 											</NavigationMenuItem>
-										)}
+										)} */}
 
 										{/* "Deals" Simple Dropdown */}
 										{dealsItem?.links && (
@@ -259,8 +263,8 @@ const Header = () => {
 														'bg-transparent hover:bg-accent/50'
 													)}>
 													{dealsItem.title}
-												</NavigationMenuTrigger>
-												<NavigationMenuContent>												 
+												</NavigationMenuTrigger>										
+											<NavigationMenuContent>											 
 													<ul className='grid w-[250px] gap-3 p-4'>
 														{dealsItem.links.map((link) => (
 															<ListItem

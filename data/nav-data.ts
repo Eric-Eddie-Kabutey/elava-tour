@@ -2,22 +2,19 @@ export const navigationData = [
     {
         title: "About Us",
         href: "/about-us",
-    },
+    },    
     {
-        title: "Destinations",        
+        title: "Destinations & Trip Types",
         links: [
             { title: "South Africa", href: "/tours/south-africa-tour" },
             { title: "Ghana Tour", href: "/tours/ghana-tour" },            
-        ]
-    },  
-    {
-        title: "Trip Types",
-        links: [
+        ],
+        tripTypes: [
             { title: "Solo Trips", href: "/trip-types/solo-trips" },
             { title: "Group Tours", href: "/trip-types/group-tours" },
             { title: "Family Holidays", href: "/trip-types/family-holidays" },
-        ], 
-    },
+        ],
+    }, 
     {
         title: "Deals",
         links: [
