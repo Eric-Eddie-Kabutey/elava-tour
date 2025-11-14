@@ -9,7 +9,7 @@ import Typography from "@/components/shared/typography";
 
 import southAfricaImg from "@/public/assets/images/home/handpicked_1.png";
 import ghanaImg from "@/public/assets/images/home/handpicked_2.png";
-import kenyaImg from "@/public/assets/images/home/handpicked_3.png";
+// import kenyaImg from "@/public/assets/images/home/handpicked_3.png";
 
 
 interface Destination {
@@ -36,13 +36,13 @@ const destinationsData: Destination[] = [
     description: "Ghana is affectionately known as the Rainbow Nation due to its diversity of people and cultures.",
     href: "/destination/ghana",
   },
-  {
-    id: 3,
-    img: kenyaImg,
-    title: "Kenya",
-    description: "The name Kenya means warrior king. It is called the Gateway to Africa because it is the first location newcomers of the continent should go.",
-    href: "/destination/kenya",
-  },
+  // {
+  //   id: 3,
+  //   img: kenyaImg,
+  //   title: "Kenya",
+  //   description: "The name Kenya means warrior king. It is called the Gateway to Africa because it is the first location newcomers of the continent should go.",
+  //   href: "/destination/kenya",
+  // },
 ];
 
 

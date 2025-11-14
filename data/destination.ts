@@ -96,16 +96,16 @@ export const ghanaTourData = {
     heroImageUrl: "https://images.unsplash.com/photo-1547471080-7108bab160a5?q=80&w=2070",
 };
 
-export const kenyaTourData = {
-    title: "KENYA: THE WILD SIDE",
-    description: [
-        "Kenya is affectionately known as the Rainbow Nation due to its diversity of people and cultures. With more than 11 official languages and dozens of ethnic groups, there's something for everyone in Kenya. Experience lush green streets, scrumptious meals, and impressive wildlife. Immerse yourself into Kenyan culture during our 10-day journey through Nairobi and Maasai Mara.",
-        "Your life will certainly change after exploring the wonderful country of Kenya with a professional team of local guides. Enjoy top-level accommodations, walk through history-filled towns, marvel at African wildlife, and get to know welcoming locals. It's time for a change of pace...the city of gold awaits!",
-    ],
-    bookNowLink: "/booking/platinum-experience",
-    funFactsLink: "/destinations/south-africa/fun-facts",
-    heroImageUrl: "https://images.unsplash.com/photo-1547471080-7108bab160a5?q=80&w=2070",
-};
+// export const kenyaTourData = {
+//     title: "KENYA: THE WILD SIDE",
+//     description: [
+//         "Kenya is affectionately known as the Rainbow Nation due to its diversity of people and cultures. With more than 11 official languages and dozens of ethnic groups, there's something for everyone in Kenya. Experience lush green streets, scrumptious meals, and impressive wildlife. Immerse yourself into Kenyan culture during our 10-day journey through Nairobi and Maasai Mara.",
+//         "Your life will certainly change after exploring the wonderful country of Kenya with a professional team of local guides. Enjoy top-level accommodations, walk through history-filled towns, marvel at African wildlife, and get to know welcoming locals. It's time for a change of pace...the city of gold awaits!",
+//     ],
+//     bookNowLink: "/booking/platinum-experience",
+//     funFactsLink: "/destinations/south-africa/fun-facts",
+//     heroImageUrl: "https://images.unsplash.com/photo-1547471080-7108bab160a5?q=80&w=2070",
+// };
 
 
 export const southAfricaTourData = {
