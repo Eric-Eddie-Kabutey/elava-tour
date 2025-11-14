@@ -331,12 +331,12 @@ const Header = () => {
 										variant='outline'
 										asChild
 										className={clsx(
-											'text-sm font-medium bg-transparent',
+											'text-sm font-medium bg-transparent hover:bg-yellow-opaque hover:text-green-opaque',
 											isScrolled
-												? 'border-yellow-opaque text-green-opaque hover:bg-gray-100 hover:text-green-opaque hover:border-green-opaque'
+												? 'border-yellow-opaque text-green-opaque'
 												: !hasTransparentHeader  && !isScrolled
 												? 'text-green-opaque border border-green-opaque'
-												: 'border-white text-white hover:bg-white/20'
+												: 'border-white text-white'
 										)}>
 										<Link href={Consultation.href || '#'}>
 											{Consultation.title}
